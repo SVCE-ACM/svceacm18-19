@@ -1,3 +1,3 @@
-https://svce-acm.github.io/svceacm18-19/
+# ACM Student Chapter Of SVCE
 
-# svceacm.github.io
+https://svce-acm.github.io/svceacm18-19/
