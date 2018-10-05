@@ -1,3 +1,4 @@
 # ACM Student Chapter Of SVCE
 
-https://svce-acm.github.io/svceacm18-19/
+Under Development : https://svce-acm.github.io/svceacm18-19/
+Official Site : https://svce.acm.org/
