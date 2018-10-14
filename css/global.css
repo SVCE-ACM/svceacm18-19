@@ -1,0 +1,18 @@
+body {
+    font-size: 115%;
+}
+
+/* Put this class to the parent class to vertically and horizontally align all its children*/
+.v-center {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+}
+
+.image {
+    max-width: 500px;
+}
