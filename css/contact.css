@@ -112,3 +112,22 @@ ul {
     text-align: left;
   }
 }
+
+@media (max-width:690px) {
+
+  .contact_form form button , .contact_form form input , .contact_form form textarea {
+    width: 100%;
+    padding: 0.25em;
+    border: 1.2px solid #c9e8ff;
+  }
+
+  .contact_form form textarea {
+    padding: 0.15em;
+  }
+  .contact_form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+}
