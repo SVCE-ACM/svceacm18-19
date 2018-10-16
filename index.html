@@ -11,6 +11,8 @@
     <meta name="keywords" content="svce,event,tech,acm,student chapter">
     <meta property="og:title" content="ACM Student Chapter @SVCE">
     <meta property="og:description" content="ACM Student Chapter of SVCE">
+	<meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:description" content="ACM Student Chapter of SVCE">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
     <style>
@@ -40,6 +42,15 @@
     }
 
     </style>
+	<script type="text/javascript">
+    	/*var imgSrc=["images/under_dev/under_dev.jpg"];
+	function lazyLoad() {
+		for(int i=0;i<imgSrc.length;i++)
+			document.getElementById('lzld').setAttribute("src",imgSrc[i]);
+
+		}*/	
+		window.onload=function () {document.getElementById('lzld').setAttribute("src","images/under_dev/under_dev.jpg");}
+	</script>
 </head>
 
 <body>
@@ -97,7 +108,7 @@
         <div class="container v-center">
             <div class="row">
                 <div class="section-img col-sm-6">
-                    <img src="images/under_dev/under_dev.jpg" alt="" class="image">
+                    <img alt="lazyLoad img" id="lzld" class="image">
                 </div><!-- .section-img -->
                     <div class="text  col-sm-6">
                         <h2 class="text-center">About us</h2>
