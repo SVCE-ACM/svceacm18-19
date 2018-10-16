@@ -30,7 +30,7 @@ ul {
 }
 
 /* wrapper section */
-.wrapper {
+.wrapper { 
   box-shadow: 0 0 20px 0 rgba(72 , 94 , 116 , 0.7);
 }
 
@@ -124,10 +124,20 @@ ul {
   .contact_form form textarea {
     padding: 0.15em;
   }
+
+  .contact_form form p {
+    /* padding-top: -5px; */
+  }
+
   .contact_form form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
+
+  .contact_form form .fill-full {
+    grid-column: 1/3;
+  }
+
 
 }
