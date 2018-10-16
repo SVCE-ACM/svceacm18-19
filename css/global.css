@@ -10,9 +10,10 @@ body {
 }
 
 .logo {
-    width: 300px;
+    max-width: 300px;
 }
 
 .image {
     max-width: 500px;
+	padding: 20px;
 }
