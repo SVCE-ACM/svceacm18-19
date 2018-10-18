@@ -14,6 +14,13 @@ body {
 }
 
 .image {
-    max-width: 500px;
+	width: 90%;
 	padding: 20px;
+}
+
+
+@media max-width: 768px {
+	.image {
+		width: 75%;
+	}	
 }
