@@ -65,6 +65,13 @@
         background-color: #65016b;
         color: white;
     }
+
+    @media (max-width: 768px) {
+        #hero {
+            height: 100%;
+            padding: 60px;
+        }
+    }
     </style>
 	<script type="text/javascript">
             /*var imgSrc=["images/under_dev/under_dev.jpg"];
@@ -117,15 +124,16 @@
     </nav>
     <!-- #nav -->
     <section id="hero">
-        <div id="social-buttons">
-            <a href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br>
-            <a href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br>
-            <a href="https://instagram.com" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br>
-        </div><!-- #social-buttons -->
+        
         <img src="images/logos/svce_acm.png" alt="SVCE ACM Student Chapter" class="logo">
         <div class="type-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repudiandae sequi ullam ab sit dolorum quos quae voluptas, quibusdam dolores ratione rem doloribus? Nisi animi quaerat excepturi, id soluta tempora dolorem consequatur delectus doloremque ut incidunt modi beatae nam aut.</p>
         </div><!-- .type-text -->
+        <div id="social-buttons">
+            <a href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br class="md">
+            <a href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br class="md">
+            <a href="https://instagram.com" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br class="md">
+        </div><!-- #social-buttons -->
     </section>
 
     <!-- #hero -->

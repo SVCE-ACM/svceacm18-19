@@ -86,3 +86,15 @@
     position: absolute;
     left: 6vw;
 }
+
+@media (max-width: 768px) {
+    #social-buttons {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: 0;
+    }
+    .md {
+        display: none;
+    }
+}
