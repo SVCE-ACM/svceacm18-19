@@ -11,7 +11,7 @@ body {
 
 /* for the whole "contact-container" class in html section */
 .contact-container {
-  max-width: 1175px;    /* for responsive width */
+  max-width: 1120px;    /* for responsive width */
   margin-left: auto;    /* auto adaptiveness margin for left side*/
   margin-right: auto;   /* auto adaptiveness margin for right side*/
   padding: 1em;
@@ -30,7 +30,7 @@ ul {
 }
 
 /* wrapper section */
-.wrapper { 
+.wrapper {
   box-shadow: 0 0 20px 0 rgba(72 , 94 , 116 , 0.7);
 }
 
@@ -82,7 +82,7 @@ ul {
 .contact_form form button {
   background: #c9e6ff;
   border: 0;
-  padding: 1em;
+  padding: 0.8em;
   font-weight: bolder;
   font-size: 115%;
 }
