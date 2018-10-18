@@ -28,12 +28,17 @@
 
 
     #about {
-        background-color: #040303;
+        background-color: #0182ac;
         color: white;
         padding: 80px 30px;
 
     }
-
+    
+    #team {
+        background-color: #0182ac;
+        color: white;
+        padding: 80px 30px;        
+    }
     .type-text {
         width: 70vw;
         padding: 15px;
@@ -42,6 +47,19 @@
         font-size: 1.3rem;
     }
 
+    .tab {
+        width: 100%;
+    }
+    
+    .card {
+        display: none !important;
+        color: black;
+        max-width: 300px;
+    }
+
+    .card.active {
+        display: block !important;
+    }
     </style>
 	<script type="text/javascript">
             /*var imgSrc=["images/under_dev/under_dev.jpg"];
@@ -124,7 +142,73 @@
     </section> -->
     <!-- #events -->
     <section id="team">
-
+        <h1 class="text-center">Our Teams</h1><br>
+        <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+        <div class="tab container h-100">
+            <nav class="tabs container-fluid v-center">
+                <div class="selector"></div>
+                <div class="row v-center">
+                    <div class="col-xs-2 offset-xs-1">
+                        <a data-toggle="tab" href="#office-bearers">Office Bearers</a>
+                    </div><!-- .col-xs-2 -->
+                    <div class="col-xs-2">
+                        <a data-toggle="tab" href="#acads">Academics</a>
+                    </div><!-- .col-xs-2 -->
+                    <div class="col-xs-2">
+                        <a data-toggle="tab" href="#events">Events</a>
+                    </div><!-- .col-xs-2 -->
+                    <div class="col-xs-2">
+                        <a data-toggle="tab" href="#media">Media</a>
+                    </div><!-- .col-xs-2 -->
+                     <div class="col-xs-2">
+                        <a data-toggle="tab" href="#web">Web</a>
+                    </div><!-- .col-xs-2 -->
+                </div><!-- .row -->
+            </nav>
+        </div>
+        <div class="container v-center">
+            
+            <div id="office-bearers" class="card animated fadeIn">
+                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Office bearers</h5>
+                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                    <a href="#" class="btn btn-primary ml-auto">Go somewhere</a>
+                </div>
+            </div><!-- col-sm-3 -->
+            <div id="acads" class="card animated fadeIn">
+                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Academics</h5>
+                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                    <a href="#" class="btn btn-primary ml-auto">fj</a>
+                </div>
+            </div><!-- .col-sm-3 -->
+            <div id="events" class="card animated fadeIn">
+                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Events</h5>
+                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                    <a href="#" class="btn btn-primary ml-auto">Go somewhere</a>
+                </div>
+            </div><!-- .col-sm-3 -->
+            <div id="media" class="card animated fadeIn">
+                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Media</h5>
+                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                    <a href="#" class="btn btn-primary ml-auto">Go somewhere</a>
+                </div>
+            </div><!-- .col-sm-3 -->
+            <div id="web" class="card animated fadeIn">
+                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Web</h5>
+                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                    <a href="#" class="btn btn-primary ml-auto">Go somewhere</a>
+                </div>
+            </div><!-- .col-sm-3 -->
+        </div><!-- .container -->
     </section>
     <!-- #team -->
     <!-- <section id="resources">
@@ -205,6 +289,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/tab.css">
 
   <!-- fontawesome and animate.css cdn link -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -215,6 +300,15 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/jquery.easing.js"></script>
+    <script>
+        $(".tabs").on("click","a",function(){
+          $('.tabs a').removeClass("active");
+          $(this).addClass('active');
+          var tab_id = this.href.substring(this.href.indexOf("#")+1);
+          $('.card').removeClass('active');
+          $('#'+tab_id).addClass('active');
+        });
+    </script>
 </body>
 
 </html>
