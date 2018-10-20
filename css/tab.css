@@ -64,7 +64,7 @@ Style the tab content
 }
 
 .tabs a.active{
-  background-color:#65016b;
+  background-color:#0182AC;
   border-radius: 50px;
   transition-duration:0.6s;
    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
@@ -88,4 +88,10 @@ Style the tab content
   
   background: #65016b;
   
+}
+
+@media (max-width: 768px) {
+  .tabs a.active {
+    border-radius: 100px;
+  }
 }

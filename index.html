@@ -65,7 +65,8 @@
     }
 
     .tab {
-        width: 100%;
+        width: 50%;
+        min-width: 600px;
     }
 
     .card {
@@ -123,6 +124,11 @@
         #hero {
             height: 100%;
             padding: 60px;
+        }
+
+        .tab {
+            width: 100%;
+            min-width: 200px;
         }
     }
     </style>
@@ -208,129 +214,132 @@
     </section> -->
     <!-- #events -->
     <section id="team">
-        <h1 class="text-center">Our Teams</h1><br>
-        <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
-        <div class="tab container h-100">
-            <nav class="tabs container-fluid v-center">
-                <div class="selector"></div>
-                <div class="row v-center">
-                    <div class="col-xs-2 offset-xs-1">
-                        <a data-toggle="tab" href="#office-bearers">Office Bearers</a>
-                    </div><!-- .col-xs-2 -->
-                    <div class="col-xs-2">
-                        <a data-toggle="tab" href="#acads">Academics</a>
-                    </div><!-- .col-xs-2 -->
-                    <div class="col-xs-2">
-                        <a data-toggle="tab" href="#events">Events</a>
-                    </div><!-- .col-xs-2 -->
-                    <div class="col-xs-2">
-                        <a data-toggle="tab" href="#media">Media</a>
-                    </div><!-- .col-xs-2 -->
-                     <div class="col-xs-2">
-                        <a data-toggle="tab" href="#web">Web</a>
-                    </div><!-- .col-xs-2 -->
-                </div><!-- .row -->
-            </nav>
-        </div>
-        <div class="container v-center">
-
-            <div id="office-bearers" class="card animated fadeIn">
-                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Office bearers</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                    <a href="#" class="btn btn-card v-center">View Team</a>
-                </div>
-            </div><!-- col-sm-3 -->
-            <div id="acads" class="card animated fadeIn">
-                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Academics</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                    <a href="#" class="btn btn-card v-center">View Team</a>
-                </div>
-            </div><!-- .col-sm-3 -->
-            <div id="events" class="card animated fadeIn">
-                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Events</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                    <a href="#" class="btn btn-card v-center">View Team</a>
-                </div>
-            </div><!-- .col-sm-3 -->
-            <div id="media" class="card animated fadeIn">
-                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Media</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                    <a href="#" class="btn btn-card v-center">View Team</a>
-                </div>
-            </div><!-- .col-sm-3 -->
-            <div id="web" class="card animated fadeIn">
-                <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Web</h5>
-                    <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                    <a href="#" class="btn btn-card v-center">View Team</a>
-                </div>
-            </div><!-- .col-sm-3 -->
+        <div class="container">
+            <h1 class="text-center">Our Teams</h1><br>
+            <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+            <div class="tab container h-100">
+                <nav class="tabs container-fluid v-center">
+                    <div class="selector"></div>
+                    <div class="row v-center">
+                        <div class="col-xs-2 offset-xs-1">
+                            <a data-toggle="tab" href="#office-bearers">Office Bearers</a>
+                        </div><!-- .col-xs-2 -->
+                        <div class="col-xs-2">
+                            <a data-toggle="tab" href="#acads">Academics</a>
+                        </div><!-- .col-xs-2 -->
+                        <div class="col-xs-2">
+                            <a data-toggle="tab" href="#events_team">Events</a>
+                        </div><!-- .col-xs-2 -->
+                        <div class="col-xs-2">
+                            <a data-toggle="tab" href="#media">Media</a>
+                        </div><!-- .col-xs-2 -->
+                         <div class="col-xs-2">
+                            <a data-toggle="tab" href="#web">Web</a>
+                        </div><!-- .col-xs-2 -->
+                    </div><!-- .row -->
+                </nav>
+            </div>
+            <div class="container v-center">
+            
+                <div id="office-bearers" class="card animated fadeIn">
+                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Office bearers</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                        <a href="#" class="btn btn-card v-center">View Team</a>
+                    </div>
+                </div><!-- col-sm-3 -->
+                <div id="acads" class="card animated fadeIn">
+                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Academics</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                        <a href="#" class="btn btn-card v-center">View Team</a>
+                    </div>
+                </div><!-- .col-sm-3 -->
+                <div id="events_team" class="card animated fadeIn">
+                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Events</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                        <a href="#" class="btn btn-card v-center">View Team</a>
+                    </div>
+                </div><!-- .col-sm-3 -->
+                <div id="media" class="card animated fadeIn">
+                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Media</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                        <a href="#" class="btn btn-card v-center">View Team</a>
+                    </div>
+                </div><!-- .col-sm-3 -->
+                <div id="web" class="card animated fadeIn">
+                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Web</h5>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
+                        <a href="#" class="btn btn-card v-center">View Team</a>
+                    </div>
+                </div><!-- .col-sm-3 -->
+            </div><!-- .container -->
         </div><!-- .container -->
     </section>
 
 	<section id="gallery">
-        <h1 class="text-center">Gallery</h1><br>
-        <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
-
-	 <!-- Swiper -->
-  <div class="swiper-container">
-	  <div class="swiper-wrapper">
-		  <div class="swiper-slide">
-		  	<div class="imgBx">
-			  <img src="images/members/Akash Saravanan.jpg" class=" img-fluid img">
-			  </div>
-			  <div class="details">
-			  <h3>Chairman</h3>
-			  </div>
-			   </div>
-		  <div class="swiper-slide">
-			  <div class="imgBx">
-			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-			  </div>
-			  <div class="details">
-			  <h3>Chairman</h3>
-			  </div> </div>
-
-		   <div class="swiper-slide">
-			  <div class="imgBx">
-			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-			  </div>
-			  <div class="details">
-			  <h3>Chairman</h3>
-			  </div> </div>
-
-		   <div class="swiper-slide">
-			  <div class="imgBx">
-			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-			  </div>
-			  <div class="details">
-			  <h3>Chairman</h3>
-			  </div> </div>
-
-		   <div class="swiper-slide">
-			  <div class="imgBx">
-			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-			  </div>
-			  <div class="details">
-			  <h3>Chairman</h3>
-			  </div> </div>
-
-
-
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-
+        <div class="container">
+            <h1 class="text-center">Gallery</h1><br>
+            <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+            
+                 <!-- Swiper -->
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="imgBx">
+                          <img src="images/members/Akash Saravanan.jpg" class=" img-fluid img">
+                          </div>
+                          <div class="details">
+                          <h3>Chairman</h3>
+                          </div>
+                           </div>
+                      <div class="swiper-slide">
+                          <div class="imgBx">
+                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+                          </div>
+                          <div class="details">
+                          <h3>Chairman</h3>
+                          </div> </div>
+            
+                       <div class="swiper-slide">
+                          <div class="imgBx">
+                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+                          </div>
+                          <div class="details">
+                          <h3>Chairman</h3>
+                          </div> </div>
+            
+                       <div class="swiper-slide">
+                          <div class="imgBx">
+                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+                          </div>
+                          <div class="details">
+                          <h3>Chairman</h3>
+                          </div> </div>
+            
+                       <div class="swiper-slide">
+                          <div class="imgBx">
+                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+                          </div>
+                          <div class="details">
+                          <h3>Chairman</h3>
+                          </div> </div>
+            
+            
+            
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+        </div><!-- .container -->
 	</section>
     <!-- #team -->
     <!-- <section id="resources">
