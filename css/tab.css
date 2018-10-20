@@ -69,6 +69,7 @@ Style the tab content
   transition-duration:0.6s;
    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
    color: #fff;
+   font-weight: bold;
 }
 
 .tabs a i{
@@ -91,11 +92,12 @@ Style the tab content
 }
 
 #team_page .tabs {
-  background: #fff;
+  background: #83CEE2;
 }
 
 #team_page .tabs a.active {
-  background-color: #65016B;
+  background-color: #fff;
+  color: #000;
 }
 
 @media (max-width: 768px) {
