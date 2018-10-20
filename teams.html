@@ -437,6 +437,17 @@
     <script src="js/jquery.easing.js"></script>
     <script src="js/swiper.min.js"></script>
     <script>
+    $(document).ready(function() {
+        var url = String(window.location.href);
+        var tab_id = url.substring(url.indexOf("#") + 1);
+        console.log(tab_id);
+        if (tab_id.length > 0 && tab_id.length < 15) {
+            $('.tabs a').removeClass('active');
+            $('a[href="#'+tab_id+'"]').addClass('active');
+            $('.teams').removeClass('active');
+            $('#'+tab_id).addClass('active');    
+        }     
+    });
     $(".tabs").on("click", "a", function() {
         $('.tabs a').removeClass("active");
         $(this).addClass('active');
@@ -444,5 +455,6 @@
         $('.teams').removeClass('active');
         $('#' + tab_id).addClass('active');
     });
+    console.log(window.location.href);
     </script>
 </body>
