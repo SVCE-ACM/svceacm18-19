@@ -9,6 +9,7 @@
 
 body {
     font-size: 115%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 /* Put this class to the parent class to vertically and horizontally align all its children*/
@@ -25,11 +26,4 @@ body {
 .image {
 	width: 90%;
 	padding: 20px;
-}
-
-
-@media max-width: 768px {
-	.image {
-		width: 75%;
-	}	
 }

@@ -90,6 +90,14 @@ Style the tab content
   
 }
 
+#team_page .tabs {
+  background: #fff;
+}
+
+#team_page .tabs a.active {
+  background-color: #65016B;
+}
+
 @media (max-width: 768px) {
   .tabs a.active {
     border-radius: 100px;
