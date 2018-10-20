@@ -46,8 +46,14 @@
     }
     
     #team {
-        background-color: #0182ac;
-        color: white;
+        background-color:#FDFCFC;
+        color: black;
+        padding: 80px 30px;        
+    }
+		
+	#gallery {
+        background-color:#0182ac;
+        color: black;
         padding: 80px 30px;        
     }
     .type-text {
@@ -86,9 +92,32 @@
       background-position: center;
       background-size: cover;
       width: 300px;
-      height: 300px;
+      height: 380px;
 	  background:transparent;
     }
+		
+		.swiper-slide .imgBx{
+			overflow: hidden;
+			width: 100%;
+			height:300px;	
+		}
+		
+		.swiper-slide .imgBx .img{
+			width: 100%;
+		}
+		
+		.swiper-slide .details{
+			box-sizing: border-box;
+			padding:0;
+			
+		}
+		
+		.swiper-slide .details h3{
+			font-size: 20px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
 
     @media (max-width: 768px) {
         #hero {
@@ -248,20 +277,61 @@
         </div><!-- .container -->
     </section>
 	
+	<section id="gallery">
+        <h1 class="text-center">Gallery</h1><br>
+        <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+	
 	 <!-- Swiper -->
   <div class="swiper-container">
 	  <div class="swiper-wrapper">
 		  <div class="swiper-slide">
 		  	<div class="imgBx">
-			  <img src="images/under_dev/under_dev.jpg" class="rounded-circle" width=100%>
+			  <img src="images/members/Akash Saravanan.jpg" class=" img-fluid img">
 			  </div>
-		  </div>
+			  <div class="details">
+			  <h3>Chairman</h3>
+			  </div>
+			   </div>
+		  <div class="swiper-slide">
+			  <div class="imgBx">
+			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+			  </div>
+			  <div class="details">
+			  <h3>Chairman</h3>
+			  </div> </div>
+		  
+		   <div class="swiper-slide">
+			  <div class="imgBx">
+			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+			  </div>
+			  <div class="details">
+			  <h3>Chairman</h3>
+			  </div> </div>
+		  
+		   <div class="swiper-slide">
+			  <div class="imgBx">
+			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+			  </div>
+			  <div class="details">
+			  <h3>Chairman</h3>
+			  </div> </div>
+		  
+		   <div class="swiper-slide">
+			  <div class="imgBx">
+			  <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
+			  </div>
+			  <div class="details">
+			  <h3>Chairman</h3>
+			  </div> </div>
+		 
 		  
 	  	  
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
   </div>
+		
+	</section>
     <!-- #team -->
     <!-- <section id="resources">
     </section> -->
