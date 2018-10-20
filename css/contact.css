@@ -140,8 +140,9 @@ ul {
     padding: 0.5em;
   }
 
-  .acm-info {
-    padding: 2px;
+  .acm-info h2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
 }
