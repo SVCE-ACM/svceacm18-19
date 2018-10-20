@@ -40,7 +40,8 @@ ul {
 
 /* acm info section in the contact form */
 .acm-info {
-  background-color: #92bdf1;
+  background-color: rgb(9,53,122);
+  color: #fff;
 }
 
 .acm-info h2 , .acm-info ul {
@@ -76,11 +77,11 @@ ul {
 .contact_form form button , .contact_form form input , .contact_form form textarea {
   width: 100%;
   padding: 0.4em;
-  border: 1.4px solid #c9e6ff;
+  border: 1.4px solid rgb(131, 206, 226);
 }
 
 .contact_form form button {
-  background: #c9e6ff;
+  background: rgb(131, 206, 226);
   border: 0;
   padding: 0.8em;
   font-weight: bolder;
@@ -89,10 +90,10 @@ ul {
 
 /* effects of button on hover and after clicking the button */
 .contact_form form button:hover , .contact_form form button:focus {
-  background: #92bee7;
+  background: rgb(1, 130, 172);
   color: #ffffff;
   outline: 0;
-  transition: background-color 0.8s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 /* responsiveness for desktop */
