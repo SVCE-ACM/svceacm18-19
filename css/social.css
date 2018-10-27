@@ -87,7 +87,7 @@
     left: 6vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #social-buttons {
         display: flex;
         position: relative;
