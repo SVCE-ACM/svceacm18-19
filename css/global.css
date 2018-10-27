@@ -30,3 +30,18 @@ h1 {
 	width: 90%;
 	padding: 20px;
 }
+
+.footer {
+    background-color: rgb(1,130,172);
+}
+
+.footer p {
+    margin-bottom: 0;        
+}
+
+.footer a {
+    color: white;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
