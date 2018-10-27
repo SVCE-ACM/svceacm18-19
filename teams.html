@@ -71,6 +71,9 @@
             margin-top: 0;
         }
 
+        .page-title {
+            font-size: 7vw;
+        }
     
 
         @media (max-width: 768px) {
@@ -98,7 +101,7 @@
                         <a class="nav-link js-scroll-trigger" href="#events">Events</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link js-scroll-trigger active" href="#team_page">Team</a>
+                        <a class="nav-link js-scroll-trigger active">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
@@ -111,16 +114,16 @@
         </div>
     </nav>
     <!-- #nav -->
-    <section id="team">
+    <section id="team" class="animated fadeIn">
         <div class="container">
-            <h1 class="text-center">Our Teams</h1><br>
+            <h1 class="text-center page-title">Our Teams</h1><br>
             <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             <div class="tab container h-100">
                 <nav class="tabs container-fluid v-center">
                     <div class="selector"></div>
                     <div class="row v-center">
                         <div class="col-xs-2 offset-xs-1">
-                            <a data-toggle="tab" href="#office-bearers" class="active">Office Bearers</a>
+                            <a data-toggle="tab" href="#office-bearers">Office Bearers</a>
                         </div><!-- .col-xs-2 -->
                         <div class="col-xs-2">
                             <a data-toggle="tab" href="#acads">Academics</a>
@@ -441,12 +444,17 @@
         var url = String(window.location.href);
         var tab_id = url.substring(url.indexOf("#") + 1);
         console.log(tab_id);
-        if (tab_id.length > 0 && tab_id.length < 15) {
+        tabs = ["office-bearers", "acads", "events", "media", "web"];
+        console.log($.inArray("acads", tabs));
+        if (tab_id.length > 0 && tab_id.length < 15 && $.inArray(tab_id, tabs) !== -1) {
             $('.tabs a').removeClass('active');
             $('a[href="#'+tab_id+'"]').addClass('active');
             $('.teams').removeClass('active');
             $('#'+tab_id).addClass('active');    
-        }     
+        } else {
+            $('a[href="#office-bearers"]').addClass('active');
+            $('#office-bearers').addClass('active');
+        }
     });
     $(".tabs").on("click", "a", function() {
         $('.tabs a').removeClass("active");
