@@ -1,34 +1,42 @@
+<!-- Hi there. Welcome in here!!. Your are viewing the source code of our Student Chapter Website -->
+
+<!-- You are here, viewing this, is no accident. Hope you would like it  :) -->
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>
-        SVCE ACM | Student chapter
+        SVCE | ACM Student chapter
     </title>
+
+    <!-- Initial setup to view the webpage on the browser (Responsiveness) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Details of our site along with customised link preview & image -->
     <meta name="title" content="ACM Student Chapter @SVCE">
     <meta name="description" content="ACM Student Chapter of SVCE">
     <meta name="keywords" content="svce,event,tech,acm,student chapter">
     <meta property="og:title" content="ACM Student Chapter @SVCE">
     <meta property="og:description" content="ACM Student Chapter of SVCE">
     <meta property="og:image" content="images/logos/svce_acm.png">
-	  <meta property="twitter:title" content="ACM Student Chapter @SVCE">
+	<meta property="twitter:title" content="ACM Student Chapter @SVCE">
     <meta property="twitter:description" content="ACM Student Chapter of SVCE">
     <meta property="twitter:image" content="images/logos/svce_acm.png">
 
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Importing the styling elements to make our site look admirable :)  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/tab.css">
 
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	  <link rel="stylesheet" href="css/swiper.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
     <style>
     #hero {
         display: flex;
@@ -134,6 +142,14 @@
         }
     }
     </style>
+
+
+    <!-- Our own Internal design material. Internal CSS. Made by us. -->
+    <style type="text/css">
+    	
+    </style>
+
+    <!-- Our #hashTag caption using our own TypeWriter effect --> 
 	<script type="text/javascript">
             /*var imgSrc=["images/under_dev/under_dev.jpg"];
     function lazyLoad() {
@@ -141,24 +157,35 @@
             document.getElementById('lzld').setAttribute("src",imgSrc[i]);
 
         }*/
+
+
+        // Just trying LazyLoading of images
         window.onload=function () {document.getElementById('lzld').setAttribute("src","images/under_dev/under_dev.jpg");}
     </script>
 </head>
 
+
+<!-- Let's now dive into the content -->
 <body>
-    <!-- <center>
+    <!-- First commit
+    	<center>
             This is <b>SVCE ACM Student Chapter</b> website.
             <br><br><br>
             <br><br><br>
             <h1>Under development!!!!!!!!!!!!!!!!!!!</h1>
             <img src="https://raw.githubusercontent.com/SVCE-ACM/svceacm18-19/master/images/under_dev/under_dev.jpg" alt="Under development" width="500" height="500">
         </center> -->
+    
+
+    <!-- Navigation Bar at the top-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
+
+            <!-- Navigation bar -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
@@ -189,7 +216,10 @@
         <img src="images/logos/svce_acm.png" alt="SVCE ACM Student Chapter" class="logo">
         <div class="type-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repudiandae sequi ullam ab sit dolorum quos quae voluptas, quibusdam dolores ratione rem doloribus? Nisi animi quaerat excepturi, id soluta tempora dolorem consequatur delectus doloremque ut incidunt modi beatae nam aut.</p>
-        </div><!-- .type-text -->
+        </div>
+
+        <!-- .type-text -->
+        <!-- Our Social Media Accounts  -->
         <div id="social-buttons">
             <a target="_blank" href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br class="md">
             <a target="_blank" href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br class="md">
@@ -198,6 +228,7 @@
     </section>
 
     <!-- #hero -->
+    <!-- Well, this section is fully "About us". We tell the world who we are!!. -->
     <section id="about">
         <div class="container v-center">
             <div class="row">
@@ -212,9 +243,14 @@
         </div><!-- .container -->
     </section>
     <!-- #about -->
+
+
     <!-- <section id="events">
     </section> -->
     <!-- #events -->
+
+
+    <!-- Make way for the Champions!!!!. It's us. Our team. -->
     <section id="team">
         <div class="container">
             <h1 class="text-center">Our Teams</h1><br>
@@ -223,19 +259,28 @@
                 <nav class="tabs container-fluid v-center">
                     <div class="selector"></div>
                     <div class="row v-center">
+                        <!-- The core team. -->
                         <div class="col-xs-2 offset-xs-1">
                             <a data-toggle="tab" href="#office-bearers" class="active">Office Bearers</a>
                         </div><!-- .col-xs-2 -->
+
+                        <!-- The future Alan Turings, the Academics team. The Technophiles. -->
                         <div class="col-xs-2">
                             <a data-toggle="tab" href="#acads">Academics</a>
                         </div><!-- .col-xs-2 -->
+
+                        <!--  -->
                         <div class="col-xs-2">
                             <a data-toggle="tab" href="#events_team">Events</a>
                         </div><!-- .col-xs-2 -->
+
+                        <!--  -->
                         <div class="col-xs-2">
                             <a data-toggle="tab" href="#media">Media</a>
                         </div><!-- .col-xs-2 -->
-                         <div class="col-xs-2">
+
+                        <!--  -->
+                        <div class="col-xs-2">
                             <a data-toggle="tab" href="#web">Web</a>
                         </div><!-- .col-xs-2 -->
                     </div><!-- .row -->
@@ -287,6 +332,8 @@
         </div><!-- .container -->
     </section>
 
+
+    <!-- Actions speak louder than words. Our accomplishments & achievements talk for us. -->
 	<section id="gallery">
         <div class="container">
             <h1 class="text-center">Gallery</h1><br>
@@ -344,17 +391,29 @@
         </div><!-- .container -->
 	</section>
     <!-- #team -->
+
+
     <!-- <section id="resources">
     </section> -->
     <!-- #resources -->
+
+
    <!--  <section id="contact">
     </section> -->
     <!-- #contact -->
+    
+
     <!-- <div class="footer">
 
     </div> -->
     <!-- .footer -->
+    
+
     <!-- Preserve the order in which the following is linked -->
+
+
+    <!-- If you want to reach us, scroll down & use this form. We will get back to you within a day. -->
+    
 
         <!-- ============= contact section starts ================== -->
         <div class="contact-container" id="contact">
@@ -420,7 +479,7 @@
 
   <!-- fontawesome and animate.css cdn link -->
 
-
+  <!-- Scripts to make smooth & attractive transtions. -->
 
 
     <script src="js/jquery.js"></script>
@@ -457,3 +516,10 @@
 </body>
 
 </html>
+
+
+<!-- Thank you Bootstrap, W3Schools, Google and Cloudflare for helping us to design & build our website using your opensource tools. -->
+
+<!-- That's the end, but not the end to our work. -->
+
+<!-- Hope you loved it!!!!  :)  -->
