@@ -1,4 +1,4 @@
-/* COLOR CODES: 
+/* COLOR CODES:
 	ACM BLUE: #0182AC;
 	ACM LIGHT BLUE: #83CEE2;
 	ACM PURPLE: #65016B;
@@ -16,7 +16,7 @@ h1 {
 	font-weight: bold;
 }
 /* Put this class to the parent class to vertically and horizontally align all its children*/
-.v-center {  
+.v-center {
     display: flex;
     justify-content: center;
     align-items: center;
