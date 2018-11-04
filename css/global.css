@@ -4,6 +4,7 @@
 	ACM PURPLE: #65016B;
 
 	IMPORTANT: ADD ANY MORE COLOR CODES USED HERE
+
 */
 
 
@@ -44,4 +45,8 @@ h1 {
 }
 .footer a:hover {
     text-decoration: underline;
+}
+
+.page-title {
+    font-size: 7vw;
 }
