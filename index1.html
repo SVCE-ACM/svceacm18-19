@@ -1,0 +1,194 @@
+<!-- Hi there. Welcome in here!!. Your are viewing the source code of our Student Chapter Website -->
+
+<!-- You are here, viewing this, is no accident. Hope you would like it  :) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        SVCE | ACM Student chapter
+    </title>
+
+    <!-- Initial setup to view the webpage on the browser (Responsiveness) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Details of our site along with customised link preview & image -->
+    <meta name="title" content="ACM Student Chapter @SVCE">
+    <meta name="description" content="ACM Student Chapter of SVCE">
+    <meta name="keywords" content="svce,event,tech,acm,student chapter">
+    <meta property="og:title" content="ACM Student Chapter @SVCE">
+    <meta property="og:description" content="ACM Student Chapter of SVCE">
+    <meta property="og:image" content="images/logos/svce_acm.png">
+	  <meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:description" content="ACM Student Chapter of SVCE">
+    <meta property="twitter:image" content="images/logos/svce_acm.png">
+
+    <!-- Importing the styling elements to make our site look admirable :)  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/events.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	  <link rel="stylesheet" href="css/swiper.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+    #hero {
+        display: flex;
+        background-color: #FDFCFC;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 150px 60px;
+    }
+
+
+    #about {
+        background-color: #0182ac;
+        color: white;
+        padding: 80px 30px;
+
+    }
+
+    h1 {
+        font-weight: bold; 
+        font-size: calc(36px + 2.8vw);
+    }
+
+    
+
+    @media (max-width: 1024px) {
+        #hero {
+            height: 100%;
+            padding: 60px;
+        }
+    }
+    </style>
+
+
+    <!-- Our #hashTag caption using our own TypeWriter effect -->
+	<script type="text/javascript">
+            /*var imgSrc=["images/under_dev/under_dev.jpg"];
+    function lazyLoad() {
+        for(int i=0;i<imgSrc.length;i++)
+            document.getElementById('lzld').setAttribute("src",imgSrc[i]);
+
+        }*/
+
+
+        // Just trying LazyLoading of images
+        window.onload=function () {document.getElementById('lzld').setAttribute("src","images/under_dev/under_dev.jpg");}
+    </script>
+</head>
+
+
+<!-- Let's now dive into the content -->
+<body>
+    <!-- First commit
+    	<center>
+            This is <b>SVCE ACM Student Chapter</b> website.
+            <br><br><br>
+            <br><br><br>
+            <h1>Under development!!!!!!!!!!!!!!!!!!!</h1>
+            <img src="https://raw.githubusercontent.com/SVCE-ACM/svceacm18-19/master/images/under_dev/under_dev.jpg" alt="Under development" width="500" height="500">
+        </center> -->
+
+
+    <!-- Navigation Bar at the top-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" data-toggle="popover" data-placement="top" data-content="Check out our latest event" data-offset="100000">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+
+            <!-- Navigation bar -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #nav -->
+    <div class="popper">
+        
+    </div><!-- .popper -->
+    <section id="hero">
+
+        <img src="images/logos/svce_acm.png" alt="SVCE ACM Student Chapter" class="logo"><br>
+
+        <!-- Our Social Media Accounts  -->
+        <div id="social-buttons">
+            <a target="_blank" href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br class="md">
+            <a target="_blank" href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br class="md">
+            <a target="_blank" href="https://instagram.com" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br class="md">
+        </div><!-- #social-buttons -->
+    </section>
+
+    <!-- #hero -->
+    <!-- Well, this section is fully "About us". We tell the world who we are!!. -->
+    <section id="about">
+        <div class="container v-center" style="flex-direction: column;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">About us</h1>
+                </div><!-- .col-lg-12 -->
+            </div><!-- .row -->
+            <div class="row v-center">
+                <div class="section-img col-lg-6 v-center">
+                    <img alt="lazyLoad img" id="lzld" class="image">
+                </div><!-- .section-img -->
+                <div class="text  col-lg-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
+                </div><!-- .text -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </section>
+    <!-- #about -->
+
+    <div class="footer">
+        <a href="https://github.com/SVCE-ACM/svceacm18-19"><p class="text-center">View source</p></a>
+    </div><!-- .footer -->
+
+
+
+  <!-- fontawesome and animate.css cdn link -->
+
+  <!-- Scripts to make smooth & attractive transtions. -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/jquery.easing.js"></script>
+</body>
+
+</html>
+
+
+<!-- Thank you Bootstrap, W3Schools, Google and Cloudflare for helping us to design & build our website using your opensource tools. -->
+
+<!-- That's the end, but not the end to our work. -->
+
+<!-- Hope you loved it!!!!  :)  -->
