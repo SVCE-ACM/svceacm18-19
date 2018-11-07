@@ -1,0 +1,219 @@
+<!-- Hi there. Welcome in here!!. Your are viewing the source code of our Student Chapter Website -->
+
+<!-- You are here, viewing this, is no accident. Hope you would like it  :) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        SVCE | ACM Student chapter
+    </title>
+
+    <!-- Initial setup to view the webpage on the browser (Responsiveness) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Details of our site along with customised link preview & image -->
+    <meta name="title" content="ACM Student Chapter @SVCE">
+    <meta name="description" content="ACM Student Chapter of SVCE">
+    <meta name="keywords" content="svce,event,tech,acm,student chapter">
+    <meta property="og:title" content="ACM Student Chapter @SVCE">
+    <meta property="og:description" content="ACM Student Chapter of SVCE">
+    <meta property="og:image" content="../images/logos/svce_acm.png">
+	<meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:description" content="ACM Student Chapter of SVCE">
+    <meta property="twitter:image" content="../images/logos/svce_acm.png">
+
+    <!-- Importing the styling elements to make our site look admirable :)  -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/social.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+    #hero {
+        display: flex;
+        background-color: #FDFCFC;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 150px 60px;
+    }
+
+
+    #about {
+        background-color: #0182ac;
+        color: white;
+        padding: 80px 30px;
+
+    }
+
+    h1 {
+        font-weight: bold; 
+        font-size: calc(36px + 2.8vw);
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        width: 100%
+    }
+    .footer a {
+        color: #0182AC;
+        font-weight: bold;
+    }
+
+    
+
+    @media (max-width: 1024px) {
+        #hero {
+            padding: 60px;
+        }
+    }
+    @media(max-width: 768px) {
+        #hero {
+            padding: 20px;
+        }
+    }
+
+    @media (max-height: 670px) {
+        #hero {
+            padding: 75px;
+        }
+    }
+    </style>
+</head>
+
+
+<!-- Let's now dive into the content -->
+<body>
+    <!-- First commit
+    	<center>
+            This is <b>SVCE ACM Student Chapter</b> website.
+            <br><br><br>
+            <br><br><br>
+            <h1>Under development!!!!!!!!!!!!!!!!!!!</h1>
+            <img src="https://raw.githubusercontent.com/SVCE-ACM/svceacm18-19/master/images/under_dev/under_dev.jpg" alt="Under development" width="500" height="500">
+        </center> -->
+
+
+    <!-- Navigation Bar at the top-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" data-toggle="popover" data-placement="top" data-content="Check out our latest event" data-offset="100000">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+
+            <!-- Navigation bar -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #nav -->
+    <div class="popper">
+        
+    </div><!-- .popper -->
+    <section id="hero">
+
+        <img src="../images/logos/svce_acm.png" alt="SVCE ACM Student Chapter" class="logo"><br>
+        <div class="type-text">
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt necessitatibus, repellat illum ipsam, tenetur amet quae ducimus nisi maxime veniam.</p>
+        </div>
+
+        <!-- Our Social Media Accounts  -->
+        <div id="social-buttons">
+            <a target="_blank" href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br class="md">
+            <a target="_blank" href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br class="md">
+            <a target="_blank" href="https://instagram.com" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br class="md">
+        </div><!-- #social-buttons -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 h-100 text-center">
+            <p class=" small ">&copy; ACM 2018. All Rights Reserved.</p>
+            <p class=" small"><a href="https://github.com/SVCE-ACM/svceacm18-19">View source on Github</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- fontawesome and animate.css cdn link -->
+
+  <!-- Scripts to make smooth & attractive transtions. -->
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/jquery.easing.js"></script>
+    <script>
+        $(document).ready(function() {
+            var init_ht = $('#hero').height() + $('footer').height();
+            console.log("First", $(window).height(), $('#hero').height() + $('footer').height());
+            if ($(window).height() > init_ht) {
+                
+                $('#hero').css({
+                    'height': '95vh'
+                });
+            } else {
+                $('#hero').css({
+                    'height': '100%'
+                });
+                $('.footer').css({
+                    'position': 'relative'
+                });
+            }
+            $(window).resize(function(){
+                console.log("Resized", $(window).height(), $('#hero').height());
+                if ($(window).height() > init_ht) {
+                    $('#hero').css({
+                        'height': '95vh'
+                    });
+                } else {
+                    $('#hero').css({
+                        'height': '100%'
+                    });
+                    $('.footer').css({
+                        'position': 'relative'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!-- Thank you Bootstrap, W3Schools, Google and Cloudflare for helping us to design & build our website using your opensource tools. -->
+
+<!-- That's the end, but not the end to our work. -->
+
+<!-- Hope you loved it!!!!  :)  -->
