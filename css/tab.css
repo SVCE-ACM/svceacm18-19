@@ -43,6 +43,7 @@ Style the tab content
   margin-top:50px;
   font-size:15px;
   padding:0px;
+	padding-right: 10px;
   list-style:none;
   background:#83cee2;
   box-shadow:0px 5px 20px rgba(0,0,0,0.1);
@@ -83,7 +84,7 @@ Style the tab content
   left:0px;
   top:0px;
   z-index:1;
-  border-radius:50px;
+  border-radius:50px ;
   transition-duration:0.6s;
    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
   
