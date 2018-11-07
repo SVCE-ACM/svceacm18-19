@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ACM-Events</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       @import url(https://fonts.googleapis.com/css?family=Montserrat);
+        body
+        {
+            margin-top: 60px;
+        }
+        
+        .wrapper {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .page-head {
+            position: fixed;
+            top: 0px;
+            margin-top: 60px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            padding: 50px;
+            color: black;
+        }
+
+        /*.page-head::before {
+            content: "";
+            position: absolute;
+            z-index: -10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: url('../images/under_dev/bg.png') ;
+            opacity: .1;            
+            background-size: 100%;
+        }*/
+        .page-head .v-center {
+            flex-direction: column;
+        }
+
+        #events {
+            border-top: 1px solid white;
+            position: relative;
+            z-index: 1000;
+            background: url('../images/under_dev/bg.png');
+            color: white;
+            padding: 50px;
+        }
+
+        h4 {
+            font-weight: bold;
+            color: rgb(9, 53, 122);
+        }
+        .card {
+            min-width: 200px;
+            max-width: 400px;
+            margin: 10px auto;
+            color: black;
+        }
+        .btn-card {
+            background-color: #65016b;
+            color: white;
+        }
+        
+        .card-img-top {
+            width: 100%;
+            height: 300px;
+        }
+
+        .footer {
+            border-top: 1px solid white;
+            background: url('../images/under_dev/bg.png');
+            padding: 5px;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body id="events-page">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active">Events</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav -->
+    <div class="wrapper">
+        <section class="page-head">
+                <div class="container v-center test">
+                    <h1 class="text-center page-title">Our Events</h1><br>
+                    <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+                </div>
+        </section><!-- .page-head -->
+        <div id="events" class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/disrupt.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Disrupt</h4>
+                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/web.jpeg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Webbed</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/code.png" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Hour Of Code</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+            
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">TechQwiz</h4>
+                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/tob.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Tech Taboo</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/blockchain.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Blockchain</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+            
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">TechQwiz</h4>
+                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/hack.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Inheritance Hack</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="../images/events/goc.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Game-Of-Codes</h4>
+                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                <a href="#" class="btn btn-card v-center">View Gallery</a>
+                            </div>
+                        </div><!-- .content -->
+                    </div><!-- .card -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                
+                <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+              </div>
+              <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-github fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div><!-- .wrapper -->
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.easing.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#events').css({
+                'margin-top': (($('.test').height() + 60 + 50) + 'px')
+            });
+            $(window).resize(function() {
+                $('#events').css({
+                    'margin-top': (($('.test').height() + 60 + 50) + 'px')
+                });
+            });
+        })
+    </script>
+
+</html>

@@ -47,6 +47,33 @@ h1 {
     text-decoration: underline;
 }
 
+
+
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.page-head {
+    position: fixed;
+    top: 0px;
+    background: url('../images/under_dev/bg.png');
+    margin-top: 60px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    padding: 50px;
+}
+
+.page-head .v-center {
+    flex-direction: column;
+}
+
 .page-title {
-    font-size: 7vw;
+    font-size: calc(3.5vw + 36px);
+}
+
+.page-description {
+    color: white;
 }
