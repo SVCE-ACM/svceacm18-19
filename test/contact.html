@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        SVCE | ACM Student chapter
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ACM Student Chapter @SVCE">
+    <meta name="description" content="ACM Student Chapter of SVCE">
+    <meta name="keywords" content="svce,event,tech,acm,student chapter">
+    <meta property="og:title" content="ACM Student Chapter @SVCE">
+    <meta property="og:description" content="ACM Student Chapter of SVCE">
+    <meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:description" content="ACM Student Chapter of SVCE">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/tab.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    /*---------------------------------------
+  Contact section              
+-----------------------------------------*/
+
+#contact-page .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#contact-sec {
+    border-top: 1px solid white;
+    position: relative;
+    z-index: 1000;
+    background: url('../images/under_dev/bg.png');
+    color: white;
+    padding: 50px;
+}
+#contact-sec .v-center {
+    flex-direction: column;
+}
+.form-control {
+  border: none;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  width: 80%;
+  max-width: 500px;
+  
+}
+
+.form-control:focus {
+  border-bottom-color: #999999;
+}
+
+ input {
+  height: 55px;
+}
+
+ button#submit {
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  color: #0182ac;
+  height: 50px;
+  width: 190px;
+  margin-top: 24px;
+}
+
+ button#submit:hover {
+  background: rgb(9, 53, 122);
+  color: #fff;
+}
+
+.fas {
+    color: white;
+}
+
+a.contact-link {
+    color: white;
+    text-decoration: underline;
+}
+
+a.contact-link:hover {
+    color: black;
+}
+
+.footer {
+    border-top: 1px solid white;
+    background: url('../images/under_dev/bg.png');
+    padding: 5px;
+    color: white;
+}
+  </style>
+
+<body id="contact-page">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #nav -->
+    <div class="wrapper">
+        <section class="page-head">
+            <div class="container v-center test">
+                <h1 class="text-center page-title">Contact Us</h1>
+                <h2 class="text-center">Let's Get In Touch!</h2><br>
+                <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+            </div>
+        </section><!-- .page-head -->
+        <section id="contact-sec">
+            <div class="container v-center">
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+                        <p><a class="contact-link" href="tel:+919962754468">(+91) 99627 54468</a></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+                        <p>
+                            <a class="contact-link" href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="container">
+                    <form action="" id="contact-form" class="v-center">
+                        <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                        <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
+                        <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+                    </form><!-- #contact-form -->
+                </div><!-- .row -->
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                
+                <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+              </div>
+              <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    <li class="list-inline-item mr-3">
+                    <a href="#">
+                      <i class="fab fa-github fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div><!-- .wrapper -->
+
+    <!-- ============= contact section ends ================== -->
+    <!-- Footer -->
+    
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../js/nav.js"></script> -->
+    <script src="../js/jquery.easing.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#contact-sec').css({
+                'margin-top': (($('.test').height() + 60 + 70) + 'px')
+            });
+            $(window).resize(function() {
+                $('#contact-sec').css({
+                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
