@@ -139,7 +139,6 @@
         // correctly initializing height to make content occupy full screen
         $(document).ready(function() {
             var init_ht = $('#hero').height() + $('footer').height();
-            console.log("First", $(window).height(), $('#hero').height() + $('footer').height());
             if ($(window).height() > init_ht) {
                 
                 $('#hero').css({
@@ -154,7 +153,6 @@
                 });
             }
             $(window).resize(function(){
-                console.log("Resized", $(window).height(), $('#hero').height());
                 if ($(window).height() > init_ht) {
                     $('#hero').css({
                         'height': '95vh'

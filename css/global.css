@@ -60,7 +60,7 @@ h1 {
 
 .page-head {
     position: fixed;
-    top: 0px;
+    /*top: 0px;*/
     background: url('../images/under_dev/bg.png');
     margin-top: 60px;
     height: 100%;

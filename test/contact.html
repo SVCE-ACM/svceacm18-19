@@ -83,16 +83,16 @@
 }
 
 .fas {
-    color: white;
+    color: black;
 }
 
 a.contact-link {
-    color: white;
+    color: black;
     text-decoration: underline;
 }
 
 a.contact-link:hover {
-    color: black;
+    color: white;
 }
 
 .footer {
@@ -137,7 +137,7 @@ a.contact-link:hover {
                 <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
-        <section id="contact-sec">
+        <section id="contact-sec" class="page-content">
             <div class="container v-center">
                 <div class="row">
                     <div class="col-sm-6 text-center">
@@ -209,16 +209,56 @@ a.contact-link:hover {
     <script src="../js/swiper.min.js"></script>
     
     <script>
-        $(document).ready(function() {
+        function parallaxHelper () {
             $('#contact-sec').css({
                 'margin-top': (($('.test').height() + 60 + 70) + 'px')
             });
-            $(window).resize(function() {
-                $('#contact-sec').css({
-                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+            
+            if ($('.test').height() + 110 > $(window).height()) {
+                $('.page-head').css({
+                    'position': 'relative',
+                    'height': 'auto'
                 });
+
+                $(window).scroll(function() {
+                   var headHeight = ($('.test').height() + 60 + 70),
+                       windowScroll = $(this).scrollTop() + $(this).height();
+
+                    console.log(headHeight, windowScroll);
+
+                   if (headHeight <= windowScroll){
+                       $('.page-head').css({
+                            'position': 'fixed',
+                            'bottom': '0'
+                        });
+                        console.log("Enter 1");
+                   } else {
+                        $('.page-head').css({
+                            'position': 'relative',
+                            'bottom': '',
+                        });
+                        console.log("Enter 2");
+                   }
+                });
+            } else {
+                $('.page-head').css({
+                    'position': '',
+                    'height': '',
+                    'bottom': ''
+                })
+            }
+        }
+        $(document).ready(function() {
+            parallaxHelper();            
+            $(window).resize(function() {
+                $('.page-head').css({
+                    'position': '',
+                    'height': ''
+                })
+                parallaxHelper();
             });
-        })
+
+        });
     </script>
 </body>
 
