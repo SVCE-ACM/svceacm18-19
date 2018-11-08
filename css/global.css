@@ -11,6 +11,7 @@
 body {
     font-size: 115%;
     font-family: 'Helvetica', 'Arial', sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -32,10 +33,6 @@ h1 {
 	padding: 20px;
 }
 
-.footer {
-    background-color: rgb(1,130,172);
-}
-
 .footer p {
     margin-bottom: 0;        
 }
@@ -47,6 +44,12 @@ h1 {
     text-decoration: underline;
 }
 
+.footer {
+    border-top: 1px solid white;
+    background: url('../images/under_dev/bg.png');
+    padding: 5px;
+    color: white;
+}
 
 
 .wrapper {
@@ -68,6 +71,14 @@ h1 {
 
 .page-head .v-center {
     flex-direction: column;
+}
+
+.page-content {
+    border-top: 1px solid white;
+    position: relative;
+    z-index: 1000;
+    background: url('../images/under_dev/bg.png');
+    color: white;
 }
 
 .page-title {

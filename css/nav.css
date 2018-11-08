@@ -11,12 +11,12 @@
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #4B63DA;
+    background-color: #0182AC;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-    color:#141860;
+    color: rgb(9, 53, 122);
     font-family: 'Montserrat-regular', sans-serif;
     font-weight: bold;
 }
@@ -25,7 +25,7 @@
 #mainNav .navbar-brand:active,
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
-    color: #4B63DA;
+    color: #0182AC;
     font-weight: bold;
 }
 
@@ -41,7 +41,7 @@
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #4B63DA;
+    color: #0182AC;
 }
 
 @media (min-width: 992px) {

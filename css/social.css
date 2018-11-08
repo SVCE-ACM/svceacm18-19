@@ -47,6 +47,9 @@
     background-color: #e4405f;
 }
 
+.github span {
+    background-color: #211f1f;
+}
 /* Icons */
 .icon-button i {
     background: none;
@@ -64,21 +67,10 @@
     z-index: 10;
 }
 
-.icon-button .icon-twitter {
-    color: #4099ff;
-}
-
-.icon-button .icon-facebook {
-    color: #3B5998;
-}
-
-.icon-button .icon-instagram {
-    color: #db5a3c;
-}
-
 .icon-button:hover .icon-twitter,
 .icon-button:hover .icon-facebook,
-.icon-button:hover .icon-instagram {
+.icon-button:hover .icon-instagram
+.icon-button:hover .icon-github {
     color: white;
 }
 
