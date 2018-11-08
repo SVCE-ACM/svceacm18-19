@@ -59,11 +59,10 @@ h1 {
 }
 
 .page-head {
-    position: fixed;
+    position: relative;
     /*top: 0px;*/
     background: url('../images/under_dev/bg.png');
     margin-top: 60px;
-    height: 100%;
     width: 100%;
     z-index: -1;
     padding: 50px;
@@ -87,4 +86,15 @@ h1 {
 
 .page-description {
     color: white;
+}
+
+.parallax-bg {
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .parallax-bg {
+        position: relative;
+        margin-top: 0!important;
+    }
 }

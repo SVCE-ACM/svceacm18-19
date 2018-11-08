@@ -12,29 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
        @import url(https://fonts.googleapis.com/css?family=Montserrat);
-        body
-        {
-            margin-top: 60px;
-        }
-        
-        .wrapper {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-
-        .page-head {
-            position: fixed;
-            top: 0px;
-            margin-top: 60px;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-            padding: 50px;
-            color: black;
-        }
-
-        .page-head::before {
+         .page-head::before {
             content: "";
             position: absolute;
             z-index: -10;
@@ -43,11 +21,15 @@
             left: 0;
             right: 0;
             background: url('../images/under_dev/bg3.jpeg') ;
-            opacity: .8;            
+            opacity: .65;            
             background-size: 100% 100%;
-        }
+        } 
         .page-head .v-center {
             flex-direction: column;
+        }
+
+        .page-title {
+            color: rgb(131, 206, 226);
         }
 
         #events {
@@ -70,7 +52,12 @@
             color: black;
         }
         .btn-card {
-            background-color: #65016b;
+            background-color: rgb(9, 53, 122);
+            color: white;
+        }
+
+        a.btn-card:hover {
+            font-weight: bold;
             color: white;
         }
         
@@ -119,126 +106,128 @@
     </nav>
     <!-- nav -->
     <div class="wrapper">
-        <section class="page-head">
-                <div class="container v-center test">
-                    <h1 class="text-center page-title">Our Events</h1><br>
-                    <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
-                </div>
+        <section class="page-head parallax-bg">
+            <div class="container v-center test">
+                <h1 class="text-center page-title">Our Events</h1><br>
+                <h3 class="text-center" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+            </div>
         </section><!-- .page-head -->
-        <div id="events" class="container-fluid">
-            <div class="row ">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/disrupt.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Disrupt</h4>
-                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/web.jpeg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Webbed</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/code.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Hour Of Code</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-            
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">TechQwiz</h4>
-                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/tob.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Tech Taboo</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/blockchain.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Blockchain</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-            
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">TechQwiz</h4>
-                                <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/hack.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Inheritance Hack</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <div class="content">
-                            <img class="card-img-top" src="../images/events/goc.jpg" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title text-center">Game-Of-Codes</h4>
-                                <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                                <a href="#" class="btn btn-card v-center">View Gallery</a>
-                            </div>
-                        </div><!-- .content -->
-                    </div><!-- .card -->
+        <section class="page-content">
+            <div id="events" class="container-fluid">
+                <div class="row ">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/disrupt.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Disrupt</h4>
+                                    <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/web.jpeg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Webbed</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/code.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Hour Of Code</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">TechQwiz</h4>
+                                    <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/tob.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Tech Taboo</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/blockchain.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Blockchain</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/tech.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">TechQwiz</h4>
+                                    <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/hack.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Inheritance Hack</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <img class="card-img-top" src="../images/events/goc.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Game-Of-Codes</h4>
+                                    <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
+                                    <a href="#" class="btn btn-card v-center">View Gallery</a>
+                                </div>
+                            </div><!-- .content -->
+                        </div><!-- .card -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </section><!-- .page-content -->
 
         <!-- Footer -->
         <footer class="footer">
@@ -283,13 +272,30 @@
     <script src="../js/jquery.easing.js"></script>
     <script>
         $(document).ready(function() {
-            $('#events').css({
-                'margin-top': (($('.test').height() + 60 + 50) + 'px')
-            });
-            $(window).resize(function() {
-                $('#events').css({
-                    'margin-top': (($('.test').height() + 60 + 50) + 'px')
+            if ($(window).width() <= 1024) {
+                $('.parallax-bg').removeClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': '0'
                 });
+            } else {
+                $('.page-head').addClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                });
+            }
+
+            $(window).on('resize',function() {
+                if ($(this).width() <= 1024) {
+                    $('.parallax-bg').removeClass('parallax-bg');
+                    $('.page-content').css({
+                        'margin-top': '0'
+                    });
+                } else {
+                    $('.page-head').addClass('parallax-bg');
+                    $('.page-content').css({
+                        'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                    });
+                }
             });
         })
     </script>

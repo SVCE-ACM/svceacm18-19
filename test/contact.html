@@ -32,15 +32,23 @@
     flex-wrap: wrap;
 }
 
-#contact-sec {
+.page-content {
     border-top: 1px solid white;
     position: relative;
     z-index: 1000;
     background: url('../images/under_dev/bg.png');
     color: white;
     padding: 50px;
+    margin-top: 0;
 }
-#contact-sec .v-center {
+
+/* .page-head {
+    position: relative;
+}
+.parallax-bg {
+    position: fixed;
+} */
+.page-content .v-center {
     flex-direction: column;
 }
 .form-control {
@@ -101,7 +109,15 @@ a.contact-link:hover {
     padding: 5px;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .parallax-bg {
+        position: relative;
+        margin-top: 0!important;
+    }
+}
   </style>
+
 
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
@@ -130,7 +146,7 @@ a.contact-link:hover {
     </nav>
     <!-- #nav -->
     <div class="wrapper">
-        <section class="page-head">
+        <section class="page-head parallax-bg">
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center">Let's Get In Touch!</h2><br>
@@ -200,64 +216,39 @@ a.contact-link:hover {
     </div><!-- .wrapper -->
 
     <!-- ============= contact section ends ================== -->
-    <!-- Footer -->
     
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../js/nav.js"></script> -->
     <script src="../js/jquery.easing.js"></script>
     <script src="../js/swiper.min.js"></script>
     
     <script>
-        function parallaxHelper () {
-            $('#contact-sec').css({
-                'margin-top': (($('.test').height() + 60 + 70) + 'px')
-            });
-            
-            if ($('.test').height() + 110 > $(window).height()) {
-                $('.page-head').css({
-                    'position': 'relative',
-                    'height': 'auto'
-                });
-
-                $(window).scroll(function() {
-                   var headHeight = ($('.test').height() + 60 + 70),
-                       windowScroll = $(this).scrollTop() + $(this).height();
-
-                    console.log(headHeight, windowScroll);
-
-                   if (headHeight <= windowScroll){
-                       $('.page-head').css({
-                            'position': 'fixed',
-                            'bottom': '0'
-                        });
-                        console.log("Enter 1");
-                   } else {
-                        $('.page-head').css({
-                            'position': 'relative',
-                            'bottom': '',
-                        });
-                        console.log("Enter 2");
-                   }
+        $(document).ready(function() {
+            if ($(window).width() <= 1024) {
+                $('.parallax-bg').removeClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': '0'
                 });
             } else {
-                $('.page-head').css({
-                    'position': '',
-                    'height': '',
-                    'bottom': ''
-                })
+                $('.page-head').addClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                });
             }
-        }
-        $(document).ready(function() {
-            parallaxHelper();            
-            $(window).resize(function() {
-                $('.page-head').css({
-                    'position': '',
-                    'height': ''
-                })
-                parallaxHelper();
-            });
 
+            $(window).on('resize',function() {
+                if ($(this).width() <= 1024) {
+                    $('.parallax-bg').removeClass('parallax-bg');
+                    $('.page-content').css({
+                        'margin-top': '0'
+                    });
+                } else {
+                    $('.page-head').addClass('parallax-bg');
+                    $('.page-content').css({
+                        'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                    });
+                }
+            });
         });
     </script>
 </body>

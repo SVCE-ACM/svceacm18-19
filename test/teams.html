@@ -110,13 +110,13 @@
     </nav>
     <!-- #nav -->
     <div class="wrapper">
-        <section class="page-head">
+        <section class="page-head parallax-bg">
             <div class="container v-center test">
                 <h1 class="text-center page-title">Our Teams</h1><br>
                 <h3 class="text-center" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
-        <section class="page-content animated fadeIn">
+        <section class="page-content">
             <div class="container">
                 <div class="tab container h-100">
                     <nav class="tabs container-fluid v-center">
@@ -472,15 +472,33 @@
     <script>
     
     // correctly placing divs for parallax effect
-    $(document).ready(function() {
-        $('.page-content').css({
-                'margin-top': (($('.test').height() + 60 + 100) + 'px')
-        });
-        $(window).resize(function() {
+    $(document).ready(function() {      
+
+        if ($(window).width() <= 1024) {
+            $('.parallax-bg').removeClass('parallax-bg');
             $('.page-content').css({
-                'margin-top': (($('.test').height() + 60 + 100) + 'px')
+                'margin-top': '0'
             });
-        });      
+        } else {
+            $('.page-head').addClass('parallax-bg');
+            $('.page-content').css({
+                'margin-top': (($('.test').height() + 60 + 70) + 'px')
+            });
+        }
+
+        $(window).on('resize',function() {
+            if ($(this).width() <= 1024) {
+                $('.parallax-bg').removeClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': '0'
+                });
+            } else {
+                $('.page-head').addClass('parallax-bg');
+                $('.page-content').css({
+                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                });
+            }
+        });
     });
 
     //for switching teams
