@@ -26,7 +26,21 @@
     /*---------------------------------------
   Contact section              
 -----------------------------------------*/
-
+.page-head::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/under_dev/bg3.jpeg') ;
+    opacity: .65;            
+    background-size: 100% 100%;
+} 
+.page-title, .page-subtitle {
+    color: rgb(131, 206, 226);
+}
 #contact-page .wrapper {
     flex-direction: column;
     flex-wrap: wrap;
@@ -158,7 +172,7 @@ a.contact-link:hover {
         <section class="page-head parallax-bg">
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
-                <h2 class="text-center">Let's Get In Touch!</h2><br>
+                <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
                 <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
