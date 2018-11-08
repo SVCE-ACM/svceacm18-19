@@ -61,14 +61,14 @@ Style the tab content
   display:inline-block;
   position:relative;
   z-index:1;
-  transition-duration:0.6s;
+  /*transition-duration:0.6s;*/
 }
 
 .tabs a.active{
   background-color:#0182AC;
   border-radius: 50px;
-  transition-duration:0.6s;
-   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+  /*transition-duration:0.6s;
+   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
    color: #fff;
    font-weight: bold;
 }
