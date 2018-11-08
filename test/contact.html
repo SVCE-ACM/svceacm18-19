@@ -61,7 +61,7 @@
   margin-bottom: 10px;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
-  width: 80%;
+  width: 60%;
   max-width: 500px;
   
 }
@@ -116,6 +116,13 @@ a.contact-link:hover {
         margin-top: 0!important;
     }
 }
+@media (max-width: 1024px) {
+    .form-control {
+        width: 95%;
+    }
+}
+
+
   </style>
 
 
@@ -168,7 +175,7 @@ a.contact-link:hover {
                     </div>
                 </div>
             </div>
-                <div class="container">
+                <div class="container-fluid">
                     <form action="" id="contact-form" class="v-center">
                         <input type="text" class="form-control" name="name" placeholder="Name" required="">
                         <input type="email" class="form-control" name="email" placeholder="Email" required="">
