@@ -23,109 +23,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-    /*---------------------------------------
-  Contact section              
------------------------------------------*/
-
-#contact-page .wrapper {
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.page-content {
-    border-top: 1px solid white;
-    position: relative;
-    z-index: 1000;
-    background: url('../images/under_dev/bg.png');
-    color: white;
-    padding: 50px;
-    margin-top: 0;
-}
-
-/* .page-head {
-    position: relative;
-}
-.parallax-bg {
-    position: fixed;
-} */
-.page-content .v-center {
-    flex-direction: column;
-}
-.form-control {
-  border: none;
-  border-bottom: 2px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-  width: 60%;
-  max-width: 500px;
-  
-}
-
-.form-control:focus {
-  border-bottom-color: #999999;
-}
-
- input {
-  height: 55px;
-}
-
- button#submit {
-  background: rgb(9, 53, 122);
-  cursor: pointer;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  height: 50px;
-  width: 190px;
-  margin-top: 24px;
-}
-
- button#submit:hover {
-  font-weight: bold;
-}
-
-.fas {
-    color: black;
-}
-
-a.contact-link {
-    color: black;
-    text-decoration: underline;
-}
-
-a.contact-link:hover {
-    color: white;
-}
-
-.footer {
-    border-top: 1px solid white;
-    background: url('../images/under_dev/bg.png');
-    padding: 5px;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .parallax-bg {
-        position: relative;
-        margin-top: 0!important;
+    html, body {
+        height: 100%;
     }
-}
-@media (max-width: 1024px) {
-    .form-control {
-        width: 95%;
+    .page-head {
+        padding: 100px;
+        padding-top: 70px;
     }
-}
-
-
-  </style>
-
-
-<body id="contact-page">
+    .page-content {
+        padding: 50px;
+    }
+        
+</style>
+<body id="about-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
@@ -138,7 +48,7 @@ a.contact-link:hover {
                         <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                        <a class="nav-link js-scroll-trigger active">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
@@ -147,51 +57,47 @@ a.contact-link:hover {
                         <a class="nav-link js-scroll-trigger" href="teams.html">Teams</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger active">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- #nav -->
+    
     <div class="wrapper">
         <section class="page-head parallax-bg">
             <div class="container v-center test">
-                <h1 class="text-center page-title">Contact Us</h1>
-                <h2 class="text-center">Let's Get In Touch!</h2><br>
+                <h1 class="text-center page-title">About Us</h1>
                 <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
-        <section id="contact-sec" class="page-content">
-            <div class="container v-center">
-                <div class="row">
-                    <div class="col-sm-6 text-center">
-                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                        <p><a class="contact-link" href="tel:+919962754468">(+91) 99627 54468</a></p>
-                    </div>
-                    <div class="col-sm-6 text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-                        <p>
-                            <a class="contact-link" href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-                <div class="container-fluid">
-                    <form action="" id="contact-form" class="v-center">
-                        <input type="text" class="form-control" name="name" placeholder="Name" required="">
-                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                        <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
-                        <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-                    </form><!-- #contact-form -->
+        <section id="about-sec" class="page-content">
+           <div class="container v-center" style="flex-direction: column;">
+                <div class="row v-center">
+                    <div class="section-img col-lg-6 v-center">
+                        <img class="image" src="../images/under_dev/under_dev.jpg">
+                    </div><!-- .section-img -->
+                    <div class="text text-justify col-lg-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
+                    </div><!-- .text -->
                 </div><!-- .row -->
+                <br><br>
+                <div class="row v-center">
+                    <div class="section-img col-lg-6 v-center">
+                        <img class="image" src="../images/under_dev/under_dev.jpg">
+                    </div><!-- .section-img -->
+                    <div class="text text-justify col-lg-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
+                    </div><!-- .text -->
+                </div><!-- .row -->
+            </div><!-- .container -->
         </section>
         <!-- Footer -->
         <footer class="footer">
           <div class="container">
             <div class="row">
               <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                
                 <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
               </div>
               <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
@@ -224,8 +130,6 @@ a.contact-link:hover {
         </footer>
     </div><!-- .wrapper -->
 
-    <!-- ============= contact section ends ================== -->
-    
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jquery.easing.js"></script>
@@ -241,7 +145,7 @@ a.contact-link:hover {
             } else {
                 $('.page-head').addClass('parallax-bg');
                 $('.page-content').css({
-                    'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                    'margin-top': (($('.test').height() + 60 + 140) + 'px')
                 });
             }
 
@@ -254,7 +158,7 @@ a.contact-link:hover {
                 } else {
                     $('.page-head').addClass('parallax-bg');
                     $('.page-content').css({
-                        'margin-top': (($('.test').height() + 60 + 70) + 'px')
+                        'margin-top': (($('.test').height() + 60 + 140) + 'px')
                     });
                 }
             });
