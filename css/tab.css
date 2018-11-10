@@ -62,7 +62,7 @@ Style the tab content
   display:inline-block;
   position:relative;
   z-index:1;
-  transition-duration:0.3s;
+  /*transition-duration:0.3s;*/
 }
 
 .tabs a.active{
