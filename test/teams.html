@@ -41,7 +41,7 @@
 
         .tab {
             width: 50%;
-            min-width: 600px;
+            min-width: 700px;
             padding: 5px;
         }
 
@@ -137,29 +137,28 @@
             <div class="container">
                 <div class="tab container h-100">
                     <nav class="tabs container-fluid v-center">
-                        <div class="selector"></div>
                         <div class="row v-center">
                             <div class="col-xs-2 offset-xs-1">
-                                <a data-toggle="tab" href="#office-bearers" class="active">Office Bearers</a>
+                                <a data-toggle="tab" href="#office-bearers" class="active"><i class="fas fa-briefcase"></i> Office Bearers</a>
                             </div><!-- .col-xs-2 -->
                             <div class="col-xs-2">
-                                <a data-toggle="tab" href="#acads">Academics</a>
+                                <a data-toggle="tab" href="#acads"><i class="fas fa-graduation-cap"></i> Academics</a>
                             </div><!-- .col-xs-2 -->
                             <div class="col-xs-2">
-                                <a data-toggle="tab" href="#events_team">Events</a>
+                                <a data-toggle="tab" href="#events_team"><i class="fas fa-calendar-check"></i> Events</a>
                             </div><!-- .col-xs-2 -->
                             <div class="col-xs-2">
-                                <a data-toggle="tab" href="#media">Media</a>
+                                <a data-toggle="tab" href="#media"><i class="fas fa-camera-retro"></i> Media</a>
                             </div><!-- .col-xs-2 -->
                             <div class="col-xs-2">
-                                <a data-toggle="tab" href="#web">Web</a>
+                                <a data-toggle="tab" href="#web"><i class="fas fa-globe"></i> Web</a>
                             </div><!-- .col-xs-2 -->
                         </div><!-- .row -->
                     </nav>
                 </div>
             </div>
             <div class="container-fluid v-center">
-                <div id="office-bearers" class="team container-fluid animated fadeIn active">
+                <div id="office-bearers" class="team container-fluid active">
                     <!-- Team -->
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-2 offset-md-2">
@@ -202,7 +201,7 @@
                     </div>
                     <!--Board-->
                 </div>
-                <div id="acads" class="team container-fluid animated fadeIn">
+                <div id="acads" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -262,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="events_team" class="team container-fluid animated fadeIn">
+                <div id="events_team" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -336,7 +335,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="media" class="team container-fluid animated fadeIn">
+                <div id="media" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -397,7 +396,7 @@
                         
                     </div>
                 </div>
-                <div id="web" class="team container-fluid animated fadeIn">
+                <div id="web" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -525,6 +524,10 @@
         var tab_id = this.href.substring(this.href.indexOf("#") + 1);
         $('.team').removeClass('active');
         $('#' + tab_id).addClass('active');
+
+        $('html, body').animate({
+            scrollTop: $('#' + tab_id).offset().top - 70
+        }, 1000);
     });  
     </script>
 </body>
