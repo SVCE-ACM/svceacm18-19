@@ -82,9 +82,7 @@
 
         .team-member p {
             margin-top: 0;
-        }
-
-    
+        }    
 
         @media (max-width: 768px) {
             .tab {
@@ -99,7 +97,7 @@
 </head>
 
 <body id="teams-page">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -127,7 +125,7 @@
         </div>
     </nav>
     <!-- #nav -->
-    <div class="wrapper">
+    <div class="wrapper animated fadeIn">
         <section class="page-head parallax-bg">
             <div class="container v-center test">
                 <h1 class="text-center page-title">Our Teams</h1><br>
@@ -483,9 +481,7 @@
         </footer>
     </div><!-- .wrapper -->
     <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/jquery.easing.js"></script>
-    <script src="../js/swiper.min.js"></script>
+    
     <script>
     
     // correctly placing divs for parallax effect
@@ -517,7 +513,11 @@
             }
         });
     });
-
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.easing.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script>
     //for switching teams
     $(".tabs").on("click", "a", function() {
         $('.tabs a').removeClass("active");
@@ -530,5 +530,14 @@
             scrollTop: $('#' + tab_id).offset().top - 70
         }, 1000);
     });  
+
+    $('.nav-link').click(function() {
+        if ($(this).hasClass('active')) {
+            return;
+        } else {
+
+            $('.navbar').addClass('fadeOutUp');
+        }
+    });
     </script>
 </body>
