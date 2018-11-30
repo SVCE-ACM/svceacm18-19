@@ -532,11 +532,17 @@
     });  
 
     $('.nav-link').click(function() {
+        var link = this.href;
+        console.log(link);
         if ($(this).hasClass('active')) {
             return;
         } else {
-
+            event.preventDefault();
             $('.navbar').addClass('fadeOutUp');
+            $('.wrapper').addClass('fadeOut');
+            setTimeout(function() {
+                window.location.href = link;
+            }, 400);
         }
     });
     </script>
