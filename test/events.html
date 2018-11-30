@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/tab.css">
     <style>
        @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -404,62 +403,16 @@
 
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/jquery.easing.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         $(document).ready(function() {
-            if ($(window).width() <= 1024) {
-                $('.parallax-bg').removeClass('parallax-bg');
-                $('.page-content').css({
-                    'margin-top': '0'
-                });
-            } else {
-                $('.page-head').addClass('parallax-bg');
-                $('.page-content').css({
-                    'margin-top': (($('.test').height() + 60 + 100) + 'px')
-                });
-            }
-
+            makeParallax($(window).width(), 100);
             $(window).on('resize',function() {
-                if ($(this).width() <= 1024) {
-                    $('.parallax-bg').removeClass('parallax-bg');
-                    $('.page-content').css({
-                        'margin-top': '0'
-                    });
-                } else {
-                    $('.page-head').addClass('parallax-bg');
-                    $('.page-content').css({
-                        'margin-top': (($('.test').height() + 60 + 100) + 'px')
-                    });
-                }
+                var windowWidth = $(this).width();
+                makeParallax(windowWidth, 100);
             });
-            //for switching teams
-            $(".tabs").on("click", "a", function() {
-                $('.tabs a').removeClass("active");
-                $(this).addClass('active');
-                var tab_id = this.href.substring(this.href.indexOf("#") + 1);
-                $('.year').removeClass('active');
-                $('#' + tab_id).addClass('active');
-                // $(window).scrollTop($('#' + tab_id).offset().top + 60);
-
-                $('html, body').animate({
-                    scrollTop: $('#' + tab_id).offset().top - 70
-                }, 1000);
-            });
-            
-            $('.nav-link').click(function() {
-                var link = this.href;
-                console.log(link);
-                if ($(this).hasClass('active')) {
-                    return;
-                } else {
-                    event.preventDefault();
-                    $('.navbar').addClass('fadeOutUp');
-                    $('.wrapper').addClass('fadeOut');
-                    setTimeout(function() {
-                        window.location.href = link;
-                    }, 500);
-                }
-            });
+            switchTabs('.year');
+            outroAnimation();
         });
     </script>
 

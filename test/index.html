@@ -138,12 +138,10 @@
   <!-- Scripts to make smooth & attractive transtions. -->
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/jquery.easing.js"></script>
-
+    <script src="../js/main.js"></script>
     <script>
         // correctly initializing height to make content occupy full screen
-        $(document).ready(function() {
-            var init_ht = $('#hero').height() + $('footer').height();
+        function occupyFullScreen(init_ht) {
             if ($(window).height() > init_ht) {
                 
                 $('#hero').css({
@@ -157,35 +155,14 @@
                     'position': 'relative'
                 });
             }
-            $(window).resize(function(){
-                if ($(window).height() > init_ht) {
-                    $('#hero').css({
-                        'height': '95vh'
-                    });
-                } else {
-                    $('#hero').css({
-                        'height': '100%'
-                    });
-                    $('.footer').css({
-                        'position': 'relative'
-                    });
-                }
-            });
-
-            $('.nav-link').click(function() {
-                var link = this.href;
-                console.log(link);
-                if ($(this).hasClass('active')) {
-                    return;
-                } else {
-                    event.preventDefault();
-                    $('.navbar').addClass('fadeOutUp');
-                    $('.wrapper').addClass('fadeOut');
-                    setTimeout(function() {
-                        window.location.href = link;
-                    }, 500);
-                }
-            });
+        }
+        $(document).ready(function() {
+            var init_ht = $('#hero').height() + $('footer').height();
+            
+            occupyFullScreen(init_ht);
+            $(window).resize(occupyFullScreen(init_ht));
+            
+            outroAnimation();
         });
     </script>
 </body>
