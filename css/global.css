@@ -115,4 +115,8 @@ h1 {
         position: relative;
         margin-top: 0!important;
     }
+
+    .page-head {
+        padding: 25px;
+    }
 }

@@ -26,18 +26,24 @@
         height: 100%;
     }
     .page-content {
-        padding: 50px 5px;
+        padding: 50px 5px 10px;
     }        
     .image {
         width: 90%;
         max-width: 600px;
     }
     
+    .item {
+        margin-bottom: 60px;
+    }
     .sub-heading {
         color: rgb(9, 53, 122);
         margin-bottom: 20px;
     }
     @media (max-width: 768px) {
+        .item {
+            margin-bottom: 30px;
+        }
         .text {
             margin-top: 40px;
         }
@@ -82,21 +88,21 @@
         </section><!-- .page-head -->
         <section id="about-sec" class="page-content">
            <div class="container-fluid v-center" style="flex-direction: column;">
-                <div class="row v-center">
-                    <div class="section-img col-lg-6 v-center">
+                <div class="item row v-center">
+                    <div class="section-img col-md-6 v-center">
                         <img class="image" src="../images/under_dev/under_dev.jpg">
                     </div><!-- .section-img -->
-                    <div class="text col-lg-6">
+                    <div class="text col-md-6">
                         <h1 class="text-center sub-heading">Lorem Ipsum</h1><!-- .text-center sub-heading -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
                     </div><!-- .text -->
                 </div><!-- .row -->
                 <br><br>
-                <div class="row v-center">
-                    <div class="section-img col-lg-6 v-center">
+                <div class="item row v-center">
+                    <div class="section-img col-md-6 v-center">
                         <img class="image" src="../images/under_dev/under_dev.jpg">
                     </div><!-- .section-img -->
-                    <div class="text col-lg-6">
+                    <div class="text col-md-6">
                         <h1 class="text-center sub-heading">Lorem Ipsum</h1><!-- .text-center sub-heading -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
                     </div><!-- .text -->
@@ -107,10 +113,10 @@
         <footer class="footer">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+              <div class="col-md-6 h-100 text-center text-lg-left my-auto">
                 <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
               </div>
-              <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+              <div class="col-md-6 h-100 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item mr-3">
                     <a href="https://www.facebook.com/SVCEACM/">
