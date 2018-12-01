@@ -148,7 +148,6 @@
     </div><!-- .wrapper -->
    
     <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
         $(document).ready(function() {
@@ -157,7 +156,7 @@
                 var windowWidth = $(this).width();
                 makeParallax(windowWidth, 140);
             });
-            outroAnimation();
+            outroAnimation('.navbar', '.wrapper');
         });
     </script>
 </body>

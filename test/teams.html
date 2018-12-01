@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .page-head::before {
             content: "";
@@ -32,7 +33,6 @@
             background: url('../images/under_dev/bg3.jpeg') ;
             opacity: .65;            
             background-size: 100% 100%;
-            background: -webkit-radial-gradient(circle, #182E69, #2F2727);
         } 
         .page-title {
             color: rgb(131, 206, 226);
@@ -81,7 +81,9 @@
 
         .team-member p {
             margin-top: 0;
-        }    
+        }
+
+    
 
         @media (max-width: 768px) {
             .tab {
@@ -199,7 +201,7 @@
                     </div>
                     <!--Board-->
                 </div>
-                <div id="acads" class="team container-fluid animated fadeIn slower">
+                <div id="acads" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -259,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="events_team" class="team container-fluid animated fadeIn slower">
+                <div id="events_team" class="team container-fluid">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -484,17 +486,15 @@
     <script>
     
     // correctly placing divs for parallax effect
-    $(document).ready(function() {      
-
+    $(document).ready(function() {
         makeParallax($(window).width(), 100);
-            $(window).on('resize',function() {
-                var windowWidth = $(this).width();
-                makeParallax(windowWidth, 100);
-            });
-            switchTabs('.team');
-            outroAnimation();
+        $(window).on('resize',function() {
+            var windowWidth = $(this).width();
+            makeParallax(windowWidth, 100);
+        });
+        switchTabs('.team');
+        outroAnimation('.navbar', '.wrapper');
     });
+
     </script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    
 </body>

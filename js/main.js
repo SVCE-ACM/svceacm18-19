@@ -1,4 +1,4 @@
-function outroAnimation() {
+function outroAnimation(nav, body) {
 	$('.nav-link').click(function() {
         var link = this.href;
         console.log(link);
@@ -6,8 +6,8 @@ function outroAnimation() {
             return;
         } else {
             event.preventDefault();
-            $('.navbar').addClass('fadeOutUp');
-            $('.wrapper').addClass('fadeOut');
+            $(nav).addClass('fadeOutUp');
+            $(body).addClass('fadeOut');
             setTimeout(function() {
                 window.location.href = link;
             }, 500);
