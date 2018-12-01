@@ -24,15 +24,6 @@ h1 {
     align-items: center;
 }
 
-.logo {
-    max-width: 300px;
-}
-
-.image {
-	width: 90%;
-	padding: 20px;
-}
-
 .footer p {
     margin-bottom: 0;        
 }
@@ -68,8 +59,27 @@ h1 {
     padding: 50px;
 }
 
+.page-head::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #182E69;
+    background: -webkit-radial-gradient(circle, #182E69, #2F2727);
+    opacity: .65;            
+    background-size: 100% 100%;
+} 
+
 .page-head .v-center {
     flex-direction: column;
+}
+
+.page-title {
+    font-size: calc(3.5vw + 36px);
+    color: rgb(131, 206, 226);
 }
 
 .page-content {
@@ -83,16 +93,21 @@ h1 {
     color: white;
 }
 
-.page-title {
-    font-size: calc(3.5vw + 36px);
-}
-
 .page-description {
     color: white;
 }
 
 .parallax-bg {
     position: fixed;
+}
+
+.type {
+    display: none !important;
+    color: black;
+}
+
+.type.active {
+    display: block !important;
 }
 
 @media (max-width: 768px) {

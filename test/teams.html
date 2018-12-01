@@ -21,42 +21,11 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .page-head::before {
-            content: "";
-            position: absolute;
-            z-index: -10;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: url('../images/under_dev/bg3.jpeg') ;
-            opacity: .65;            
-            background-size: 100% 100%;
-        } 
-        .page-title {
-            color: rgb(131, 206, 226);
-        }
-        
-
+    <style>      
         .tab {
             width: 50%;
             min-width: 700px;
             padding: 5px;
-        }
-
-        .team {
-            display: none !important;
-            color: black;
-        }
-
-        .team.active {
-            display: block !important;
-        }
-
-        .btn-card {
-            background-color: #65016b;
-            color: white;
         }
         
         /*Team members*/
@@ -69,7 +38,7 @@
         .team-member img {
             width: 225px;
             height: 225px;
-            image-orientation:10%;
+            image-orientation: 10%;
         }
 
         .team-member h4 {
@@ -81,17 +50,12 @@
 
         .team-member p {
             margin-top: 0;
-        }
-
-    
+        }    
 
         @media (max-width: 768px) {
             .tab {
                 width: 100%;
                 min-width: 200px;
-            }
-            .page-title {
-                font-size: calc(5vw + 36px);
             }
         }
       </style>
@@ -158,7 +122,7 @@
                 </div>
             </div>
             <div class="container-fluid v-center">
-                <div id="office-bearers" class="team container-fluid active animated fadeIn slower">
+                <div id="office-bearers" class="type team container-fluid active animated fadeIn slower">
                     <!-- Team -->
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-2 offset-md-2">
@@ -201,7 +165,7 @@
                     </div>
                     <!--Board-->
                 </div>
-                <div id="acads" class="team container-fluid">
+                <div id="acads" class="type team container-fluid animated fadeIn slower">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -261,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="events_team" class="team container-fluid">
+                <div id="events_team" class="type team container-fluid animated fadeIn slower">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -335,7 +299,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="media" class="team container-fluid animated fadeIn slower">
+                <div id="media" class="type team container-fluid animated fadeIn slower">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -396,7 +360,7 @@
                         
                     </div>
                 </div>
-                <div id="web" class="team container-fluid animated fadeIn slower">
+                <div id="web" class="type team container-fluid animated fadeIn slower">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="team-member">
@@ -482,6 +446,7 @@
         </footer>
     </div><!-- .wrapper -->
     <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
     

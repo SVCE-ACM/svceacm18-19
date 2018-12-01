@@ -28,7 +28,48 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-
+    <style>
+        #hero {
+            display: flex;
+            background-color: #FDFCFC;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 150px 60px;
+        }
+        .logo {
+            min-width: 250px;
+            max-width: 300px;
+        }
+        .type-text p {
+            padding-top: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+            width: 100%
+        }
+        .footer a {
+            color: #0182AC;
+            font-weight: bold;
+        }
+        @media (max-width: 1024px) {
+            #hero {
+                padding: 60px;
+            }
+        }
+        @media(max-width: 768px) {
+            #hero {
+                padding: 20px;
+            }
+        }
+        @media (max-height: 670px) {
+            #hero {
+                padding: 75px;
+            }
+        }
+    </style>
 
     
 </head>
@@ -96,41 +137,7 @@
         </footer>
     <!-- </div>.wrapper animated fadeIn -->
   <!-- Scripts to make smooth & attractive transtions. -->
-    <style>
-    #hero {
-        display: flex;
-        background-color: #FDFCFC;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 150px 60px;
-    }
-    .footer {
-        position: fixed;
-        bottom: 0;
-        background-color: white;
-        width: 100%
-    }
-    .footer a {
-        color: #0182AC;
-        font-weight: bold;
-    }
-    @media (max-width: 1024px) {
-        #hero {
-            padding: 60px;
-        }
-    }
-    @media(max-width: 768px) {
-        #hero {
-            padding: 20px;
-        }
-    }
-    @media (max-height: 670px) {
-        #hero {
-            padding: 75px;
-        }
-    }
-    </style>
+
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jquery.easing.js"></script>

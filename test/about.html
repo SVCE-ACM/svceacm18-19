@@ -25,32 +25,23 @@
     html, body {
         height: 100%;
     }
-    .page-head {
-        padding: 100px;
-        padding-top: 70px;
-    }
     .page-content {
-        padding: 50px;
+        padding: 50px 5px;
+    }        
+    .image {
+        width: 90%;
+        max-width: 600px;
     }
-
-    .page-head::before {
-        content: "";
-        position: absolute;
-        z-index: -10;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        /*background: url('../images/under_dev/bg3.jpeg') ;*/
-        background: #182E69;
-        background: -webkit-radial-gradient(circle, #182E69, #2F2727);
-        opacity: .65;            
-        background-size: 100% 100%;
-    } 
-    .page-title {
-        color: rgb(131, 206, 226);
+    
+    .sub-heading {
+        color: rgb(9, 53, 122);
+        margin-bottom: 20px;
     }
-        
+    @media (max-width: 768px) {
+        .text {
+            margin-top: 40px;
+        }
+    }
 </style>
 <body id="about-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
@@ -90,12 +81,13 @@
             </div>
         </section><!-- .page-head -->
         <section id="about-sec" class="page-content">
-           <div class="container v-center" style="flex-direction: column;">
+           <div class="container-fluid v-center" style="flex-direction: column;">
                 <div class="row v-center">
                     <div class="section-img col-lg-6 v-center">
                         <img class="image" src="../images/under_dev/under_dev.jpg">
                     </div><!-- .section-img -->
-                    <div class="text text-justify col-lg-6">
+                    <div class="text col-lg-6">
+                        <h1 class="text-center sub-heading">Lorem Ipsum</h1><!-- .text-center sub-heading -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
                     </div><!-- .text -->
                 </div><!-- .row -->
@@ -104,7 +96,8 @@
                     <div class="section-img col-lg-6 v-center">
                         <img class="image" src="../images/under_dev/under_dev.jpg">
                     </div><!-- .section-img -->
-                    <div class="text text-justify col-lg-6">
+                    <div class="text col-lg-6">
+                        <h1 class="text-center sub-heading">Lorem Ipsum</h1><!-- .text-center sub-heading -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
                     </div><!-- .text -->
                 </div><!-- .row -->
@@ -148,13 +141,14 @@
     </div><!-- .wrapper -->
    
     <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
     <script>
         $(document).ready(function() {
-            makeParallax($(window).width(), 140);
+            makeParallax($(window).width(), 100);
             $(window).on('resize',function() {
                 var windowWidth = $(this).width();
-                makeParallax(windowWidth, 140);
+                makeParallax(windowWidth, 100);
             });
             outroAnimation('.navbar', '.wrapper');
         });

@@ -21,23 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
 </head>
 <style>
-    /*---------------------------------------
-  Contact section              
------------------------------------------*/
-.page-head::before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: url('../images/under_dev/bg3.jpeg') ;
-    opacity: .65;            
-    background-size: 100% 100%;
-    background: -webkit-radial-gradient(circle, #182E69, #2F2727);
-} 
-.page-title, .page-subtitle {
+.page-subtitle {
     color: rgb(131, 206, 226);
 }
 #contact-page .wrapper {
@@ -45,25 +29,14 @@
     flex-wrap: wrap;
 }
 
-.page-content {
-    /*border-top: 1px solid white;*/
-    position: relative;
-    z-index: 1000;
-    background: url('../images/under_dev/bg.png');
-    color: white;
+.page-content {    
     padding: 50px;
-    margin-top: 0;
 }
 
-/* .page-head {
-    position: relative;
-}
-.parallax-bg {
-    position: fixed;
-} */
 .page-content .v-center {
     flex-direction: column;
 }
+
 .form-control {
   border: none;
   border-bottom: 2px solid #f0f0f0;
@@ -115,27 +88,12 @@ a.contact-link:hover {
     color: white;
 }
 
-.footer {
-    border-top: 1px solid white;
-    background: url('../images/under_dev/bg.png');
-    padding: 5px;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .parallax-bg {
-        position: relative;
-        margin-top: 0!important;
-    }
-}
 @media (max-width: 1024px) {
     .form-control {
         width: 95%;
     }
 }
-
-
-  </style>
+</style>
 
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
