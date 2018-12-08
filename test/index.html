@@ -69,6 +69,58 @@
                 padding: 75px;
             }
         }
+		
+		
+		
+		.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+	
+#feedback {
+    position: fixed;
+    right: 0;
+    top: 80px;
+    height: 300px;
+    margin-left: -3px;
+    margin-bottom: -3px;
+    z-index: 10000;
+}
+		
+		#feedback-tab {
+    float: right;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 10000;
+
+}
+#feedback-form {
+    float: right;
+    width: 740px;
+    height: 100%;
+    padding: 15px;
+    background-clip: 'padding-box';
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    z-index: 10000;
+}
     </style>
 
     
@@ -108,6 +160,18 @@
         </div>
     </nav>
     <!-- #nav -->
+	
+	<div id="feedback">
+		<div id="feedback-form" style="display:none;" class="col-xs-4 col-md-4 ">
+			<h3 style="margin-top:0;color: #6b2a09;">Upcoming Event!!!</h3>
+			<p style="font-family: 'adventure,script';color: #6b2a09;font-size: 18px;">December of Algorithms</p>
+			<p>11:00 AM - 07:00 PM</p>
+			
+			<p>An Algorithm a day</p>
+			
+		</div>
+		<div id="feedback-tab"><img src="../images/logos/upcoming-events.png"> </div>
+	</div>
 
     <!-- <div class="wrapper animated fadeIn"> -->
         <section id="hero" class="animated fadeIn">
@@ -174,6 +238,27 @@
     <link rel="stylesheet" href="../css/social.css">
 
 </body>
+	
+<script type="text/javascript">
+$(function() {
+	$("#feedback-tab").click(function() {
+		$("#feedback-form").toggle("slide");
+	});
+
+	$("#feedback-form form").on('submit', function(event) {
+		var $form = $(this);
+		$.ajax({
+			type: $form.attr('method'),
+			url: $form.attr('action'),
+			data: $form.serialize(),
+			success: function() {
+				$("#feedback-form").toggle("slide").find("textarea").val('');
+			}
+		});
+		event.preventDefault();
+	});
+});
+</script>
 
 </html>
 
