@@ -108,12 +108,14 @@
 }
 #feedback-form {
     float: right;
-    width: 740px;
+    width: 40em;
     height: 100%;
     padding: 15px;
     background-clip: 'padding-box';
+	background-color: white;
     border: 1px solid rgba(0,0,0,.2);
     -moz-border-radius: 0px;
+	color:blue;
     -webkit-border-radius: 0px;
     border-radius: 0px;
     -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
@@ -121,6 +123,23 @@
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     z-index: 10000;
 }
+		
+		@media screen and (max-width: 767px) {
+	#feedback-tab img{
+		width:35px;
+	}
+		}
+		
+		@media screen and (max-width: 670px) {
+	#feedback-form {
+		width:10em;
+	}
+		}
+		@media screen and (max-width: 767px) {
+	#feedback-form {
+		width:10em;
+	}
+		}
     </style>
 
     
@@ -165,12 +184,14 @@
 		<div id="feedback-form" style="display:none;" class="col-xs-4 col-md-4 ">
 			<h3 style="margin-top:0;color: #6b2a09;">Upcoming Event!!!</h3>
 			<p style="font-family: 'adventure,script';color: #6b2a09;font-size: 18px;">December of Algorithms</p>
-			<p>11:00 AM - 07:00 PM</p>
+			
 			
 			<p>An Algorithm a day</p>
 			
 		</div>
-		<div id="feedback-tab"><img src="../images/logos/upcoming-events.png"> </div>
+		<div id="feedback-tab"   style="font-family: 'Adventure';font-weight: 140;"><img src="../images/logos/Capture.PNG">
+			</div>
+		
 	</div>
 
     <!-- <div class="wrapper animated fadeIn"> -->
@@ -187,7 +208,11 @@
                 <a target="_blank" href="https://www.instagram.com/svceacm/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br class="md">
                 <a target="_blank" href="https://github.com/SVCE-ACM" class="icon-button github"><i class="fa fa-github"></i><span></span></a><br class="md">
             </div><!-- #social-buttons -->
+	
+			
         </section>
+	
+		
         
         <!-- Footer -->
         <footer class="footer animated fadeIn">
