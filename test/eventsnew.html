@@ -12,13 +12,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link rel="stylesheet" href="../css/tab.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:800" rel="stylesheet">
 
     <style>
         body {
         margin: 0;
         font-family: 'Exo 2', sans-serif;
     }
+    
+    .page-head {
+        /*background: #182E69;*/
+    }
 
+    .page-head::before {
+        /*background-image: radial-gradient(circle, #182e69, #08437d, #00588f, #006d9e, #0182ac);*/
+    }
+
+    .page-content {
+        background-image: radial-gradient(circle, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+    }
+    
+    .navbar-brand {
+        font-family: 'Merriweather Sans', sans-serif !important;
+        padding: 0 !important;
+    }
+
+    .acm {
+        font-size: 35px;
+
+        padding-right: 5px;
+    }
+
+    .svce {
+        font-size: 17.5px;
+    }
     .nav-link {
         font-family: 'Exo 2', sans-serif !important;
         font-weight: 600 !important;
@@ -293,7 +320,7 @@
 <body id="events-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="acm">acm</span><span class="svce">SVCE</span></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
