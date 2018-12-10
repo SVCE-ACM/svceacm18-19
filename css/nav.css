@@ -12,31 +12,24 @@
     color: white;
     border: 0;
     background-color: #0182AC;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 
 #mainNav .navbar-brand {
-    color: rgb(9, 53, 122);
-    font-family: 'Montserrat-regular', sans-serif;
-    font-weight: bold;
+    padding: 0!important;
 }
 
-#mainNav .navbar-brand.active,
-#mainNav .navbar-brand:active,
-#mainNav .navbar-brand:focus,
-#mainNav .navbar-brand:hover {
-    color: #0182AC;
-    font-weight: bold;
+#mainNav .navbar-brand img {
+    height: 50px;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 90%;
-    font-weight: 550;
+    font-weight: 600;
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: black;
-    
-    font-family: 'Montserrat-regular', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
@@ -70,6 +63,5 @@
     }
     #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
-        padding: 12px 0;
     }
 }
