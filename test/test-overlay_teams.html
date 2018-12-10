@@ -33,6 +33,9 @@
         .team-member {
             margin-bottom: 50px;
             text-align: center;
+            // for overlay
+            position: relative;
+            width: 50%;
         }
 
         .team-member img {
@@ -40,40 +43,7 @@
             height: 225px;
             image-orientation: 10%;
         }
-        
-        .img-container {
-          width: 225px;
-          height: 225px;
-          position: relative;
-          margin: 0 auto;
-        }
 
-        .img-container img {
-            width: 225px;
-            height: 225px;
-        }
-
-        .overlay {
-          position: absolute;
-          display: flex;
-          height: 100%;
-          width: 100%;
-          background: rgba(34,34,34,0.85);
-          top: 0;
-          left: 0;
-          opacity: 0;
-          justify-content: center;
-          align-items: center;
-          transition: opacity .5s;
-          z-index: 5;
-          border-radius: 50%;
-          color: white;
-        }
-
-        .overlay:hover {
-          opacity: 1;
-        }
-        
         .team-member h4 {
             margin-top: 25px;
             margin-bottom: 0;
@@ -95,6 +65,41 @@
         a{
  		   text-decoration: none !important;
 		}
+
+        .team-member:hover .rounded-circle {
+            opacity: 0.3;
+        }
+
+        .team-member:hover .middle {
+            opacity: 1;
+        }
+
+        .overlay {
+            background-color: #4CAF50;      // color to be matched with the wesbite theme
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .rounded-circle {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
       </style>
 </head>
 
@@ -165,10 +170,14 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-2 offset-md-2">
                             <a href="https://github.com/akashsara">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class=" rounded-circle" src="../images/members/Akash Saravanan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class=" rounded-circle" src="../images/members/Akash Saravanan.jpg" alt="Akash Saravanan">
+                                    <!-- img overlay -->
+                                    <div class="middle">
+                                        <div class="overlay">
+                                            <i class="fab fa-github fa-2x fa-fw"></i>
+                                        </div>
+                                    </div>
+                                    <!-- end img overlay -->
                                     <h4>Akash Saravanan</h4>
                                     <p style="color: black;">Chairman</p>
                                 </div>
@@ -177,10 +186,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/aishwarya-ramanathan-337358167">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="rounded-circle" src="../images/members/Aishwarya Ramanathan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="rounded-circle" src="../images/members/Aishwarya Ramanathan.jpg" alt="">
                                     <h4>Aishwarya Ramanathan</h4>
                                     <p style="color: black;">Vice-Chairman</p>
                                 </div>
@@ -191,10 +197,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/jashaul-d-364057a6/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="rounded-circle" src="../images/members/Jashaul D.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="rounded-circle" src="../images/members/Jashaul D.jpg" alt="">
                                     <h4>Jashaul D</h4>
                                     <p style="color: black;">Secretary</p>
                                 </div>
@@ -203,10 +206,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-md-0 offset-sm-3">
                             <a href="https://www.instagram.com/aishu_9825">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="rounded-circle" src="../images/members/Aishwarya A..jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="rounded-circle" src="../images/members/Aishwarya A..jpg" alt="">
                                     <h4>Aishwarya A</h4>
                                     <p style="color: black;">Treasurer</p>
                                 </div>
@@ -215,10 +215,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/mohamed-anan-681450150">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="rounded-circle" src="../images/members/Mohamed Anan.jpg" width="100%" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="rounded-circle" src="../images/members/Mohamed Anan.jpg" width="100%" alt="">
                                     <h4>Mohamed Anan</h4>
                                     <p style="color: black;">Member Chair</p>
                                 </div>
@@ -232,10 +229,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/menonakhil90">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="rounded-circle" src="../images/members/acadAkhil Menon.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="rounded-circle" src="../images/members/acadAkhil Menon.jpg" alt="">
                                     <h4>Akhil Menon</h4>
                                     <p style="color: black;">Team Head</p>
                                 </div>
@@ -244,10 +238,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/madhuvanti_murali/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Madhuvanti Muralikrishnan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Madhuvanti Muralikrishnan.jpg" alt="">
                                     <h4>Madhuvanti Muralikrishnan</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -256,10 +247,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://tinyurl.com/y9rkk8tz">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Abishaik Mohan.jpg" width="100%" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Abishaik Mohan.jpg" width="100%" alt="">
                                     <h4>Abishaik Mohan</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -268,10 +256,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-2 offset-md-2">
                             <a href="https://www.linkedin.com/in/hariharasubramanian-v-946651164">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Hariharasubramanian V.jpeg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Hariharasubramanian V.jpeg" alt="">
                                     <h4>Hariharasubramanian V</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -280,10 +265,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/abhiraksha">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Abhiraksha Pattabhiraman.png" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Abhiraksha Pattabhiraman.png" alt="">
                                     <h4>Abhiraksha Pattabhiraman</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -292,10 +274,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/KrishnaAlagiri">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Krishnakanth Alagiri.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Krishnakanth Alagiri.jpg" alt="">
                                     <h4>Krishnakanth Alagiri</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -304,10 +283,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/maha2000">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Mahalakshumi Visvanathan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Mahalakshumi Visvanathan.jpg" alt="">
                                     <h4>Mahalakshumi Visvanathan</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -316,10 +292,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/srivishnu36">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/D. Sri Vishnu Vardhan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/D. Sri Vishnu Vardhan.jpg" alt="">
                                     <h4>Sri Vishnu Vardhan.D</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -332,10 +305,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="http://linkedin.com/in/pranavvwadhwa">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Pranav Wadhwa.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Pranav Wadhwa.jpg" alt="">
                                     <h4>Pranav Wadhwa</h4>
                                     <p style="color: black;">Team Head</p>
                                 </div>
@@ -344,10 +314,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://in.linkedin.com/in/ananya-naresh">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Ananya Naresh.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Ananya Naresh.jpg" alt="">
                                     <h4>Ananya Naresh</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -356,10 +323,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://in.linkedin.com/in/pranav-vaidyanathan-632988122">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Pranav Vaidyanathan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Pranav Vaidyanathan.jpg" alt="">
                                     <h4>Pranav Vaidyanathan</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -368,10 +332,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="http://www.linkedin.com/in/aravindbalakrishnan/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Aravind Balakrishnan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Aravind Balakrishnan.jpg" alt="">
                                     <h4>Aravind Balakrishnan</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -380,10 +341,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://m.facebook.com/sadithyakumaran?ref=bookmarks">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Adithya Kumaran.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Adithya Kumaran.jpg" alt="">
                                     <h4>Adithya Kumaran</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -392,10 +350,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.facebook.com/kaushik.girirajan">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Kaushik Girirajan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Kaushik Girirajan.jpg" alt="">
                                     <h4>Kaushik Girirajan</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -404,10 +359,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/_deekshay_/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Deekshitha.jpeg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Deekshitha.jpeg" alt="">
                                     <h4>Deekshitha</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -416,10 +368,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/vickx_10/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Vignesh S.png" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Vignesh S.png" alt="">
                                     <h4>Vignesh S</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -428,10 +377,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/anirudh-narayan-602505172">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/B. Anirudh.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/B. Anirudh.jpg" alt="">
                                     <h4>Anirudh B</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -440,10 +386,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-4 offset-md-4">
                             <a href="https://github.com/sai-janani">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Sai Janani.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Sai Janani.jpg" alt="">
                                     <h4>Sai Janani</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -456,10 +399,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/manav-chhabria-320536152">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Manav B Chhabria.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Manav B Chhabria.jpg" alt="">
                                     <h4>Manav B Chhabria</h4>
                                     <p style="color: black;">Team Head</p>
                                 </div>
@@ -468,10 +408,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/sanjanaapparao/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Sanjana Apparao.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Sanjana Apparao.jpg" alt="">
                                     <h4>Sanjana Apparao</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -480,10 +417,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/crytotech">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Aparajita S.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Aparajita S.jpg" alt="">
                                     <h4>Aparajita S</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -492,10 +426,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/harini-ashok">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Harini Ashok.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Harini Ashok.jpg" alt="">
                                     <h4>Harini Ashok</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -504,10 +435,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/adela_florence_">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Adela Florence. C.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Adela Florence. C.jpg" alt="">
                                     <h4>Adela Florence. C</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -516,10 +444,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.instagram.com/aravindsuresh">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Aravind S.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Aravind S.jpg" alt="">
                                     <h4>Aravind S</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -528,10 +453,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 offset-lg-2 offset-md-2">
                             <a href="https://in.linkedin.com/in/mdk-mukkesh-a4088316a">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/M D K Mukkesh.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/M D K Mukkesh.jpg" alt="">
                                     <h4>M D K Mukkesh</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -540,10 +462,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/sriram-s-6a3533b8">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Sriram.S.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Sriram.S.jpg" alt="">
                                     <h4>Sriram.S</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -557,10 +476,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/sri-vardhamanan-a-33b744155">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/A. Sri Vardhamanan.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/A. Sri Vardhamanan.jpg" alt="">
                                     <h4>A. Sri Vardhamanan</h4>
                                     <p style="color: black;">WebMaster & Team Head</p>
                                 </div>
@@ -569,10 +485,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/adarshmanickam/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Adarsh Manickam M..jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Adarsh Manickam M..jpg" alt="">
                                     <h4>Adarsh Manickam M</h4>
                                     <p style="color: black;">Senior Executive Member</p>
                                 </div>
@@ -581,10 +494,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/imhphari/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Hari Prasath T S..jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Hari Prasath T S..jpg" alt="">
                                     <h4>Hari Prasath T S</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -593,10 +503,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/karthikn2099/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Karthick Sridhar.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Karthick Sridhar.jpg" alt="">
                                     <h4>Karthick Sridhar</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -605,10 +512,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://github.com/ragu244">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Raguraman.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Raguraman.jpg" alt="">
                                     <h4>Raguraman</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
@@ -617,10 +521,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <a href="https://www.linkedin.com/in/yuvaraj-jayavel-304587160/">
                                 <div class="team-member">
-                                    <div class="img-container">
-                                        <img class="mx-auto rounded-circle" src="../images/members/Yuvaraj J.jpg" alt="">
-                                        <div class="overlay"><i class="fab fa-github fa-4x fa-fw"></i></div><!-- .overlay -->
-                                    </div><!-- .img-container -->
+                                    <img class="mx-auto rounded-circle" src="../images/members/Yuvaraj J.jpg" alt="">
                                     <h4>Yuvaraj J</h4>
                                     <p style="color: black;">Executive Member</p>
                                 </div>
