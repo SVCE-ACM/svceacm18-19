@@ -90,7 +90,7 @@ h1 {
     position: relative;
     z-index: 1000;
     color: white;
-    background-image: radial-gradient(circle, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+    background-image: linear-gradient(to right top, #182e69, #08437d, #00588f, #006d9e, #0182ac);
     padding-bottom: 40px;
 }
 
