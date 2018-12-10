@@ -39,7 +39,7 @@ function switchTabs(tabType) {
         // $(window).scrollTop($('#' + tab_id).offset().top + 60);
 
         $('html, body').animate({
-            scrollTop: $('#' + tab_id).offset().top - 70
+            scrollTop: $('#' + tab_id).offset().top - 170
         }, 1000);
     });
 }
