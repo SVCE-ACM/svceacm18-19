@@ -83,6 +83,7 @@ h1 {
 }
 
 .page-subtitle {
+    font-size: calc(1.5vw + 12px);
     color: rgb(131, 206, 226);
 }
 

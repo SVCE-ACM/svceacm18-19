@@ -1,0 +1,543 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery.js"></script>
+    <style>
+    body {
+        margin: 0;
+    }
+
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    .image-grid {
+        width: 100%;
+        max-width: 1310px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 10px 5px 0;
+    }
+
+    .image__cell {
+        float: left;
+        position: relative;
+    }
+
+    .image--basic {
+        padding: 0 5px;
+    }
+
+    .basic__img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .image__cell.is-collapsed .image--basic {
+        cursor: pointer;
+    }
+
+    .image__cell.is-expanded .image--expand {
+        max-height: 5000px;
+        margin-bottom: 10px;
+    }
+
+    .image--expand {
+        position: relative;
+        left: -5px;
+        padding: 0 5px;
+        box-sizing: content-box;
+        overflow: hidden;
+        /*background: #222;*/
+        max-height: 0;
+        /*transition: max-height .3s ease-in-out, margin-bottom .1s .2s;*/
+    }
+
+    .image__cell.is-collapsed .arrow--up {
+        height: 10px;
+        width: 100%;
+    }
+
+    .image__cell.is-expanded .arrow--up {
+        border-bottom: 8px solid #222;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        height: 0;
+        width: 0;
+        margin: 2px auto 0;
+    }
+
+    .expand__close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #454545;
+        font-size: 50px;
+        line-height: 50px;
+        text-decoration: none;
+    }
+
+    .expand__close:before {
+        content: '×';
+    }
+
+    .expand__close:hover {
+        color: #fff;
+    }
+
+    .image--large {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        padding: 40px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .caption {
+    	min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event-title {
+    	padding-top: 40px;
+    }
+
+    .desc-box {
+    	display: flex;
+    	align-items: center;
+    }
+
+    .box {
+    	display: flex;
+    	flex-direction: row;
+    }
+
+    .text-center {
+    	text-align: center;
+    }
+    @media only screen and (max-width: 530px) {
+
+        .image__cell {
+            width: 100%;
+        }
+
+        /*   .image__cell:nth-of-type(2n+2) .image--expand {
+		      margin-left: -100%;
+		  } */
+
+        .image__cell:nth-of-type(n+2) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 100%;
+        }
+
+        .desc-box {
+        	clear: left;
+        }
+
+    }
+
+    @media (max-width: 767px) and (min-width: 531px) {
+        .image__cell {
+            width: 33.33%;
+        }
+
+        .image__cell:nth-of-type(3n+2) .image--expand {
+            margin-left: -100%;
+        }
+		
+		.image__cell:nth-of-type(3n+3) .image--expand {
+            margin-left: -200%;
+        }
+        .image__cell:nth-of-type(3n+4) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 300%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .image__cell {
+            width: 25%;
+        }
+
+        .image__cell:nth-of-type(4n+2) .image--expand {
+            margin-left: -100%;
+        }
+
+        .image__cell:nth-of-type(4n+3) .image--expand {
+            margin-left: -200%;
+        }
+
+        .image__cell:nth-of-type(4n+4) .image--expand {
+            margin-left: -300%;
+        }
+
+        .image__cell:nth-of-type(4n+5) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 400%;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+    	.box {
+    		flex-direction: column;
+    	}
+
+    	.image--large {
+    		padding: 40px 20px;
+    	}
+    }
+    </style>
+</head>
+
+<body>
+    <section class="image-grid">
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-0"><div class="caption text-center">Lorem ipsum dolor sit.</div><img id="expand-jump-0" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"><!-- .caption --></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand">
+            	<a href="#close-jump-0" class="expand__close"></a>
+            	<div class="event-title text-center">Lorem ipsum dolor.</div><!-- .event-title -->
+            	<div class="box">
+            		<img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4">
+            		<div class="desc-box">
+            			<p class="event-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequatur, doloribus repellendus eaque rerum ut nostrum ab dignissimos obcaecati molestiae neque eos eius aspernatur, id magni natus vitae molestias. Ipsam eaque nihil corporis. Ea, aliquid? Hic dolor architecto nisi fugit veniam perspiciatis non ipsum in dolorum, amet sequi numquam inventore, illo laudantium velit fugiat exercitationem veritatis provident, officia at! Dicta odio itaque esse fugiat ullam labore aliquam, provident numquam et. Repudiandae voluptates accusamus, cumque modi magni sequi temporibus aliquam atque corrupti impedit ab quae esse, asperiores doloribus? Quo similique commodi eius! Obcaecati dolorum, vitae laudantium provident, vero ut laborum, quisquam suscipit nulla, unde porro alias vel consequuntur sint! Fuga eius facilis earum ea consequatur ullam ut est et, praesentium quibusdam commodi saepe facere sint minus maxime doloribus sed totam obcaecati possimus, officia quis. Atque similique alias, laudantium culpa cum, hic non minima quam aut dolorem consectetur quas reprehenderit, eligendi delectus.</p><!-- .event-desc -->
+            		</div><!-- .desc-box -->
+            	</div><!-- .box -->
+            </div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-1"><div class="caption text-center">Lorem ipsum dolor sit. Lorem ipsum dolor sit.</div><img id="expand-jump-1" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-1" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-2"><img id="expand-jump-2" class="basic__img" src="http://lorempixel.com/250/250/fashion/3" alt="Fashion 3"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-2" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/3" alt="Fashion 3"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-3"><img id="expand-jump-3" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-3" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-4"><img id="expand-jump-4" class="basic__img" src="http://lorempixel.com/250/250/fashion/1" alt="Fashion 1"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-4" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/1" alt="Fashion 1"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-5"><img id="expand-jump-5" class="basic__img" src="http://lorempixel.com/250/250/fashion/5" alt="Fashion 5"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-5" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/5" alt="Fashion 5"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-6"><img id="expand-jump-6" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-6" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-7"><img id="expand-jump-7" class="basic__img" src="http://lorempixel.com/250/250/fashion/3" alt="Fashion 3"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-7" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/3" alt="Fashion 3"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-8"><img id="expand-jump-8" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-8" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-9"><img id="expand-jump-9" class="basic__img" src="http://lorempixel.com/250/250/fashion/3" alt="Fashion 3"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-9" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/3" alt="Fashion 3"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-10"><img id="expand-jump-10" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-10" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-11"><img id="expand-jump-11" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-11" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-12"><img id="expand-jump-12" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-12" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-13"><img id="expand-jump-13" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-13" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-14"><img id="expand-jump-14" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-14" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-15"><img id="expand-jump-15" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-15" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-16"><img id="expand-jump-16" class="basic__img" src="http://lorempixel.com/250/250/fashion/9" alt="Fashion 9"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-16" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/9" alt="Fashion 9"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-17"><img id="expand-jump-17" class="basic__img" src="http://lorempixel.com/250/250/fashion/5" alt="Fashion 5"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-17" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/5" alt="Fashion 5"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-18"><img id="expand-jump-18" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-18" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-19"><img id="expand-jump-19" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-19" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-20"><img id="expand-jump-20" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-20" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-21"><img id="expand-jump-21" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-21" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-22"><img id="expand-jump-22" class="basic__img" src="http://lorempixel.com/250/250/fashion/1" alt="Fashion 1"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-22" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/1" alt="Fashion 1"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-23"><img id="expand-jump-23" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-23" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-24"><img id="expand-jump-24" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-24" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-25"><img id="expand-jump-25" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-25" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-26"><img id="expand-jump-26" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-26" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-27"><img id="expand-jump-27" class="basic__img" src="http://lorempixel.com/250/250/fashion/7" alt="Fashion 7"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-27" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/7" alt="Fashion 7"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-28"><img id="expand-jump-28" class="basic__img" src="http://lorempixel.com/250/250/fashion/7" alt="Fashion 7"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-28" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/7" alt="Fashion 7"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-29"><img id="expand-jump-29" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-29" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-30"><img id="expand-jump-30" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-30" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-31"><img id="expand-jump-31" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-31" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-32"><img id="expand-jump-32" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-32" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-33"><img id="expand-jump-33" class="basic__img" src="http://lorempixel.com/250/250/fashion/8" alt="Fashion 8"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-33" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/8" alt="Fashion 8"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-34"><img id="expand-jump-34" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-34" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-35"><img id="expand-jump-35" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-35" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-36"><img id="expand-jump-36" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-36" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-37"><img id="expand-jump-37" class="basic__img" src="http://lorempixel.com/250/250/fashion/5" alt="Fashion 5"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-37" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/5" alt="Fashion 5"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-38"><img id="expand-jump-38" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-38" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-39"><img id="expand-jump-39" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-39" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-40"><img id="expand-jump-40" class="basic__img" src="http://lorempixel.com/250/250/fashion/7" alt="Fashion 7"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-40" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/7" alt="Fashion 7"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-41"><img id="expand-jump-41" class="basic__img" src="http://lorempixel.com/250/250/fashion/7" alt="Fashion 7"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-41" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/7" alt="Fashion 7"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-42"><img id="expand-jump-42" class="basic__img" src="http://lorempixel.com/250/250/fashion/5" alt="Fashion 5"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-42" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/5" alt="Fashion 5"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-43"><img id="expand-jump-43" class="basic__img" src="http://lorempixel.com/250/250/fashion/3" alt="Fashion 3"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-43" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/3" alt="Fashion 3"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-44"><img id="expand-jump-44" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-44" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-45"><img id="expand-jump-45" class="basic__img" src="http://lorempixel.com/250/250/fashion/5" alt="Fashion 5"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-45" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/5" alt="Fashion 5"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-46"><img id="expand-jump-46" class="basic__img" src="http://lorempixel.com/250/250/fashion/6" alt="Fashion 6"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-46" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/6" alt="Fashion 6"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-47"><img id="expand-jump-47" class="basic__img" src="http://lorempixel.com/250/250/fashion/4" alt="Fashion 4"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-47" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/4" alt="Fashion 4"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-48"><img id="expand-jump-48" class="basic__img" src="http://lorempixel.com/250/250/fashion/2" alt="Fashion 2"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-48" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/2" alt="Fashion 2"></div>
+        </article>
+        <article class="image__cell is-collapsed">
+            <div class="image--basic"><a href="#expand-jump-49"><img id="expand-jump-49" class="basic__img" src="http://lorempixel.com/250/250/fashion/7" alt="Fashion 7"></a>
+                <div class="arrow--up"></div>
+            </div>
+            <div class="image--expand"><a href="#close-jump-49" class="expand__close"></a><img class="image--large" src="http://lorempixel.com/400/400/fashion/7" alt="Fashion 7"></div>
+        </article>
+    </section>
+    <script>
+    // Demo by Dan Rose.
+    // See: http://www.sitepoint.com/recreating-google-images-search-layout-css
+    //bind click events
+    var $cell = $('.image__cell');
+
+    $cell.find('.image--basic').click(function() {
+        var $thisCell = $(this).closest('.image__cell');
+
+        if ($thisCell.hasClass('is-collapsed')) {
+            $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed');
+            $thisCell.removeClass('is-collapsed').addClass('is-expanded');
+        } else {
+            $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+        }
+    });
+
+    $cell.find('.expand__close').click(function() {
+
+        var $thisCell = $(this).closest('.image__cell');
+
+        $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+    });
+    //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>
