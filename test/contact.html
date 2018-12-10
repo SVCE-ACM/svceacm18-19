@@ -19,11 +19,10 @@
     <link rel="stylesheet" href="../css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
 </head>
 <style>
-.page-subtitle {
-    color: rgb(131, 206, 226);
-}
+
 #contact-page .wrapper {
     flex-direction: column;
     flex-wrap: wrap;
@@ -98,7 +97,7 @@ a.contact-link:hover {
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/logos/svce_acm_2.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -129,7 +128,7 @@ a.contact-link:hover {
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
-                <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
+                <!-- <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3> -->
             </div>
         </section><!-- .page-head -->
         <section id="contact-sec" class="page-content">
@@ -199,10 +198,10 @@ a.contact-link:hover {
     <script src="../js/main.js"></script>
     <script>
     $(document).ready(function() {
-        makeParallax($(window).width(), 100);
+        makeParallax($(window).width(), 70);
         $(window).on('resize', function() {
             var windowWidth = $(this).width();
-            makeParallax(windowWidth, 100);
+            makeParallax(windowWidth, 70);
         });
         outroAnimation('.navbar', '.wrapper');
     });

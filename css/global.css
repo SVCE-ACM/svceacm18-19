@@ -82,6 +82,10 @@ h1 {
     color: rgb(131, 206, 226);
 }
 
+.page-subtitle {
+    color: rgb(131, 206, 226);
+}
+
 .page-content {
     /*border-top: 1px solid white;*/
     -webkit-box-shadow: 0px -3px 10px 0px rgba(255,255,255,1);
