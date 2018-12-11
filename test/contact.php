@@ -1,3 +1,37 @@
+<?php
+$ma="";
+if(isset($_POST['submit']))
+{
+     $mailto = "ragu741721@gmail.com";
+    $mailSub = "New Message";
+    $mailMsg = $_POST['name']." have sent the message ".$_POST['message'];
+     require '../PHPMailer-master/PHPMailerAutoload.php';
+   $mail = new PHPMailer();
+   $mail ->IsSmtp();
+   $mail ->SMTPDebug = 0;
+   $mail ->SMTPAuth = true;
+   $mail ->SMTPSecure = 'ssl';
+   $mail ->Host = "smtp.gmail.com";
+   $mail ->Port = 465; // or 587
+   $mail ->IsHTML(true);
+   $mail ->Username = "ragu741721@gmail.com";
+   $mail ->Password = "raguraman99";
+   $mail ->SetFrom("ragu741721@gmail.com");
+   $mail ->Subject = $mailSub;
+   $mail ->Body = $mailMsg;
+   $mail ->AddAddress($mailto);
+     if(!$mail->Send())
+   {
+         $ma="Mail Not Sent";
+   }
+   else
+   {
+       $ma= "Mail Sent Successfully";
+   }
+
+
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,10 +53,12 @@
     <link rel="stylesheet" href="../css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
-</head>
+  </head>
+    
 <style>
-
+.page-subtitle {
+    color: rgb(131, 206, 226);
+}
 #contact-page .wrapper {
     flex-direction: column;
     flex-wrap: wrap;
@@ -93,11 +129,12 @@ a.contact-link:hover {
     }
 }
 </style>
-
+    
+  
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/logos/svce_acm_2.png"></a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -128,7 +165,7 @@ a.contact-link:hover {
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
-                <!-- <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3> -->
+                <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
         <section id="contact-sec" class="page-content">
@@ -147,11 +184,12 @@ a.contact-link:hover {
                 </div>
             </div>
             <div class="container-fluid">
-                <form action="" id="contact-form" class="v-center">
+                <form action="/svceacm18-19/test/contact.php" id="contact-form" class="v-center" method="post" >
                     <input type="text" class="form-control" name="name" placeholder="Name" required="">
                     <input type="email" class="form-control" name="email" placeholder="Email" required="">
                     <textarea class="form-control" rows="5" name="message" placeholder="Message" required="" data-gramm_editor="false"></textarea>
                     <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+                    <?php echo $ma;?>
                 </form><!-- #contact-form -->
             </div><!-- .row -->
         </section>
@@ -198,10 +236,10 @@ a.contact-link:hover {
     <script src="../js/main.js"></script>
     <script>
     $(document).ready(function() {
-        makeParallax($(window).width(), 70);
+        makeParallax($(window).width(), 100);
         $(window).on('resize', function() {
             var windowWidth = $(this).width();
-            makeParallax(windowWidth, 70);
+            makeParallax(windowWidth, 100);
         });
         outroAnimation('.navbar', '.wrapper');
     });
