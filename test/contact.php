@@ -2,7 +2,7 @@
 $ma="";
 if(isset($_POST['submit']))
 {
-     $mailto = "ragu741721@gmail.com";
+     $mailto = "acm.svcecse@gmail.com";
     $mailSub = "New Message";
     $mailMsg = $_POST['name']." have sent the message ".$_POST['message'];
      require '../PHPMailer-master/PHPMailerAutoload.php';
@@ -14,9 +14,9 @@ if(isset($_POST['submit']))
    $mail ->Host = "smtp.gmail.com";
    $mail ->Port = 465; // or 587
    $mail ->IsHTML(true);
-   $mail ->Username = "ragu741721@gmail.com";
-   $mail ->Password = "raguraman99";
-   $mail ->SetFrom("ragu741721@gmail.com");
+   $mail ->Username = "acm.svcecse@gmail.com";
+   $mail ->Password = "password";
+   $mail ->SetFrom("acm.svcecse@gmail.com");
    $mail ->Subject = $mailSub;
    $mail ->Body = $mailMsg;
    $mail ->AddAddress($mailto);
