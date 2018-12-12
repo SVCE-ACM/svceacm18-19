@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/global.css">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
     <style>
@@ -121,6 +123,7 @@
     -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	border-radius: 20px;
     z-index: 10000;
 }
 		
@@ -134,11 +137,23 @@
 	#feedback-form {
 		width:10em;
 	}
+			#feedback-form h3{
+				font-size: 10px;
+			}
+			#feedback-form p{
+				font-size: 10px;
+			}
 		}
 		@media screen and (max-width: 767px) {
 	#feedback-form {
 		width:10em;
 	}
+			#feedback-form h3{
+				font-size: 20px;
+			}
+			#feedback-form p{
+				font-size: 20px;
+			}
 		}
     </style>
 
@@ -181,12 +196,12 @@
     <!-- #nav -->
 	
 	<div id="feedback">
-		<div id="feedback-form" style="display:none;" class="col-xs-4 col-md-4 ">
-			<h3 style="margin-top:0;color: #6b2a09;">Upcoming Event!!!</h3>
-			<p style="font-family: 'adventure,script';color: #6b2a09;font-size: 18px;">December of Algorithms</p>
+		<div id="feedback-form" style="display:none;" class="col-xs-4 col-md-4 panel panel-default" >
+			<h3 style="margin-top:0;color: #6b2a09;font-family: 'Gloria Hallelujah', bold;">December of Algorithms</h3>
+			<p style="font-family: 'Alegreya SC', serif; ;color: #D23E3E;">An Algorithm a day</p>
+			<p>For More Info... <a href="http://goo.gl/QN3Pd8"><br>Click Here</a></p>
 			
 			
-			<p>An Algorithm a day</p>
 			
 		</div>
 		<div id="feedback-tab"   style="font-weight: 140;"><img src="../images/logos/upcoming-events.png">
