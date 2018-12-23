@@ -33,7 +33,16 @@
     .image {
         width: 90%;
         max-width: 600px;
+		border-radius: 20px;
+		-webkit-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        -moz-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+		
     }
+	.text-content{
+		font-size: 100%;
+	}
+	
     
     .item {
         margin-bottom: 60px;
@@ -47,13 +56,30 @@
             margin-bottom: 30px;
         }
         .text {
-            margin-top: 40px;
+            margin-top: 20px;
         }
+		.text-content {
+		font-size: 90%;
+	}
+		.image{
+			align-content: stretch;
+		}}
 	@media (max-width: 1024px) {
 		.text {
             margin-top: 20px;
         }
-    }
+		.text-content{
+		font-size: 120%;
+		
+		}}
+		@media (max-width: 1700px) {
+		.text {
+            margin-top: 0px;
+        }
+		.text-content{
+		font-size: 130%;
+			
+			}}
 </style>
 <body id="about-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
@@ -96,9 +122,9 @@
            <div class="container-fluid v-center" style="flex-direction: column;">
                 <div class="item row v-center">
                     <div class="section-img col-md-6 v-center">
-                        <img class="image" src="../images/gallery/about.jpg">
+                        <img class="image img-fluid" src="../images/gallery/about.jpg">
                     </div><!-- .section-img -->
-                    <div class="text col-md-6">
+                    <div class="text col-md-12 col-lg-6 col-sm-12 text-content ">
                         
                         <p>Started in 2012 with an aim to advance awareness of computer science and technology, the SVCE-ACM student chapter is a premier computing society belonging to Sri Venkateswara College of Engineering.  <br><br>
 
