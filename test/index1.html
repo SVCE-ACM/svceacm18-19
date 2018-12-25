@@ -60,6 +60,9 @@
           color: white;
         }
 
+        .fa-hand-pointer {
+          animation-iteration-count: 5;
+        }
         #expand-btn, #close-btn {
           cursor: pointer;
           margin: 0;
@@ -166,12 +169,12 @@
 
     <div class="content">
       <div id="hero" class="container">
-        <div id="expand-btn" class="closed animated shake">
-          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-right"></i></p>
+        <div id="expand-btn" class="closed">
+          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-right"></i> <i class="fas fa-hand-pointer animated heartBeat"></i></p>
           <!-- .notif-text -->
         </div>
         <div id="close-btn" class="closed">
-          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-left"></i></p>
+          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-left"></i> <i class="fas fa-hand-pointer"></i></p>
           <!-- .notif-text -->
         </div>
         <!-- #events-notif -->
@@ -289,7 +292,7 @@
       }
 
       $('#expand-btn').click(function() {
-        $(this).removeClass('animated');
+        $('.fa-hand-pointer').removeClass('animated heartBeat');
         expand();
       });
 
