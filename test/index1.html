@@ -86,9 +86,9 @@
         #events-desc {
           border: 1px solid white;
           border-radius: 15px;
-          -webkit-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1);
-          -moz-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1);
-          box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1);
+          -webkit-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          -moz-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
           padding: 15px;
           margin-left: 15px;
           margin-right: 15px;
@@ -166,7 +166,7 @@
 
     <div class="content">
       <div id="hero" class="container">
-        <div id="expand-btn" class="closed">
+        <div id="expand-btn" class="closed animated shake">
           <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-right"></i></p>
           <!-- .notif-text -->
         </div>
@@ -289,6 +289,7 @@
       }
 
       $('#expand-btn').click(function() {
+        $(this).removeClass('animated');
         expand();
       });
 
