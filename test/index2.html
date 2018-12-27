@@ -242,7 +242,7 @@
     </nav>
     <!-- #nav -->
 
-    <div class="content">
+    <div class="content animated fadeIn">
       <div id="hero" class="container">
         <div id="expand-btn" class="expand-switch closed">
           <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-right animated heartBeat"></i></p>
@@ -278,7 +278,7 @@
     <!-- .content -->
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer animated fadeIn">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
@@ -379,6 +379,8 @@
       $('#close-btn').click(function() {
         close();
       });
+
+      outroAnimation('.navbar', '.content, .footer');
     </script>
 
 </body>
