@@ -23,80 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
     <style>      
-        .tab {
-            width: 50%;
-            min-width: 700px;
-            padding: 5px;
-        }
-        
-        /*Team members*/
-
-        .team-member {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .team-member img {
-            width: 225px;
-            height: 225px;
-            image-orientation: 10%;
-        }
-        
-        .img-container {
-          width: 225px;
-          height: 225px;
-          position: relative;
-          margin: 0 auto;
-        }
-
-        .img-container img {
-            width: 225px;
-            height: 225px;
-        }
-
-        .overlay {
-          position: absolute;
-          display: flex;
-          height: 100%;
-          width: 100%;
-          background: rgba(34,34,34,0.85);
-          top: 0;
-          left: 0;
-          opacity: 0;
-          justify-content: center;
-          align-items: center;
-          transition: opacity .5s;
-          z-index: 5;
-          border-radius: 50%;
-          color: white;
-        }
-
-        .overlay:hover {
-          opacity: 1;
-        }
-        
-        .team-member h4 {
-            margin-top: 25px;
-            margin-bottom: 0;
-            text-transform: none;
-            color:whitesmoke;
-        }
-
-        .team-member p {
-            color: #aaa;
-            margin-top: 0;
-        }    
-
-        @media (max-width: 768px) {
-            .tab {
-                width: 100%;
-                min-width: 200px;
-            }
-        }
-
-        a{
- 		   text-decoration: none !important;
-		}
+        .tab{width:50%;min-width:700px;padding:5px}.team-member{margin-bottom:50px;text-align:center}.team-member img{width:225px;height:225px;image-orientation:10%}.img-container{width:225px;height:225px;position:relative;margin:0 auto}.img-container img{width:225px;height:225px}.overlay{position:absolute;display:flex;height:100%;width:100%;background:rgba(34,34,34,.85);top:0;left:0;opacity:0;justify-content:center;align-items:center;transition:opacity .5s;z-index:5;border-radius:50%;color:white}.overlay:hover{opacity:1}.team-member h4{margin-top:25px;margin-bottom:0;text-transform:none;color:whitesmoke}.team-member p{color:#aaa;margin-top:0}@media (max-width:768px){.tab{width:100%;min-width:200px}}a{text-decoration:none!important}
       </style>
 </head>
 
@@ -672,17 +599,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    
     // correctly placing divs for parallax effect
-    $(document).ready(function() {
-        makeParallax($(window).width(), 100);
-        $(window).on('resize',function() {
-            var windowWidth = $(this).width();
-            makeParallax(windowWidth, 100);
-        });
-        switchTabs('.team');
-        outroAnimation('.navbar', '.wrapper');
-    });
-
+    $(document).ready(function(){makeParallax($(window).width(),100);$(window).on('resize',function(){var windowWidth=$(this).width();makeParallax(windowWidth,100)});switchTabs('.team');outroAnimation('.navbar','.wrapper')})
     </script>
 </body>

@@ -24,80 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
 </head>
 <style>
-    html, body {
-        height: 100%;
-    }
-    .page-content {
-        background-image: linear-gradient(to right top, #182e69, #08437d, #00588f, #006d9e, #0182ac);
-        padding: 50px 5px 10px;
-    }        
-    .image {
-        width: 90%;
-        max-width: 600px;
-		border-radius: 20px;
-		-webkit-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
-        -moz-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
-        box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
-		
-    }
-	.text-content{
-		font-size: 100%;
-	}
-	
-    
-    .item {
-        margin-bottom: 60px;
-    }
-    .sub-heading {
-        color: rgb(9, 53, 122);
-        margin-bottom: 20px;
-    }
-    @media (max-width: 768px) {
-        .item {
-            margin-bottom: 70px;
-        }
-        .text {
-            margin-top: 30px;
-        }
-
-        .text p {
-            font-size: 1.15em;
-        }
-		.text-content {
-		font-size: 85%;
-	}
-		.image{
-			align-content: stretch;
-			margin-top: 0!important;
-		}}
-	@media (min-width: 769px) {
-		.text {
-            margin-top: 20px;
-        }
-		.text-content{
-		font-size: 100%;
-		
-		}}
-	
-	
-		@media (min-width: 1024px) {
-		.text {
-            margin-top: 40px;
-        }
-		.text-content{
-		font-size: 100%;
-			
-			}
-	}
-	@media (min-width: 1290px) {
-		.text {
-            margin-top: 40px;
-        }
-		.text-content{
-		font-size: 130%;
-			
-			}
-	}
+    html,body{height:100%}.page-content{background-image:linear-gradient(to right top,#182e69,#08437d,#00588f,#006d9e,#0182ac);padding:50px 5px 10px}.image{width:90%;max-width:600px;border-radius:20px;-webkit-box-shadow:6px 0 5px 0 rgba(34,34,34,.75);-moz-box-shadow:6px 0 5px 0 rgba(34,34,34,.75);box-shadow:6px 0 5px 0 rgba(34,34,34,.75)}.text-content{font-size:100%}.item{margin-bottom:60px}.sub-heading{color:rgb(9,53,122);margin-bottom:20px}@media (max-width:768px){.item{margin-bottom:70px}.text{margin-top:30px}.text p{font-size:1.15em}.text-content{font-size:85%}.image{align-content:stretch;margin-top:0!important}}@media (min-width:769px){.text{margin-top:20px}.text-content{font-size:100%}}@media (min-width:1024px){.text{margin-top:40px}.text-content{font-size:100%}}@media (min-width:1290px){.text{margin-top:40px}.text-content{font-size:130%}}
 </style>
 <body id="about-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
@@ -193,14 +120,7 @@ Like every student chapter of ACM across the world, the SVCE chapter strives to 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $(document).ready(function() {
-            makeParallax($(window).width(), 100);
-            $(window).on('resize',function() {
-                var windowWidth = $(this).width();
-                makeParallax(windowWidth, 100);
-            });
-            outroAnimation('.navbar', '.wrapper');
-        });
+        $(document).ready(function(){makeParallax($(window).width(),100);$(window).on('resize',function(){var windowWidth=$(this).width();makeParallax(windowWidth,100)});outroAnimation('.navbar','.wrapper')})
     </script>
 </body>
 

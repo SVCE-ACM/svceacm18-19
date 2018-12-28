@@ -57,78 +57,7 @@ if(isset($_POST['submit']))
   </head>
     
 <style>
-.page-subtitle {
-    color: rgb(131, 206, 226);
-}
-#contact-page .wrapper {
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.page-content {    
-    padding: 50px;
-}
-
-.page-content .v-center {
-    flex-direction: column;
-}
-
-.form-control {
-  border: none;
-  border-bottom: 2px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-  width: 60%;
-  max-width: 500px;
-  
-}
-
-.form-control:focus {
-  border-bottom-color: #999999;
-}
-
- input {
-  height: 55px;
-}
-
- button#submit {
-  background: rgb(9, 53, 122);
-  cursor: pointer;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  height: 50px;
-  width: 190px;
-  margin-top: 24px;
-}
-
- button#submit:hover {
-  font-weight: bold;
-}
-
-.fas {
-    color: black;
-}
-
-a.contact-link {
-    color: black;
-    text-decoration: underline;
-}
-
-a.contact-link:hover {
-    color: white;
-}
-
-@media (max-width: 1024px) {
-    .form-control {
-        width: 95%;
-    }
-}
+.page-subtitle{color:rgb(131,206,226)}#contact-page .wrapper{flex-direction:column;flex-wrap:wrap}.page-content{padding:50px}.page-content .v-center{flex-direction:column}.form-control{border:none;border-bottom:2px solid #f0f0f0;border-radius:0;box-shadow:none;font-size:18px;margin-top:10px;margin-bottom:10px;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;width:60%;max-width:500px}.form-control:focus{border-bottom-color:#999}input{height:55px}button#submit{background:rgb(9,53,122);cursor:pointer;border:none;border-radius:50px;color:white;height:50px;width:190px;margin-top:24px}button#submit:hover{font-weight:700}.fas{color:black}a.contact-link{color:black;text-decoration:underline}a.contact-link:hover{color:white}@media (max-width:1024px){.form-control{width:95%}}
 </style>
     
   
@@ -236,14 +165,7 @@ a.contact-link:hover {
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    $(document).ready(function() {
-        makeParallax($(window).width(), 100);
-        $(window).on('resize', function() {
-            var windowWidth = $(this).width();
-            makeParallax(windowWidth, 100);
-        });
-        outroAnimation('.navbar', '.wrapper');
-    });
+    $(document).ready(function(){makeParallax($(window).width(),100);$(window).on('resize',function(){var windowWidth=$(this).width();makeParallax(windowWidth,100)});outroAnimation('.navbar','.wrapper')})
     </script>
 </body>
 
