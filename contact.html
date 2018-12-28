@@ -1,3 +1,40 @@
+
+<?php
+$ma="";
+if(isset($_POST['submit']))
+{
+     $mailto = "ragu741721@gmail.com";
+    $mailSub = "New Message";
+    $mailMsg = $_POST['name']." have sent the message ".$_POST['message'];
+     require '../PHPMailer-master/PHPMailerAutoload.php';
+   $mail = new PHPMailer();
+   $mail ->IsSmtp();
+   $mail ->SMTPDebug = 0;
+   $mail ->SMTPAuth = true;
+   $mail ->SMTPSecure = 'ssl';
+   $mail ->Host = "smtp.gmail.com";
+   $mail ->Port = 465; // or 587
+   $mail ->IsHTML(true);
+   $mail ->Username = "ragu741721@gmail.com";
+   $mail ->Password = "raguraman99";
+   $mail ->SetFrom("ragu741721@gmail.com");
+   $mail ->Subject = $mailSub;
+   $mail ->Body = $mailMsg;
+   $mail ->AddAddress($mailto);
+     if(!$mail->Send())
+   {
+         $ma="Mail Not Sent";
+   }
+   else
+   {
+       $ma= "Mail Sent Successfully";
+   }
+
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -13,34 +50,30 @@
     <meta property="og:description" content="ACM Student Chapter of SVCE">
     <meta property="twitter:title" content="ACM Student Chapter @SVCE">
     <meta property="twitter:description" content="ACM Student Chapter of SVCE">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	</head>
-	
-	
-	<style>
-	
-			
-		/*---------------------------------------
-  Contact section              
------------------------------------------*/
-		
-		.center{
-			margin-left: 18%;
-		}
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+</head>
+<style>
 
-.contact-info .fa {
-  padding-right: 5px;
+#contact-page .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-#contact .form-control {
+.page-content {    
+    padding: 50px;
+}
+
+.page-content .v-center {
+    flex-direction: column;
+}
+
+.form-control {
   border: none;
   border-bottom: 2px solid #f0f0f0;
   border-radius: 0px;
@@ -50,45 +83,58 @@
   margin-bottom: 10px;
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
+  width: 60%;
+  max-width: 500px;
+  
 }
 
-#contact .form-control:focus {
+.form-control:focus {
   border-bottom-color: #999999;
 }
 
-#contact input {
+ input {
   height: 55px;
 }
 
-#contact button#submit {
-  background: #0182ac;
+ button#submit {
+  background: rgb(9, 53, 122);
+  cursor: pointer;
   border: none;
   border-radius: 50px;
-  color: #ffffff;
+  color: white;
   height: 50px;
-	width: 190px;
+  width: 190px;
   margin-top: 24px;
 }
 
-#contact button#submit:hover {
-  background: #7682cc;
-  color: #ffffff;
+ button#submit:hover {
+  font-weight: bold;
 }
 
+.fas {
+    color: black;
+}
 
-		footer {
-        background-color: #0182ac;
-        color: white;
-        padding: 20px;
+a.contact-link {
+    color: black;
+    text-decoration: underline;
+}
 
+a.contact-link:hover {
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .form-control {
+        width: 95%;
     }
-	
-	</style>
+}
+</style>
 
-<body id="teams-page">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
+<body id="contact-page">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/logos/svce_acm_2.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -98,175 +144,107 @@
                         <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#events">Events</a>
+                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link js-scroll-trigger active">Team</a>
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Teams</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger active">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- #nav -->
-	
-	
-	
-	<section id="contact22">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-            <p>(+91) 99627 54468</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-            <p>
-              <a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-	</section>
-	
-	</br>
-	</br>
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	<section id="contact" class="parallax-section text-center">
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-12 col-sm-12">
-                    <!-- SECTION TITLE -->
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <h2>Send Us a Message</h2>
-                         <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
+    <div class="wrapper animated fadeIn">
+        <section class="page-head parallax-bg">
+            <div class="container v-center test">
+                <h1 class="text-center page-title">Contact Us</h1>
+                <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
+                <!-- <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3> -->
+            </div>
+        </section><!-- .page-head -->
+        <section id="contact-sec" class="page-content">
+            <div class="container v-center">
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+                        <p><a class="contact-link" href="tel:+919962754468">(+91) 99627 54468</a></p>
                     </div>
-               </div>
-
-               <div class="col-md-7 col-sm-10 ">
-                    <!-- CONTACT FORM HERE -->
-                    <div class="fadeInUp" >
-                        <form id="contact-form" action="#" method="post" class="center">
-                              <div class="col-md-6 col-sm-6 text-center">
-                                   <input type="text" class="form-control" name="name" placeholder="Name" required="">
-                              </div>
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                              </div>
-                              <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
-                              </div>
-                              <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                                   <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-                              </div>
-                        </form>
+                    <div class="col-sm-6 text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+                        <p>
+                            <a class="contact-link" href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
+                        </p>
                     </div>
-               </div>
-
-               
-
+                </div>
+            </div>
+            <div class="container-fluid">
+                <form action="" id="contact-form" class="v-center">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                    <textarea class="form-control" rows="5" name="message" placeholder="Message" required="" data-gramm_editor="false"></textarea>
+                    <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+					  <?php echo $ma;?>
+                </form><!-- #contact-form -->
+            </div><!-- .row -->
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                
+                <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+              </div>
+              <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item mr-3">
+                    <a href="https://www.facebook.com/SVCEACM/">
+                      <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mr-3">
+                    <a href="https://twitter.com/acm_svce">
+                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    <li class="list-inline-item mr-3">
+                    <a href="https://github.com/SVCE-ACM">
+                      <i class="fab fa-github fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                    
+                  <li class="list-inline-item">
+                    <a href="https://www.instagram.com/svceacm/">
+                      <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-     </div>
-
-
-	</section>
-	
-	  <!-- ============= contact section ends ================== -->
-
- 
-      
-   <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            
-            <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
-          </div>
-          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-facebook fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-                </a>
-              </li>
-				<li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-github fa-2x fa-fw"></i>
-                </a>
-              </li>
-				
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-instagram fa-2x fa-fw"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
- <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/nav.js"></script> -->
-    <script src="js/jquery.easing.js"></script>
-    <script src="js/swiper.min.js"></script>
+        </footer>
+    </div><!-- .wrapper -->
+    <!-- ============= contact section ends ================== -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
     <script>
     $(document).ready(function() {
-        var url = String(window.location.href);
-        var tab_id = url.substring(url.indexOf("#") + 1);
-        console.log(tab_id);
-        tabs = ["office-bearers", "acads", "events", "media", "web"];
-        console.log($.inArray("acads", tabs));
-        if (tab_id.length > 0 && tab_id.length < 15 && $.inArray(tab_id, tabs) !== -1) {
-            $('.tabs a').removeClass('active');
-            $('a[href="#'+tab_id+'"]').addClass('active');
-            $('.teams').removeClass('active');
-            $('#'+tab_id).addClass('active');    
-        } else {
-            $('a[href="#office-bearers"]').addClass('active');
-            $('#office-bearers').addClass('active');
-        }
+        makeParallax($(window).width(), 70);
+        $(window).on('resize', function() {
+            var windowWidth = $(this).width();
+            makeParallax(windowWidth, 70);
+        });
+        outroAnimation('.navbar', '.wrapper');
     });
-    $(".tabs").on("click", "a", function() {
-        $('.tabs a').removeClass("active");
-        $(this).addClass('active');
-        var tab_id = this.href.substring(this.href.indexOf("#") + 1);
-        $('.teams').removeClass('active');
-        $('#' + tab_id).addClass('active');
-    });
-    console.log(window.location.href);
     </script>
 </body>
+
 </html>
-
-
+ 

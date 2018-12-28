@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,47 +8,333 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-       @import url(https://fonts.googleapis.com/css?family=Montserrat);
-        html, body{
-            height: 100%;
-            font-weight: 50;
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="css/tab.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <style>    
+    .page-content {
+        background-image: radial-gradient(circle, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+    }
+
+    .type {
+        color: inherit;
+    }
+
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    .image-grid {
+        max-width: 1250px;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 10px 5px 0;
+    }
+
+    .image__cell {
+        float: left;
+        position: relative;
+    }
+
+    .image--basic {
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+
+    .basic__img {
+        /*display: block;*/
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+        border-radius: 25px 25px 0 0;
+        border-color: transparent;
+    }
+
+    .large-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image__cell.is-collapsed .image--basic {
+        cursor: pointer;
+    }
+
+    .image__cell.is-expanded .image--expand {
+        max-height: 5000px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: 1px solid white;
+    }
+
+    .image--expand {
+        position: relative;
+        box-sizing: content-box;
+        background: #182E69;
+        background: radial-gradient(circle, #182E69, #2F2727);
+        overflow: hidden;
+        max-height: 0;
+        /*transition: max-height .5s ease-in-out, margin-bottom .1s .2s;*/
+    }
+
+    
+    .image__cell.is-collapsed .arrow--up {
+        height: 10px;
+        width: 100%;
+    }
+
+    .image__cell.is-expanded .arrow--up {
+        border-bottom: 8px solid #fff;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        height: 0;
+        width: 0;
+        margin: 2px auto 0;
+    }
+
+    .expand__close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #454545!important;
+        font-size: 50px;
+        line-height: 50px;
+        text-decoration: none;
+    }
+
+    .expand__close:hover {
+        color: #fff;
+    }
+
+    .image--large {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        padding: 0 40px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        object-fit: contain;
+        min-width: 600px;
+        /*max-width: 500px;*/
+        /*width: 100%;*/
+        max-height: 500px;
+    }
+
+    .caption {
+        background: #fff;
+        width: 350px;
+        margin: 0 auto;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 25px 25px;
+        -webkit-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75), 0px 6px 5px 0px rgba(34,34,34,0.75);
+        -moz-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75), 0px 6px 5px 0px rgba(34,34,34,0.75);
+        box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75), 0px 6px 5px 0px rgba(34,34,34,0.75);
+    }
+    
+    h1 {
+        font-weight: 600;
+    }
+    .caption h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .event-title {
+        padding-top: 40px;
+        color: rgb(131, 206, 226);
+    }
+
+    .desc-box {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    
+    .event-desc {
+        line-height: 1.5em;
+    }
+
+    .event-desc a {
+        color: #03a9f4;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .event-desc a:hover {
+        color: #ccc;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .img-container img {
+        -webkit-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        -moz-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+    }
+
+    .text-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 250px;
+        margin: 0 auto;
+        border-radius: 25px 25px 0 0;
+        font-family: 'Amatic SC', cursive;
+        font-size: 72px;
+        text-align: center;
+        line-height: 1.25;
+        padding: 10px;
+        -webkit-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        -moz-box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+        box-shadow: 6px 0px 5px 0px rgba(34,34,34,0.75);
+    }
+
+    #event-5 {
+        background: #666;
+    }    
+
+    #event-6 {
+        background: #333;
+    }
+
+    #event-7 {
+        background: #777;
+    }
+
+    #event-old10 {
+        background: #222;
+    }
+
+    #event-old11 {
+        line-height: 1.05;
+        background: #666;
+    }
+
+    #event-old12 {
+        background: #333;
+    }
+
+    .image--basic a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h4 {
+        font-weight: bold;
+        color: rgb(9, 53, 122);
+    }
+    .text-center {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 530px) {
+        .image--large {
+            min-width: 300px;
         }
-        body
-        {
-            background: url('images/under_dev/bg.png');
-            color: white;
-            margin-top: 60px;
-            padding: 60px 30px;
-        }
-        
-        h4 {
-            font-weight: bold;
-            color: rgb(9, 53, 122);
-        }
-        .card {
-            min-width: 200px;
-            max-width: 400px;
-            margin: 10px auto;
-            color: black;
-        }
-        .btn-card {
-            background-color: #65016b;
-            color: white;
-        }
-        
-        .card-img-top {
+    }
+    @media only screen and (min-width: 531px) and (max-width: 768px) {
+
+        .image__cell {
             width: 100%;
-            height: 300px;
+        }
+
+        .image--large {
+            margin: 0 auto;
+            min-width: 500px;
+        }
+
+        .image__cell:nth-of-type(n+2) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1199px) and (min-width: 769px) {
+        .image__cell {
+            width: 50%;
+        }
+
+        .image__cell:nth-of-type(2n+2) .image--expand {
+            margin-left: -100%;
         }
         
-    </style>
+        .image__cell:nth-of-type(2n+3) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 200%;
+        }
+
+        .image--large {
+            min-width: 500px;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .image__cell {
+            width: 33.33%;
+        }
+
+        .image__cell:nth-of-type(3n+2) .image--expand {
+            margin-left: -100%;
+        }
+        
+        .image__cell:nth-of-type(3n+3) .image--expand {
+            margin-left: -200%;
+        }
+        .image__cell:nth-of-type(3n+4) {
+            clear: left;
+        }
+
+        .image--expand {
+            width: 300%;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .box {
+            flex-direction: column;
+        }
+
+        .image--large {
+            padding: 40px 20px;
+        }
+    }
+</style>
 </head>
 
 <body id="events-page">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink " id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/logos/svce_acm_2.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -58,143 +344,611 @@
                         <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger active">Events</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- nav -->
-    <div class="container title-div">
-        <h1 class="text-center page-title">Events</h1><br>
-    </div><!-- .container title-div -->
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/disrupt.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Disrupt</h4>
-                            <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
-                        </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
+    <div class="wrapper animated fadeIn">
+        <section class="page-head parallax-bg">
+            <div class="container v-center test">
+                <h1 class="text-center page-title">Our Events</h1>
+                <h3 class="text-center page-subtitle">Have a look at our events!</h3>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/web.jpeg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Webbed</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
-                        </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
+        </section><!-- .page-head -->
+        <section class="page-content">
+            <div class="tab container h-100">
+                <div class="row v-center">
+                    <nav class="tabs" style="padding-left: 2px;">
+                        <div class="row">
+                            <a data-toggle="tab" href="#year18-19" class="active">2018-2019</a>
+                            <a data-toggle="tab" href="#year17-18">2017-2018</a>
+                        </div><!-- .row -->
+                    </nav>
+                </div><!-- .row -->
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/code.png" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Hour Of Code</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+            <div id="year18-19" class="image-grid type year active">
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-0">
+                            <div class="img-container">
+                                <img id="event-0" class="basic__img" src="images/events/inaug2018/inaug3.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Inauguration</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-0" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Inauguration</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events/inaug2018/inaug3.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">The 16th of July, 2018, marked the inauguration of the ACM SVCE Student Chapter for the academic year 2018 - 2019. The Chief Guest for the event was Mr Vaidyanathan Krishnamoorthy, Vice President and Head of Insurance Cognitive Business Operations of Tata Consultancy Services, New Jersey, who enthused the audience with realistic business strategies that are very much essential to thrive in the corporate world. He concluded his speech after having an interactive Q&A session with the audience. Additionally, the members of last year's chapter were felicitated and were encouraged to continue working with the current chapter.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
-            </div>
-        
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/tech.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">TechQwiz</h4>
-                            <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-1">
+                            <div class="img-container">
+                                <img id="event-1" class="basic__img" src="images/events/yah/yah1.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>YAH! 2K'18</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-1" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Yet Another Hackathon</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events/yah/yah5.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">A Hackathon is where crazy ideas turn into reality. The SVCE-ACM Student Chapter in collaboration with the SVCE Alumni Association conducted Yet Another Hackathon (YAH! 2K’18) on the 18th and 19th of August 2018 at Ascendas IT Park. From over 450 participants spanning a staggering 157 teams, the top 27 teams were selected based on an online screening test which tested both their ideation as well as their product development skills.<br><br>
+                                        The judging panel had an incredibly tough time deciding the winners which reflected the high standard of performance by the all the teams. In the end, they chose the victors – Team SSNsCreed consisting of Sundararaman, Vishal Gupta and Shrikanth from SSN College of Engineering. They bagged Rs. 30,000 in cash. The runner-ups were team AI Enthusiasts comprising of Ayush Parasbhai Maniar, Pawar Pranav Dayanand and Singhal Rajat Vikas, from IIT Madras. In addition, there were also prizes for the Best UI, Best Idea, Best Feature, Most Feasible Product and People's Choice Award.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/tob.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Tech Taboo</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-2">
+                            <div class="img-container">
+                                <img id="event-2" class="basic__img" src="images/events/technofair/technofair2.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Technofair</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-2" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Technofair</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events/technofair/technofair4.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">Interrupt is a National Level Technical Symposium organized by the Computer Science Department of Sri Venkateswara College of Engineering. For over 25 years, Interrupt has always kept students on their toes, eagerly waiting to experience its thrill and grandeur. This year, on the 29th of September, Technofair was conducted as a part of the SVCE-ACM Student Chapter initiative – an event where the participants are provided with a certain number of points as soon as they register, enabling them to trade their points to participate in the various mini events, thereby grabbing the chance to gain more points and win exciting goodies. <br><br>Technofair had a total of 10 exciting mini events, each of them being unique in their own special way. Having such a wide plethora of fun-filled technical events, Technofair gave its participants a wide variety of opportunities to choose from. While events tend to get boring and monotonous at times, this was one such event which never lost its element of excitement, which was undoubtedly the driving factor behind its huge success!</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/blockchain.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Blockchain</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-3">
+                            <div class="img-container">
+                                <img id="event-3" class="basic__img" src="images/events/virtualization/virtualization3.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Virtualization</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-3" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Virtualization</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events/virtualization/virtualization2.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">Knowledge is always meant to be shared. On the 4th of September 2018, a guest lecture on Virtualization was conducted by Mr. Ashok Lakshmichandran, Founder & CEO of Futurenet Technologies. He spoke about Virtualization and cloud and its benefits. He also spoke of how Virtualization applied into real world scenarios and how students can make a career out in it highlighting Vmware's role in Virtualization. He concluded his lecture with an interactive Q&A session with the audience, thereby enabling the students to get their doubts clarified and to get a better understanding about Virtualization as a whole. On the whole, the event proved to be a grand success.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
-            </div>
-        
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/tech.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">TechQwiz</h4>
-                            <p class="card-text ">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-4">
+                            <div class="img-container">
+                                <img id="event-4" class="basic__img" src="images/events/doa/algo2.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>A December of Algorithms</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-4" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>A December of Algorithms</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events/doa/algo1.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">An online event, A December Of Algorithms, was conducted throughout the month of December, with an aim to help the participants conquer the world of algorithms, once and for all. The participants were provided with algorithms and tools associated with the problem to help them improve their ability to comprehend and implement algorithms. In the process, it also taught them to use Github and make their first pull request. Participants who implemented all 31 algorithms successfully were provided with Certificates of Appreciation. The event was successful, helping many participants work their way through algorithms. The github repository can be found <a href="https://github.com/SVCE-ACM/A-December-of-Algorithms">here</a>.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/hack.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Inheritance Hack</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-5">
+                            <div id="event-5" class="text-img-container">
+                                GAME DESIGN
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Game Design</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-5" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Game Design</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">Calibration is an event specially conducted for the freshers every year to find new talent and their interests. For this year's calibration, the ACM student chapter organized many programs, including a Game Designing event. This event consisted of two round. The students had to pitch their game ideas and explain them thoroughly in the first round and the second round consisted of a real-time Q&A session with the judges, where each of the designers were questioned based on their previous round presentations. The event was a grand success with enthusiastic students displaying healthy competition and active participation.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-6">
+                            <div id="event-6" class="text-img-container">
+                                GAMING
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Gaming</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-6" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Gaming</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">Calibrations serves its purpose to initiate interaction between the first year students and the senior students. On the 15th of September 2018, a gaming event was conducted by the students of the SVCE- ACM chapter as a part of Calibrations 2k18. The gaming event was conducted in-order to encourage the growing spark about the trending computer and video games in the young minds. For this event, the participants were gathered to play FIFA, one of the most popular games on the market right now. The event served as an opportunity to do a small scale talent search among those newly admitted in our institution. This event went on successfully with a great turnout of participants</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-7">
+                            <div id="event-7" class="text-img-container" style="line-height: 1.05;">
+                                AVENUES TO EXPLORE - WEBINAR
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>Avenues to Explore - Webinar</h4>
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-7" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Avenues to Explore - Webinar</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">The SVCE-ACM Student Chapter conducted a webinar, Avenues To Explore, on the 22nd of December 2018 which featured Mr. Tarun Chinmai, an Alumini of the SVCE ACM Student Chapter, currently pursuing his Masters Degree at Arizona State University. The webinar aimed to help students get a better understanding of the various avenues in Computer Science. The speaker started the webinar with an introduction to computers and a few insights into various domains which constitute Computer Science. He proceeded to explain the importance of certain fields and elucidated their role in the developement of sustainable technology. The webinar also featured tips on howto decide on a specific domain, wherein the students were advised to understand the nuances present in each field, whilst exposing themselves to hands-on experience before deciding on a certain field. Following this, he provided various tips on how to tackle college placements as well. The webinar came to a conclusion with an interactive Q and A session.The diverse breadth of questions put-forth by the 100+ viewers across colleges in India served as a paragon to the success of the event.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="content">
-                        <img class="card-img-top" src="images/events/goc.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Game-Of-Codes</h4>
-                            <p class="card-text">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero's 1st-century BC text De Finibus Bonorum et Malorum.</p>
-                            <a href="#" class="btn btn-card v-center">View Gallery</a>
+            <div id="year17-18" class="image-grid type year">
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old0">
+                            <div class="img-container">
+                                <img id="event-old0" class="basic__img" src="images/events_2017/events/inaug2.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Inauguration</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old0" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Inauguration</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/inaug2.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">The 25th of July, 2017, marked the inauguration of the ACM SVCE Student Chapter for the academic year 2017 - 2018. The Chief Guest for the event was Mr Rajesh Padmanabhan, Founder and CEO of NFN Labs, who enthused the audience with a realistic but motivating outlook on life, technology and entrepreneurial spirit. Additionally, the members of last year's chapter were felicitated and were encouraged to continue working with the current chapter.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
                         </div>
-                    </div><!-- .content -->
-                </div><!-- .card -->
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old1">
+                            <div class="img-container">
+                                <img id="event-old1" class="basic__img" src="images/events_2017/events/gameofcodes4.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Game of Codes</h4></div><!-- .caption -->
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old1" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Game of Codes</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/gameofcodes4.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">The aim was to provide student-sourced guidance to other students on attaining maximum success in placement interviews. The event kick started with a mock coding round, followed by an interactive session where students who had already been offered jobs at companies such as Dell shared their valuable experience in interviews and answers to commonly asked programming questions. The event was a success, with each participant getting a confidence boost.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old2">
+                            <div class="img-container">
+                                <img id="event-old2" class="basic__img" src="images/events_2017/events/inheritancehack1.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Inheritance Hack</h4></div>
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old2" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Inheritance Hack</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/inheritancehack1.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">The Association of Computing Machinery, the Association of Computer Engineers and the iGEM Team of SVCE came together to organize the Inheritance Hack - a one of a kind interdisciplinary hackathon on Synthetic Biology that requires a Computer Science Application. This hackathon was conducted in Sri Venkateswara College of Engineering on the 26th and 27th of August, 2017. 8 teams consisting of 2-3 members each took part in this hackathon. Each team was to make an educational app, based on riboswitches or biobrick assembly within a time period of 24 hours. Finally, each team’s app was judged by Dr. Ravi Kant from Saksin and the team which had made the best, most efficient app was awarded with a cash prize of Rs.15000. The main aim of this event was to enable the participants to collaborate and learn beyond their specialized course of curriculum. This unique opportunity enthralled the participating teams more than anything else resulting in a befitting grand success.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old3">
+                            <div class="img-container">
+                                <img id="event-old3" class="basic__img" src="images/events_2017/events/disrupt1.jpg">
+                            </div><!-- .img-container -->
+                            <div class="caption text-center"><h4>Disrupt</h4></div>
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old3" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Disrupt</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/disrupt1.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">A technology based debate, Discord, was conducted by the SVCE ACM Student Chapter. on 21st September, 2017. This debate was open to 2nd, 3rd and 4th year students from all over the college. 14 people participated in this event. The main aim of this event was to ensure that students learn to stand up for themselves and for what they believe in because that’s what it takes to succeed in the corporate world. These top notch debates were well received and appreciated by a sizeable and enthusiastic audience that served as strong encouragement to all the participants. The debate had multiple rounds. The best participants were filtered out and made to debate against each other in the final round. Joshua Samuel and Chaitra emerged as the winner and the runner up. The outstanding highlight of this event was the depth of research and analysis that participants had done on their topics - they truly left no stone unturned.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old4">
+                            <div class="img-container">
+                                <img id="event-old4" class="basic__img" src="images/events_2017/events/webbed3.jpg">
+                            </div><!-- .img-container --><!-- .caption -->
+                            <div class="caption text-center"><h4>Webbed</h4></div>
+                        </a>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old4" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Webbed</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/webbed3.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">A Web Development workshop was conducted as a part the Computer Science Symposium of Sri Venkateswara College of Engineering, Interrupt, by the SVCE ACM Student Chapter on 25th September 2017. The workshop focused on LAMP Stack. The various students attending the workshop were asked to setup an apache server along with a database and were taught the basics of HTML, CSS, JavaScript, PHP and SQL with the help of simple, crisp examples. Bootstrap Framework was discussed elaborately since it is one of the most commonly used frameworks for building a responsive website. The workshop also touched upon various other concepts in a more theory oriented way such as Ajax for asynchronous server requests, hosting/deployment of a website and various other languages currently being used in the industry. A Portfolio Website was prepared to demonstrate the interaction between the frontend and backend of Web development thereby enabling the participants to get a hands on experience.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old5">
+                                        <div class="img-container">
+                                            <img id="event-old5" class="basic__img" src="images/events_2017/events/hourofcode3.jpg">
+                                        </div><!-- .img-container --></a>
+                        <div class="caption text-center"><h4>Hour of Code</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old5" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Hour of Code</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/hourofcode3.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">The Hour of Code is a global movement designed to generate excitement in young people about programming and technology. Games, tutorials, and other events are organized during the Computer Science Education Week every year between December 4th and 10th. This year, the ACM Student Chapter of SVCE decided to contribute their part to this global initiative by conducting a participatory workshop in Don Bosco School on 4th December 2017. About 40 students from 9th and 10th grades attended the event. An interactive tutorial (from the hourofcode.com) which focuses on the basics of Python, was used to ensure a great learning experience for the students. It had a chatter bot, named Eliza, explain the basic concepts of Python such as input, print and loop statements. The students then tried their hand at coding with some guidance from the ACM volunteers. The students were more than just excited with the tutorial sessions and the hands on experience. They participated passionately and gained reasonable expertise on the fundamental concepts of Python. The workshop thereby succeeded in giving students a head start for their future endeavors. They were actually able to widen their knowledge about coding and thus the essence of Hour of Code was achieved.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old6">
+                                        <div class="img-container">
+                                            <img id="event-old6" class="basic__img" src="images/events_2017/events/blockchained2.jpg">
+                                        </div><!-- .img-container --></a>
+                        <div class="caption text-center"><h4>Blockchained</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old6" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Blockchained</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/blockchained2.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">On 28th December 2017, a technical lecture on block chain was conducted by Mr. Tarun Chinmai, a blockchain enthusiast and a software developer at Akamai. The session started off with an introduction on what the blockchain is, some information about its mysterious creator and the reasoning behind its creation. He then touched on the most popular cryptocurrencies with brief explanations on each of them. The lecture included demos of the blockchain ledger system as well as a clear explanation of the hash functions involved and the concept of 'mining'. Tarun also debunked the many myths about blockchain. He then went into an in depth explanation on Merkel trees and their uses in the blockchain. It ended with an interactive Q&A session with questions involving everything from Mt. Gox to whether they should invest in cryptocurrency.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old7">
+                            <div class="img-container">
+                                <img id="event-old7" class="basic__img" src="images/events_2017/events/techqwiz2.jpg">
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>TechQWiz</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old7" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>TechQWiz</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/techqwiz2.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">A non-technical quiz based on technological trends and facts was conducted on 16th February, 2018. It was divided into 4 different rounds. The quiz started off with the Quizmaster, Akash Saravanan explaining the rules and the format. After a trick question to put the crowd at ease, the quiz began with an energized audience. The first round consisted of questions over a variety of fields which have been in the news recently. The questions in this round related to everything from Snapchat’s recent design update and the uproar behind it to cryptocurrency millionaires, Boston Dynamics’ Spot Mini robot and the recent Meltdown and Spectre vulnerabilities. The second round was a logo round with 15 logos that the teams were asked to identify. This round was followed by a “Connect” round wherein the teams were presented with a series of images and were asked to connect them to a specific language, company, technology or person. The final round was an exciting 20 question round on technology, both new and old. Overall, there were 18 teams of 2 evenly spread across the 2nd and 3rd years. Ultimately, CoreML consisting of Gurudutt P. and Chran S. of the 3rd year came out as the winner by a narrow margin. The event was a very informational and exciting session for all the participants and they requested more quizzes to be conducted. A majority of the participants praised the selection of questions and stated that they acquired new knowledge that they wouldn’t have normally encountered.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old8">
+                            <div class="img-container">
+                                <img id="event-old8" class="basic__img" src="images/events_2017/events/techtaboo2.jpg">
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>‎TechTaboo</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old8" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>‎TechTaboo</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="large-img-container">
+                                <img class="image--large" src="images/events_2017/events/techtaboo2.jpg">
+                            </div><!-- .large-img-container -->
+                                <div class="desc-box">
+                                    <p class="event-desc">A game of unspeakable fun and naming technology which should not be named, Tech Taboo, was conducted as a Women’s Day special event by the SVCE ACM Student Chapter on March 9th, 2018. A total of 29 girls participated in this tech game, who were split up into 10 teams. The main aim of this event was to encourage women to explore the depths of technology in the most fun-filled way possible. All of the teams participated with a lot of enthusiasm and excitement. In the end, the team consisting of Adela Florence, Brammi.J and Dhivya.R from 2nd year, CSE-A emerged as the winning team. This was a fun-filled tech event which pushed people to not only use their tech knowledge, but also their wit and presence of mind.</p><!-- .event-desc -->
+                                </div><!-- .desc-box -->
+                            </div><!-- .box -->
+                        </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old9">
+                            <div  class="img-container">
+                                <img id="event-old9" class="basic__img" src="images/events_2017/events/loremipsum1.jpg">
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>Lorem Ipsum</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old9" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Lorem Ipsum</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">Lorem Ipsum was started on January 7th 2018. This is a monthly newsletter that we send out to the students of SVCE, which is a curated collection of articles and video links, with feature articles written by the newsletter team, and a section dedicated to discovering start-ups. We've gotten over 300 subscribers over the months.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old10">
+                            <div id="event-old10" class="text-img-container">
+                                BREACH
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>Breach</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old10" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Breach</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">An online technology based debate, Breach, was conducted on the Discord App by the SVCE ACM Student Chapter on 2nd October, 2017. This event was exclusive to the first year students, from all the departments, of Sri Venkateswara College of Engineering in order to nurture them to be strong individuals. 10 people participated in this event. The main aim of this event was to ensure that the students learn to analyze any given topic objectively and holistically because that's what makes them stand out of the crowd and outshine. The debate had multiple rounds. The best participants were filtered out and made to debate against each other in the final round. Hariharan.B from 1st year, ECE-A and Kaaviya Baskaran from 1st year, IT-A emerged as the winner and the runner up. The unique success factor that came out throughout this debating event was the fact that all participants focused on positive arguments and rebuttals rather than putting down the competition.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old11">
+                            <div id="event-old11" class="text-img-container">
+                                PRE-PLACEMENT CODING COMPETITION
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>Pre-placement Coding Competition</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old11" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Pre-placement Coding Competition</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">A 4 hour long coding test was conducted on 6th January 2018 in association with the placement cell of the college. The test was held on the HackerRank platform with a total of 103 students of the CS and IT branches participating. The questions were of varying difficulties with the easiest requiring a student to find the maximum of 4 numbers and the toughest asking them to reverse a linked list. The test was scored out of 200 points with two students managing to get the perfect score. Based on a combination of the results of this test, student feedback and discussion with faculty members, a coding development programme was established.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                <article class="image__cell is-collapsed">
+                    <div class="image--basic">
+                        <a class="expand-link" href="#event-old12">
+                            <div id="event-old12" class="text-img-container" style="line-height: 1.05;">
+                                CODING SKILL DEVELOPMENT PROGRAM
+                            </div><!-- .img-container -->
+                        </a>
+                        <div class="caption text-center"><h4>Coding Skill Development Program</h4>
+                        </div>
+                        <div class="arrow--up"></div>
+                    </div>
+                    <div class="image--expand">
+                        <a href="#close-jump-old12" class="expand__close">✕</a>
+                        <div class="event-title text-center"><h1>Coding Skill Development Program</h1>
+                        </div><!-- .event-title -->
+                        <div class="box">
+                            <div class="desc-box">
+                                <p class="event-desc">A coding development programme was conducted for the 3rd year CS and IT students of the college from February 1st 2018 to March 31st 2018 in association with the placement cell of the college. It consisted of 110 students who were split into categories based on their mastery of programming. Ample resources in the form of YouTube lectueres, ebooks and interactive tutorials were provided to the students to learn more about topics given for the week. To aid with their learning, an assignment was given every week as well with questions based on the topic of the week. This way the students were able to both learn and do at the same time. At the end of the programme, a final test on HackerRank will be conducted with questions based on the topics covered during the programme. Based on the category, topics covered started from conditional statements and went as far as linked lists and advanced sorting algorithms like merge sort and quick sort.</p><!-- .event-desc -->
+                            </div><!-- .desc-box -->
+                        </div><!-- .box -->
+                    </div>
+                </article>
+                
+            </div><!-- .image-grid -->
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                        <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.facebook.com/SVCEACM/">
+                      <i class="fab fa-facebook fa-2x fa-fw"></i>
+                    </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://twitter.com/acm_svce">
+                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://github.com/SVCE-ACM">
+                      <i class="fab fa-github fa-2x fa-fw"></i>
+                    </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/svceacm/">
+                      <i class="fab fa-instagram fa-2x fa-fw"></i>
+                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.easing.js"></script>
-    
+    <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function() {
+        makeParallax($(window).width(), 100);
+        $(window).on('resize', function() {
+            var windowWidth = $(this).width();
+            makeParallax(windowWidth, 100);
+        });
+        switchTabs('.year');
+        outroAnimation('.navbar', '.wrapper');
+    });
+    </script>
+    <script>
+    var $cell = $('.image__cell');
+
+    $cell.find('.image--basic').click(function() {
+        var $thisCell = $(this).closest('.image__cell');
+
+        if ($thisCell.hasClass('is-collapsed')) {
+            $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed');
+            $thisCell.removeClass('is-collapsed').addClass('is-expanded');
+        } else {
+            $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+        }
+    });
+
+    $cell.find('.expand__close').click(function() {
+        var $thisCell = $(this).closest('.image__cell');
+        $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+    });
+
+    //setting all captions to same height
+    var maxHeight = Math.max.apply(null, $(".caption").map(function() {
+        return $(this).height();
+    }).get());
+    $('.caption').css("height", maxHeight);
+    </script>
+</body>
 
 </html>

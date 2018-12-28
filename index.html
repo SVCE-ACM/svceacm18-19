@@ -1,241 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- Hi there. Welcome in here!!. Your are viewing the source code of our Student Chapter Website -->
 
 <!-- You are here, viewing this, is no accident. Hope you would like it  :) -->
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <title>
         SVCE | ACM Student chapter
     </title>
 
-    <!-- Initial setup to view the webpage on the browser (Responsiveness) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Details of our site along with customised link preview & image -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="ACM Student Chapter @SVCE">
     <meta name="description" content="ACM Student Chapter of SVCE">
     <meta name="keywords" content="svce,event,tech,acm,student chapter">
     <meta property="og:title" content="ACM Student Chapter @SVCE">
     <meta property="og:description" content="ACM Student Chapter of SVCE">
     <meta property="og:image" content="images/logos/svce_acm.png">
-	  <meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:title" content="ACM Student Chapter @SVCE">
     <meta property="twitter:description" content="ACM Student Chapter of SVCE">
     <meta property="twitter:image" content="images/logos/svce_acm.png">
 
     <!-- Importing the styling elements to make our site look admirable :)  -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/social.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/tab.css">
-    <link rel="stylesheet" href="css/events.css">
-
+    <link rel="stylesheet" href="css/global.css">
+  	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	  <link rel="stylesheet" href="css/swiper.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    <link rel="stylesheet" href="css/social.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <style>
-    #hero {
-        display: flex;
-        height: 100vh;
-        background-color: #FDFCFC;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-
-    #about {
-        background-color: #0182ac;
-        color: white;
-        padding: 80px 30px;
-
-    }
-
-    #team {
-        background-color:#FDFCFC;
-        color: black;
-        padding: 80px 30px;
-    }
-
-	#gallery {
-        background-color:#0182ac;
-        color: white;
-        padding: 80px 30px;
-    }
-    .type-text {
-        width: 70vw;
-        padding: 15px;
-        margin: 15px;
-        text-align: center;
-        font-size: 1.3rem;
-    }
-
-    .tab {
-        width: 50%;
-        min-width: 600px;
-    }
-
-    .card {
-        display: none !important;
-        color: black;
-        max-width: 300px;
-    }
-
-    .card.active {
-        display: block !important;
-    }
-
-    .btn-card {
-        background-color: #65016b;
-        color: white;
-    }
-
-	.swiper-container {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-      width: 300px;
-      height: 380px;
-	  background:transparent;
-    }
-
-		.swiper-slide .imgBx{
-			overflow: hidden;
-			width: 100%;
-			height:300px;
-		}
-
-		.swiper-slide .imgBx .img{
-			width: 100%;
-		}
-
-		.swiper-slide .details{
-			box-sizing: border-box;
-			padding:0;
-
-		}
-
-		.swiper-slide .details h3{
-			font-size: 20px;
-			margin: 0;
-			padding: 0;
-			text-align: center;
-		}
-
-		
-			
-		/*---------------------------------------
-  Contact section              
------------------------------------------*/
-
-.contact-info .fa {
-  padding-right: 5px;
-}
-
-#contact .form-control {
-  border: none;
-  border-bottom: 2px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
-#contact .form-control:focus {
-  border-bottom-color: #999999;
-}
-
-#contact input {
-  height: 55px;
-}
-
-#contact button#submit {
-  background: #0182ac;
-  border: none;
-  border-radius: 50px;
-  color: #ffffff;
-  height: 50px;
-  margin-top: 24px;
-}
-
-#contact button#submit:hover {
-  background: #7682cc;
-  color: #ffffff;
-}
-
-
-		footer {
-        background-color: #0182ac;
-        color: white;
-        padding: 20px;
-
-    }
-		
-		
-
-    @media (max-width: 1024px) {
+        html, body {
+          height: 100%;
+        }
+        body {
+          display: flex;
+          flex-direction: column;
+        }
+        .content {
+          flex: 1 0 auto;
+          display: flex;
+          align-items: center;
+        }
+        
         #hero {
-            height: 100%;
-            padding: 60px;
+          border-radius: 50px;
+          background-image: linear-gradient(to right bottom, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+          margin: auto;
+          display: flex;
+          flex-direction: row;
+          padding: 30px 10px;
+          height: 500px;
+          position: relative;
+          color: white;
         }
 
-        .tab {
-            width: 100%;
-            min-width: 200px;
+        .fas {
+          animation-iteration-count: 5;
         }
-    }
+        #expand-btn, #close-btn {
+          cursor: pointer;
+          margin: 0;
+        }
+
+        #expand-btn {
+          display: flex;
+        }
+
+        #close-btn {
+          display: none;
+        }
+
+        .notif-text{
+          font-size: 24px;
+          background: #21252996;
+          border-radius: 15px;
+          font-family: 'Staatliches', cursive;
+          text-align: center;
+          -webkit-writing-mode: vertical-lr;
+          -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+          text-orientation: upright;    
+          margin-left: 0;
+        }
+
+        #events-desc {
+          border: 1px solid white;
+          border-radius: 15px;
+          -webkit-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          -moz-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          padding: 15px;
+          margin-left: 15px;
+          margin-right: 15px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+        }
+
+        #mob-events-desc {
+          border: 1px solid white;
+          border-radius: 15px;
+          -webkit-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          -moz-box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          box-shadow: 3px 3px 5px 0px rgba(255,255,255,1), -3px -3px 5px 0px rgba(255,255,255,1), -3px 3px 5px 0px rgba(255,255,255,1), 3px -3px 5px 0px rgba(255,255,255,1);
+          padding: 15px;
+          margin-left: 15px;
+          margin-right: 15px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+        }
+        
+        .mob-notif-text{
+          display: none;
+          font-size: 24px;
+          background: #21252996;
+          border-radius: 15px;
+          font-family: 'Staatliches', cursive;
+          text-align: center;
+          letter-spacing: 0.1em;
+        }
+        .event-img {
+          margin: 20px auto;
+          width: 100%;
+          max-width: 350px;
+        }
+
+        .event-link a {
+          color: #00BCD4;
+          text-decoration: underline;
+        }
+
+        #hero #herologo {
+          margin-left: 5px;
+          height: calc(50vh - 60px);
+          align-self: center;
+
+          min-width: calc(50vh - 60px);
+        /*   right: 50%; */
+          padding: 5px;
+        }
+
+        #hero #intro {
+          /*border: 1px solid white;*/
+          border-radius: 15px;
+          margin: auto 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+          align-self: center;
+        }
+
+        #hero #intro #intro-heading {
+          text-align: center;
+          color: rgb(131, 206, 226);
+          font-size: calc(2.25vw + 24px);
+          font-weight: bold;
+          line-height: 1.1;
+        }
+
+        
+        @media screen and (max-width: 992px) {
+            .content {
+                background-image: -webkit-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: -o-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: linear-gradient(to bottom right, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                padding: 10px;
+            }
+            #hero {
+                background-image: none;
+                margin-top: 70px;
+                margin-bottom: 20px;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #herologo {
+                min-height: 260px;
+                min-width: 260px;
+                margin-bottom: 10px;
+            }
+            .expand-switch {
+                display: none !important;
+            }
+
+            #intro {
+              padding: 0 !important;
+              margin: 30px 15px 50px!important;
+            }
+            
+            #intro-heading {
+              line-height: 1.2;
+              font-size: calc(3vw + 24px);
+            }
+
+            #mob-events-desc {
+              opacity: 1;
+              display: flex;
+              margin: auto;
+            }
+
+            .mob-notif-text {
+              display: block;
+            }
+        }
     </style>
-
-
-    <!-- Our own Internal design material. Internal CSS. Made by us. -->
-    <style type="text/css">
-
-    </style>
-
-    <!-- Our #hashTag caption using our own TypeWriter effect -->
-	<script type="text/javascript">
-            /*var imgSrc=["images/under_dev/under_dev.jpg"];
-    function lazyLoad() {
-        for(int i=0;i<imgSrc.length;i++)
-            document.getElementById('lzld').setAttribute("src",imgSrc[i]);
-
-        }*/
-
-
-        // Just trying LazyLoading of images
-        window.onload=function () {document.getElementById('lzld').setAttribute("src","images/under_dev/under_dev.jpg");}
-    </script>
 </head>
 
-
-<!-- Let's now dive into the content -->
 <body>
-    <!-- First commit
-    	<center>
-            This is <b>SVCE ACM Student Chapter</b> website.
-            <br><br><br>
-            <br><br><br>
-            <h1>Under development!!!!!!!!!!!!!!!!!!!</h1>
-            <img src="https://raw.githubusercontent.com/SVCE-ACM/svceacm18-19/master/images/under_dev/under_dev.jpg" alt="Under development" width="500" height="500">
-        </center> -->
-
-
     <!-- Navigation Bar at the top-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">SVCE ACM</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/logos/svce_acm_2.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -244,362 +228,89 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#hero">Home</a>
+                        <a class="nav-link js-scroll-trigger active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#resources">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- #nav -->
-    <section id="hero">
 
-        <img src="images/logos/svce_acm.png" alt="SVCE ACM Student Chapter" class="logo">
-        <div class="type-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repudiandae sequi ullam ab sit dolorum quos quae voluptas, quibusdam dolores ratione rem doloribus? Nisi animi quaerat excepturi, id soluta tempora dolorem consequatur delectus doloremque ut incidunt modi beatae nam aut.</p>
+    <div class="content animated fadeIn">
+      <div id="hero" class="container">
+        <div id="expand-btn" class="expand-switch closed">
+          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-right animated heartBeat"></i></p>
+          <!-- .notif-text -->
         </div>
-
-        <!-- .type-text -->
-        <!-- Our Social Media Accounts  -->
-        <div id="social-buttons">
-            <a target="_blank" href="https://twitter.com/" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a><br class="md">
-            <a target="_blank" href="https://facebook.com" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a><br class="md">
-            <a target="_blank" href="https://instagram.com" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a><br class="md">
-        </div><!-- #social-buttons -->
-    </section>
-
-    <!-- #hero -->
-    <!-- Well, this section is fully "About us". We tell the world who we are!!. -->
-    <section id="about">
-        <div class="container v-center">
-            <div class="row">
-                <div class="section-img col-lg-6 v-center">
-                    <img alt="lazyLoad img" id="lzld" class="image">
-                </div><!-- .section-img -->
-                <div class="text  col-lg-6">
-                    <h1 class="text-center">About us</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium tempora necessitatibus optio distinctio ipsa expedita ad laborum repellendus aperiam cupiditate, consequatur maiores. Vitae voluptas fugit esse reprehenderit eum iusto sint pariatur, totam porro excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eaque, temporibus officiis placeat neque natus dolore non excepturi. Voluptates a iure amet architecto veritatis consectetur doloribus nobis placeat quaerat voluptatem! Ipsum, quaerat, eos. Aliquid eveniet perferendis aspernatur, dolorum ullam rem!</p>
-                </div><!-- .text -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </section>
-    <!-- #about -->
-
-
-    <!-- <section id="events">
-
-    </section> -->
-
-    <!-- #events -->
-
-
-    <!-- Make way for the Champions!!!!. It's us. Our team. -->
-    <section id="team">
-        <div class="container">
-            <h1 class="text-center">Our Teams</h1><br>
-            <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
-            <div class="tab container h-100">
-                <nav class="tabs container-fluid v-center">
-                    <div class="selector"></div>
-                    <div class="row v-center">
-                        <!-- The core team. -->
-                        <div class="col-xs-2 offset-xs-1">
-                            <a data-toggle="tab" href="#office-bearers" class="active">Office Bearers</a>
-                        </div><!-- .col-xs-2 -->
-
-                        <!-- The future Alan Turings, the Academics team. The Technophiles. -->
-                        <div class="col-xs-2">
-                            <a data-toggle="tab" href="#acads">Academics</a>
-                        </div><!-- .col-xs-2 -->
-
-                        <!--  -->
-                        <div class="col-xs-2">
-                            <a data-toggle="tab" href="#events_team">Events</a>
-                        </div><!-- .col-xs-2 -->
-
-                        <!--  -->
-                        <div class="col-xs-2">
-                            <a data-toggle="tab" href="#media">Media</a>
-                        </div><!-- .col-xs-2 -->
-
-                        <!--  -->
-                        <div class="col-xs-2">
-                            <a data-toggle="tab" href="#web">Web</a>
-                        </div><!-- .col-xs-2 -->
-                    </div><!-- .row -->
-                </nav>
-            </div>
-            <div class="container v-center">
-
-                <div id="office-bearers" class="card animated fadeIn active">
-                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Office bearers</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                        <a href="teams.html#office-bearers" class="btn btn-card v-center">View Team</a>
-                    </div>
-                </div><!-- col-sm-3 -->
-                <div id="acads" class="card animated fadeIn">
-                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Academics</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                        <a href="teams.html#acads" class="btn btn-card v-center">View Team</a>
-                    </div>
-                </div><!-- .col-sm-3 -->
-                <div id="events_team" class="card animated fadeIn">
-                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Events</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                        <a href="teams.html#events_team" class="btn btn-card v-center">View Team</a>
-                    </div>
-                </div><!-- .col-sm-3 -->
-                <div id="media" class="card animated fadeIn">
-                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Media</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                        <a href="teams.html#media" class="btn btn-card v-center">View Team</a>
-                    </div>
-                </div><!-- .col-sm-3 -->
-                <div id="web" class="card animated fadeIn">
-                    <img class="card-img-top" src="images/under_dev/under_dev.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Web</h5>
-                        <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam veritatis molestias nisi inventore minima. Quibusdam.</p>
-                        <a href="teams.html#web" class="btn btn-card v-center">View Team</a>
-                    </div>
-                </div><!-- .col-sm-3 -->
-            </div><!-- .container -->
-        </div><!-- .container -->
-    </section>
-
-
-    <!-- Actions speak louder than words. Our accomplishments & achievements talk for us. -->
-	<section id="gallery">
-        <div class="container">
-            <h1 class="text-center">Gallery</h1><br>
-            <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
-
-                 <!-- Swiper -->
-              <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                          <div class="imgBx">
-                          <img src="images/members/Akash Saravanan.jpg" class=" img-fluid img">
-                          </div>
-                          <div class="details">
-                          <h3>Chairman</h3>
-                          </div>
-                           </div>
-                      <div class="swiper-slide">
-                          <div class="imgBx">
-                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-                          </div>
-                          <div class="details">
-                          <h3>Chairman</h3>
-                          </div> </div>
-
-                       <div class="swiper-slide">
-                          <div class="imgBx">
-                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-                          </div>
-                          <div class="details">
-                          <h3>Chairman</h3>
-                          </div> </div>
-
-                       <div class="swiper-slide">
-                          <div class="imgBx">
-                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-                          </div>
-                          <div class="details">
-                          <h3>Chairman</h3>
-                          </div> </div>
-
-                       <div class="swiper-slide">
-                          <div class="imgBx">
-                          <img src="images/members/Jashaul D.jpg" class=" img img-fluid">
-                          </div>
-                          <div class="details">
-                          <h3>Chairman</h3>
-                          </div> </div>
-
-
-
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-              </div>
-        </div><!-- .container -->
-	</section>
-    <!-- #team -->
-
-
-    <!-- <section id="resources">
-    </section> -->
-    <!-- #resources -->
-
-
-   <!--  <section id="contact">
-    </section> -->
-    <!-- #contact -->
-
-
-    <!-- <div class="footer">
-
-    </div> -->
-    <!-- .footer -->
-
-
-    <!-- Preserve the order in which the following is linked -->
-
-
-    <!-- If you want to reach us, scroll down & use this form. We will get back to you within a day. -->
-
-
-        <!-- ============= contact section starts ================== -->
-  
-	<section id="contact22">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae</p>
-          </div>
+        <div id="close-btn" class="expand-switch closed">
+          <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-left animated heartBeat"></i></i></p>
+          <!-- .notif-text -->
         </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-            <p>(+91) 99627 54468</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-            <p>
-              <a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
-            </p>
-          </div>
+        <!-- #events-notif -->
+        <div id="events-desc">
+          <h2>A December of Algorithms</h2>
+          <img class="event-img" src="images/events/doa/algo1.jpg" alt="">
+          <p>31 Algorithms! 31 days! All you need to do is, simply FORK the repository and start implementing them. Complete all the algorithms to get a CERTIFICATE!</p><p class="event-link text-center">Click <a href="https://github.com/SVCE-ACM/A-December-of-Algorithms">here</a> to participate</p>
+        </div>
+        <img id="herologo" src="images/logos/herologo.svg" alt="">
+        <div id="intro">
+          <h2 id="intro-heading">SVCE ACM<br>Student Chapter</h2>
+          <!-- #intro-heading -->
+          <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, magnam quo eius. Soluta enim illo architecto possimus consectetur nulla, qui autem deleniti nesciunt commodi ratione earum ducimus quia maxime dignissimos.</p>
+          <!-- .intro-text -->
+        </div>
+          <p class="mob-notif-text">Our Latest Event</p>
+        <!-- #intro -->
+        <div id="mob-events-desc">
+            <h2 class="text-center">A December of Algorithms</h2>
+            <img class="event-img" src="images/events/doa/algo1.jpg" alt="">
+            <p>31 Algorithms! 31 days! All you need to do is, simply FORK the repository and start implementing them. Complete all the algorithms to get a CERTIFICATE!</p><p class="event-link text-center">Click <a href="https://github.com/SVCE-ACM/A-December-of-Algorithms">here</a> to participate</p>
         </div>
       </div>
-	</section>
-	
-	</br>
-	</br>
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
+      <!-- .container -->
+    </div>
+    <!-- .content -->
 
-	<section id="contact" class="parallax-section text-center">
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-12 col-sm-12">
-                    <!-- SECTION TITLE -->
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <h2>Send Us a Message</h2>
-                         <p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-                    </div>
-               </div>
-
-               <div class="col-md-7 col-sm-10 ">
-                    <!-- CONTACT FORM HERE -->
-                    <div class="fadeInUp" >
-                        <form id="contact-form" action="#" method="post" class="align-content-center">
-                              <div class="col-md-6 col-sm-6 text-center">
-                                   <input type="text" class="form-control" name="name" placeholder="Name" required="">
-                              </div>
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                              </div>
-                              <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
-                              </div>
-                              <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                                   <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-                              </div>
-                        </form>
-                    </div>
-               </div>
-
-               
-
-          </div>
-     </div>
-
-
-	</section>
-	
-	  <!-- ============= contact section ends ================== -->
-
- 
-      
-   <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer animated fadeIn">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <ul class="list-inline mb-2">
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Teams</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Events</a>
-              </li>
-            </ul>
+            
             <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul class="list-inline mb-0">
               <li class="list-inline-item mr-3">
-                <a href="#">
+                <a href="https://www.facebook.com/SVCEACM/">
                   <i class="fab fa-facebook fa-2x fa-fw"></i>
                 </a>
               </li>
               <li class="list-inline-item mr-3">
-                <a href="#">
+                <a href="https://twitter.com/acm_svce">
                   <i class="fab fa-twitter-square fa-2x fa-fw"></i>
                 </a>
               </li>
-				<li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-github fa-2x fa-fw"></i>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/svceacm/">
+                  <i class="fab fa-instagram fa-2x fa-fw"></i>
                 </a>
               </li>
-				
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-instagram fa-2x fa-fw"></i>
+               <li class="list-inline-item mr-3">
+                <a href="https://github.com/SVCE-ACM">
+                  <i class="fab fa-github fa-2x fa-fw"></i>
                 </a>
               </li>
             </ul>
@@ -608,52 +319,74 @@
       </div>
     </footer>
 
-
-
-
-  <!-- fontawesome and animate.css cdn link -->
-
-  <!-- Scripts to make smooth & attractive transtions. -->
-
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/nav.js"></script>
     <script src="js/jquery.easing.js"></script>
-	<script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>
-        $(".tabs").on("click","a",function(){
-          $('.tabs a').removeClass("active");
-          $(this).addClass('active');
-          var tab_id = this.href.substring(this.href.indexOf("#")+1);
-          $('.card').removeClass('active');
-          $('#'+tab_id).addClass('active');
+      function expand() {
+        $('#intro').css('display', 'none');
+        $('#events-desc').css('display', 'flex');
+        $('#herologo').css({
+          position: 'absolute',
+          right: '50%'
         });
+        anime({
+          targets: '#herologo',
+          duration: 200,
+          easing: 'linear',
+          right: ['50%','0%'],
+          autoplay: false,
+          complete: function(anim) {
+            $('#herologo').css({
+              position: '',
+              right: ''
+            });
+            $('#intro').css('opacity', 0);
+            $('#events-desc').css('opacity', 1);
+            $('#expand-btn').css('display', 'none');
+            $('#close-btn').css('display', 'flex');
+          }
+        }).play();
+      }
 
-		var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+      function close() {
+        $('#intro').css('display', 'block');
+        $('#events-desc').css('display', 'none');
+        $('#herologo').css({
+          position: 'absolute',
+          right: '0%'
+        });
+        anime({
+          targets: '#herologo',
+          duration: 200,
+          easing: 'linear',
+          right: ['0%','50%'],
+          autoplay: false,
+          complete: function(anim) {
+            $('#herologo').css({
+              position: '',
+              right: ''
+            });
+            $('#intro').css('opacity', 1);
+            $('#events-desc').css('opacity', 0);
+            $('#expand-btn').css('display', 'flex');
+            $('#close-btn').css('display', 'none');
+          }
+        }).play();
+      }
+
+      $('#expand-btn').click(function() {
+        $('.fas').removeClass('animated heartBeat');
+        expand();
+      });
+
+      $('#close-btn').click(function() {
+        close();
+      });
+
+      outroAnimation('.navbar', '.content, .footer');
     </script>
+
 </body>
-
-</html>
-
-
-<!-- Thank you Bootstrap, W3Schools, Google and Cloudflare for helping us to design & build our website using your opensource tools. -->
-
-<!-- That's the end, but not the end to our work. -->
-
-<!-- Hope you loved it!!!!  :)  -->

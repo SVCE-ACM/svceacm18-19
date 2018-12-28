@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
      $mailto = "acm.svcecse@gmail.com";
     $mailSub = "New Message";
     $mailMsg = $_POST['name']." have sent the message ".$_POST['message'];
-     require '../PHPMailer-master/PHPMailerAutoload.php';
+     require 'PHPMailer-master/PHPMailerAutoload.php';
    $mail = new PHPMailer();
    $mail ->IsSmtp();
    $mail ->SMTPDebug = 0;
@@ -47,10 +47,11 @@ if(isset($_POST['submit']))
     <meta property="og:description" content="ACM Student Chapter of SVCE">
     <meta property="twitter:title" content="ACM Student Chapter @SVCE">
     <meta property="twitter:description" content="ACM Student Chapter of SVCE">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/tab.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
   </head>
@@ -231,9 +232,9 @@ a.contact-link:hover {
         </footer>
     </div><!-- .wrapper -->
     <!-- ============= contact section ends ================== -->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
     $(document).ready(function() {
         makeParallax($(window).width(), 100);
