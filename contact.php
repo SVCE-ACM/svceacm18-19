@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
 
 <head>
     <title>
-        SVCE | ACM Student chapter
+        Contact Us | SVCE ACM Student chapter
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="ACM Student Chapter @SVCE">
