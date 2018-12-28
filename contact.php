@@ -54,6 +54,7 @@ if(isset($_POST['submit']))
     <link rel="stylesheet" href="css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
   </head>
     
 <style>
@@ -95,7 +96,6 @@ if(isset($_POST['submit']))
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
-                <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3>
             </div>
         </section><!-- .page-head -->
         <section id="contact-sec" class="page-content">
