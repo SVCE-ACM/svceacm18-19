@@ -1,46 +1,10 @@
 
-<?php
-$ma="";
-if(isset($_POST['submit']))
-{
-     $mailto = "ragu741721@gmail.com";
-    $mailSub = "New Message";
-    $mailMsg = $_POST['name']." have sent the message ".$_POST['message'];
-     require '../PHPMailer-master/PHPMailerAutoload.php';
-   $mail = new PHPMailer();
-   $mail ->IsSmtp();
-   $mail ->SMTPDebug = 0;
-   $mail ->SMTPAuth = true;
-   $mail ->SMTPSecure = 'ssl';
-   $mail ->Host = "smtp.gmail.com";
-   $mail ->Port = 465; // or 587
-   $mail ->IsHTML(true);
-   $mail ->Username = "ragu741721@gmail.com";
-   $mail ->Password = "raguraman99";
-   $mail ->SetFrom("ragu741721@gmail.com");
-   $mail ->Subject = $mailSub;
-   $mail ->Body = $mailMsg;
-   $mail ->AddAddress($mailto);
-     if(!$mail->Send())
-   {
-         $ma="Mail Not Sent";
-   }
-   else
-   {
-       $ma= "Mail Sent Successfully";
-   }
-
-
-}
-?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>
-        SVCE | ACM Student chapter
+        Contact Us | SVCE ACM Student chapter
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="ACM Student Chapter @SVCE">
@@ -50,91 +14,25 @@ if(isset($_POST['submit']))
     <meta property="og:description" content="ACM Student Chapter of SVCE">
     <meta property="twitter:title" content="ACM Student Chapter @SVCE">
     <meta property="twitter:description" content="ACM Student Chapter of SVCE">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/tab.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/tab.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
-</head>
+  </head>
+    
 <style>
-
-#contact-page .wrapper {
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.page-content {    
-    padding: 50px;
-}
-
-.page-content .v-center {
-    flex-direction: column;
-}
-
-.form-control {
-  border: none;
-  border-bottom: 2px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-  width: 60%;
-  max-width: 500px;
-  
-}
-
-.form-control:focus {
-  border-bottom-color: #999999;
-}
-
- input {
-  height: 55px;
-}
-
- button#submit {
-  background: rgb(9, 53, 122);
-  cursor: pointer;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  height: 50px;
-  width: 190px;
-  margin-top: 24px;
-}
-
- button#submit:hover {
-  font-weight: bold;
-}
-
-.fas {
-    color: black;
-}
-
-a.contact-link {
-    color: black;
-    text-decoration: underline;
-}
-
-a.contact-link:hover {
-    color: white;
-}
-
-@media (max-width: 1024px) {
-    .form-control {
-        width: 95%;
-    }
-}
+.page-subtitle{color:rgb(131,206,226)}#contact-page .wrapper{flex-direction:column;flex-wrap:wrap}.page-content{padding:50px}.page-content .v-center{flex-direction:column}.form-control{border:none;border-bottom:2px solid #f0f0f0;border-radius:0;box-shadow:none;font-size:18px;margin-top:10px;margin-bottom:10px;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;width:60%;max-width:500px}.form-control:focus{border-bottom-color:#999}input{height:55px}button#submit{background:rgb(9,53,122);cursor:pointer;border:none;border-radius:50px;color:white;height:50px;width:190px;margin-top:24px}button#submit:hover{font-weight:700}.fas{color:black}a.contact-link{color:black;text-decoration:underline}a.contact-link:hover{color:white}@media (max-width:1024px){.form-control{width:95%}}
 </style>
-
+    
+  
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/logos/svce_acm_2.png"></a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/logos/svce_acm_2.png"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
             </button>
@@ -165,17 +63,12 @@ a.contact-link:hover {
             <div class="container v-center test">
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
-                <!-- <h3 class="text-center page-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aut at officiis. Ab, nobis, nulla. Corrupti architecto aperiam quas beatae.</h3> -->
             </div>
         </section><!-- .page-head -->
         <section id="contact-sec" class="page-content">
-            <div class="container v-center">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 text-center">
-                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                        <p><a class="contact-link" href="tel:+919962754468">(+91) 99627 54468</a></p>
-                    </div>
-                    <div class="col-sm-6 text-center">
+                    <div class="col-sm-6 offset-sm-3 text-center">
                         <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
                         <p>
                             <a class="contact-link" href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
@@ -184,12 +77,12 @@ a.contact-link:hover {
                 </div>
             </div>
             <div class="container-fluid">
-                <form action="" id="contact-form" class="v-center">
+                <form action="/svceacm18-19/test/contact.php" id="contact-form" class="v-center" method="post" >
                     <input type="text" class="form-control" name="name" placeholder="Name" required="">
                     <input type="email" class="form-control" name="email" placeholder="Email" required="">
                     <textarea class="form-control" rows="5" name="message" placeholder="Message" required="" data-gramm_editor="false"></textarea>
                     <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-					  <?php echo $ma;?>
+                    <?php echo $ma;?>
                 </form><!-- #contact-form -->
             </div><!-- .row -->
         </section>
@@ -231,20 +124,12 @@ a.contact-link:hover {
         </footer>
     </div><!-- .wrapper -->
     <!-- ============= contact section ends ================== -->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
-    $(document).ready(function() {
-        makeParallax($(window).width(), 70);
-        $(window).on('resize', function() {
-            var windowWidth = $(this).width();
-            makeParallax(windowWidth, 70);
-        });
-        outroAnimation('.navbar', '.wrapper');
-    });
+    $(document).ready(function(){makeParallax($(window).width(),100);$(window).on('resize',function(){var windowWidth=$(this).width();makeParallax(windowWidth,100)});outroAnimation('.navbar','.wrapper')})
     </script>
 </body>
 
 </html>
- 

@@ -99,13 +99,9 @@ if(isset($_POST['submit']))
             </div>
         </section><!-- .page-head -->
         <section id="contact-sec" class="page-content">
-            <div class="container v-center">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 text-center">
-                        <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-                        <p><a class="contact-link" href="tel:+919962754468">(+91) 99627 54468</a></p>
-                    </div>
-                    <div class="col-sm-6 text-center">
+                    <div class="col-sm-6 offset-sm-3 text-center">
                         <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
                         <p>
                             <a class="contact-link" href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a>
