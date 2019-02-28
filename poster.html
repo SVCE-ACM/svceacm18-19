@@ -142,7 +142,7 @@ body {
     max-width: 350px
 }
 
-.event-link a {
+.event-link {
     color: #00BCD4;
     text-decoration: underline
 }
@@ -178,6 +178,11 @@ body {
 	flex-direction: row-reverse;
 	justify-content: space-around;
 	margin-bottom: 20px;
+}
+#templates {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 @media screen and (max-width:992px) {
@@ -220,6 +225,10 @@ body {
     }
     .mob-notif-text {
         display: block
+    }
+    #templates {
+    	flex-direction: column;
+    	align-items: center
     }
 }
     </style>
@@ -290,7 +299,21 @@ body {
 		    <li>Selected SVCE students maybe invited to interview for design roles at the <b>SVCE ACM STUDENT CHAPTER</b>
 		        </br>and <b>Curtain Call SVCE (Drama Club)</b></li>
 		</ul>
-		</div>
+		<div id="templates" style="margin-top: 30px;">
+			<div id="png">
+				<h2 class="template-title">PNG template</h2><!-- #png -->
+				<a class="event-link" href="resources/posterdesign.png">Download PNG template</a>
+			</div><!-- #png -->
+			<div id="psd">
+				<h2 class="template-title">PSD template</h2><!-- #psd -->
+				<a class="event-link" href="resources/posterdesign.psd">Download PSD template</a>
+			</div><!-- #psd -->
+			<div id="ai">
+				<h2 class="template-title">AI template</h2><!-- #ai -->
+				<a class="event-link" href="resources/posterdesign.ai">Download AI template</a>
+			</div><!-- #ai -->
+		</div><!-- #templates -->
+	  </div>
 		<!-- .container -->
     </div>
     <!-- .content -->
