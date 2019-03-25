@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hi there. Welcome in here!!. Your are viewing the source code of our Student Chapter Website -->
+<!-- You are here, viewing this, is no accident. Hope you would like it  :) -->
+
+<head>
+    <title>
+        SVCE ACM Student chapter
+    </title>
+    <!-- Details of our site along with customised link preview & image -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ACM Student Chapter @SVCE">
+    <meta name="description" content="ACM Student Chapter of SVCE">
+    <meta name="keywords" content="svce,event,tech,acm,student chapter">
+    <meta property="og:title" content="ACM Student Chapter @SVCE">
+    <meta property="og:description" content="ACM Student Chapter of SVCE">
+    <meta property="og:image" content="images/logos/svce_acm.png">
+    <meta property="twitter:title" content="ACM Student Chapter @SVCE">
+    <meta property="twitter:description" content="ACM Student Chapter of SVCE">
+    <meta property="twitter:image" content="images/logos/svce_acm.png">
+    <!-- Importing the styling elements to make our site look admirable :)  -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/social.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <style>
+        html,body{height:100%}body{display:flex;flex-direction:column}.content{flex:1 0 auto;display:flex;align-items:center}#hero{background-image:linear-gradient(to right bottom,#182e69,#08437d,#00588f,#006d9e,#0182ac);border-radius:50px;margin:auto;margin-top:100px;margin-bottom:50px;display:flex;flex-direction:column;padding:40px 30px;position:relative;color:white}.fas{animation-iteration-count:5}#expand-btn,#close-btn{cursor:pointer;margin:0}#expand-btn{display:flex}#close-btn{display:none}.notif-text{font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;-webkit-writing-mode:vertical-lr;-ms-writing-mode:tb-lr;writing-mode:vertical-lr;text-orientation:upright;margin-left:0}#events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}#mob-events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}.mob-notif-text{display:none;font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;letter-spacing:.1em}.event-img{margin:20px auto;width:100%;max-width:350px}.event-link{color:#00BCD4;text-decoration:underline}#hero #herologo{margin-left:5px;height:calc(50vh - 60px);align-self:center;min-width:calc(50vh - 60px);padding:5px}#hero #intro{border-radius:15px;margin:auto 15px;padding-left:15px;padding-right:15px;align-self:center}.intro-heading{margin-bottom:20px;text-align:center;color:rgb(131,206,226);font-size:calc(2.25vw + 24px);font-weight:700;line-height:1.1;align-self:center}.event-heading{display:flex;flex-direction:row-reverse;justify-content:space-around;margin-bottom:20px}#templates{display:flex;flex-direction:row;justify-content:space-around}@media screen and (max-width:992px){.content{background-image:-webkit-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:-o-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:linear-gradient(to bottom right,#182e69,#08437d,#00588f,#006d9e,#0182ac);padding:10px}#hero{background-image:none;margin-top:70px;margin-bottom:20px;flex-direction:column;height:100%}.event-heading{flex-direction:column}#herologo{min-height:260px;min-width:260px;margin-bottom:10px}.expand-switch{display:none!important}#intro{padding:0!important;margin:30px 15px 50px!important}#intro-heading{line-height:1.2;font-size:calc(3vw + 24px)}#mob-events-desc{opacity:1;display:flex;margin:auto}.mob-notif-text{display:block}#templates{flex-direction:column;align-items:center}}
+        .faqHeader {
+                            font-size: 27px;
+                            margin: 14px;
+                        }
+
+                        .panel-heading [data-toggle="collapse"]:after {
+                            font-family: 'Glyphicons Halflings';
+                            content: "\e072";
+                            float: right;
+                            color: #F58723;
+                            font-size: 18px;
+                            line-height: 22px;
+                            / -webkit-transform: rotate(-90deg);
+                            -moz-transform: rotate(-90deg);
+                            -ms-transform: rotate(-90deg);
+                            -o-transform: rotate(-90deg);
+                            transform: rotate(-90deg);
+                        }
+
+                        .panel-heading [data-toggle="collapse"].collapsed:after {
+
+                            -webkit-transform: rotate(90deg);
+                            -moz-transform: rotate(90deg);
+                            -ms-transform: rotate(90deg);
+                            -o-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                            color: #454444;
+                        }
+                        a {
+                          color: white;
+                        }
+                        .card {
+                          background: none;
+                          margin-bottom: 10px;
+                        }
+                        .card-header {
+                          background: #0182ac;
+                          border: solid white 1px;
+                        }
+                        .card-body {
+                          border: solid white 1px;
+                          border-top: none;
+                          border-radius: 0 0 10px 10px;
+                        }
+                        .btn-accordion {
+                          cursor: pointer;
+                          color: white;
+                          border-style: none;
+                          background: none;
+                          width: 100%;
+                          text-align: left;
+                        }
+                        .btn-accordion:focus {
+                          outline: none;
+                        }
+                        .section-heading {
+                            color: rgb(131,206,226);
+                            font-size: calc(2.25vw + 16px)
+                        }
+                        #resume-corner {
+                            margin-bottom: 50px;
+                        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar at the top-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/logos/svce_acm_2.png"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+            <!-- Navigation bar -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #nav -->
+    <div class="content animated fadeIn">
+        <div id="hero" class="container">
+            <h1 class="intro-heading">
+                Career center
+            </h1><!-- .intro-heading -->
+            
+            <h2 class="section-heading">
+                Resume Corner
+            </h2><!-- .section-heading -->
+            <div id="resume-corner">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nihil tenetur quod itaque perspiciatis, consequatur, esse corporis reprehenderit molestiae in hic amet, velit sint voluptatum distinctio earum perferendis autem! Sint sapiente porro accusamus cum dolore impedit, saepe alias nobis nemo, accusantium explicabo modi error sed consequuntur asperiores deserunt repellendus quidem facilis voluptatum fugit dolorem excepturi. Similique amet, alias sint aliquid.</p>
+                <p>Iure voluptatibus rem nesciunt similique consectetur dicta, molestias corporis impedit, dolorem aliquam atque blanditiis nobis porro eum, deserunt voluptas. Laboriosam, maxime delectus minus natus, neque ea iste commodi illo quia, fugit autem deleniti ex. Accusantium fugiat, tenetur delectus dicta architecto excepturi. Minima repudiandae eum, provident doloremque, neque perferendis fuga quod velit nam reprehenderit consectetur illo nulla adipisci nesciunt, omnis dolores.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam nesciunt deserunt! Maxime dignissimos placeat suscipit velit officiis, at dicta culpa cumque, doloremque deserunt aliquid ea quidem? Reiciendis, eos minima. Facilis, corporis repellendus placeat ea vero cumque consequatur nemo. Expedita beatae, nam ipsa temporibus provident aliquam blanditiis? Accusantium dicta iusto neque nobis aliquam enim, porro animi ducimus beatae, consequuntur libero alias ut mollitia nemo veniam quo reprehenderit sed! Vero, necessitatibus.</p>
+                <div id="templates" style="margin-top: 30px;">
+                    <div id="png">
+                        <h2 class="template-title">PNG template</h2><!-- #png -->
+                        <a class="event-link" href="resources/posterdesign.png" download="posterdesig">Download PNG template</a>
+                    </div><!-- #png -->
+                    <div id="psd">
+                        <h2 class="template-title">PSD template</h2><!-- #psd -->
+                        <a class="event-link" href="resources/posterdesign.psd" download>Download PSD template</a>
+                    </div><!-- #psd -->
+                    <div id="ai">
+                        <h2 class="template-title">AI template</h2><!-- #ai -->
+                        <a class="event-link" href="resources/posterdesign.ai" download>Download AI template</a>
+                    </div><!-- #ai -->
+                </div><!-- #templates -->
+            </div><!-- #resume-corner -->
+            <!-- FAQ Section -->
+            <h2 class="section-heading">
+                FAQ - Frequently asked questions
+            </h2>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Lorem ipsum dolor sit amet.
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn-accordion collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Lorem ipsum dolor sit amet.
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn-accordion collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Lorem ipsum dolor sit amet.
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- .container -->
+        </div>
+    </div>
+    <footer class="footer animated fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <p class=" small mb-4 mb-lg-0">&copy; SVCE-ACM 2018. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3">
+                            <a href="https://www.facebook.com/SVCEACM/">
+                                <i class="fab fa-facebook fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="https://twitter.com/acm_svce">
+                                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/svceacm/">
+                                <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="https://github.com/SVCE-ACM">
+                                <i class="fab fa-github fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script>
+    function expand() {
+        $('#intro').css('display', 'none');
+        $('#events-desc').css('display', 'flex');
+        $('#herologo').css({ position: 'absolute', right: '50%' });
+        anime({
+            targets: '#herologo',
+            duration: 200,
+            easing: 'linear',
+            right: ['50%', '0%'],
+            autoplay: !1,
+            complete: function(anim) {
+                $('#herologo').css({ position: '', right: '' });
+                $('#intro').css('opacity', 0);
+                $('#events-desc').css('opacity', 1);
+                $('#expand-btn').css('display', 'none');
+                $('#close-btn').css('display', 'flex')
+            }
+        }).play()
+    }
+
+    function close() {
+        $('#intro').css('display', 'block');
+        $('#events-desc').css('display', 'none');
+        $('#herologo').css({ position: 'absolute', right: '0%' });
+        anime({
+            targets: '#herologo',
+            duration: 200,
+            easing: 'linear',
+            right: ['0%', '50%'],
+            autoplay: !1,
+            complete: function(anim) {
+                $('#herologo').css({ position: '', right: '' });
+                $('#intro').css('opacity', 1);
+                $('#events-desc').css('opacity', 0);
+                $('#expand-btn').css('display', 'flex');
+                $('#close-btn').css('display', 'none')
+            }
+        }).play()
+    }
+    $('#expand-btn').click(function() {
+        $('.fas').removeClass('animated heartBeat');
+        expand()
+    });
+    $('#close-btn').click(function() { close() });
+    outroAnimation('.navbar', '.content, .footer')
+    </script>
+</body>
