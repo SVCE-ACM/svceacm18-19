@@ -1,0 +1,36 @@
+#mainNav{background-color:white;}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:white;border:0;background-color:#0182AC;font-family:'Exo 2',sans-serif}#mainNav .navbar-brand{padding:0!important}#mainNav .navbar-brand img{height:50px}#mainNav .navbar-nav .nav-item .nav-link{font-size:1em;font-weight:600;padding:.75em 0;letter-spacing:1px;color:black;font-family:'Exo 2',sans-serif}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#0182AC}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top 0.3s,padding-bottom 0.3s;-moz-transition:padding-top 0.3s,padding-bottom 0.3s;transition:padding-top 0.3s,padding-bottom 0.3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:white}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em}#mainNav .container{padding:10px;}}#searchform{margin: 30% 0 0 15%;}
+
+.timeline-main .stepper.stepper-vertical.timeline.timeline-simple li .step-content:after,
+.timeline-main .stepper.stepper-vertical.timeline.timeline-simple li .step-content:before{
+  
+  
+      top: 55px;
+
+	} 
+
+  
+
+	
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../img/hof.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card {
+	border-radius: 10%!important;
+}
+
+.step-content{
+	border-radius: 5%!important
+}
+.footer p{margin-bottom:0}.footer a{color:white}.footer a:hover{text-decoration:underline}.footer{border-top:1px solid white;padding:5px;color:white;background:#00588f}
