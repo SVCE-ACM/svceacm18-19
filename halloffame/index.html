@@ -30,29 +30,25 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item">
-                    <a id="home-link" class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a id="student-affairs-link" class="nav-link" href="#">Student Affairs</a>
-                </li>
-                <li class="nav-item">
-                    <a id="professors-corner-link" class="nav-link" href="#">Professors' Corner</a>
-                </li>
-                <li class="nav-item active">
-                    <a id="alumni-link" class="nav-link" href="#">Alumni</a>
-                </li>
-                <li class="nav-item">
-                    <a id="about-link" class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a id="career-center-link" class="nav-link" href="#">Career Center</a>
-                </li>
-                
-            </ul>
-        </div>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link js-scroll-trigger" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
   </div>
 </nav>
 
@@ -69,7 +65,7 @@
                 <div class="col-md-10">
 
                     <!-- Heading -->
-                    <h2 class="display-2 font-weight-bold white-text pt-5 mb-1">Hall-of Fame</h2>
+					<h1 class=" font-weight-bold white-text pt-5 mb-1">Hall-of Fame</h1>
 
                     <!-- Divider -->
                     <hr class="hr-light">
@@ -105,7 +101,7 @@
             <li>
               <!--Section Title -->
               <a href="#!">
-                <span class="circle default-color z-depth-1-half"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                <span class="circle default-color z-depth-1-half"><i class="fa fa-code" aria-hidden="true"></i></span>
               </a>
 
               <!-- Section Description -->
@@ -142,7 +138,7 @@
             <li class="timeline-inverted">
               <!--Section Title -->
               <a href="#!">
-                <span class="circle secondary-color z-depth-1-half"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <span class="circle secondary-color z-depth-1-half"><i class="fa fa-code" aria-hidden="true"></i></span>
               </a>
 
               <!-- Section Description -->
@@ -179,7 +175,7 @@
             <li>
               <!--Section Title -->
               <a href="#!">
-                <span class="circle primary-color z-depth-1-half"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+                <span class="circle primary-color z-depth-1-half"><i class="fa fa-code" aria-hidden="true"></i></span>
               </a>
 
               <!-- Section Description -->
@@ -215,7 +211,7 @@
             <li class="timeline-inverted">
               <!--Section Title -->
               <a href="#!">
-                <span class="circle pink z-depth-1-half"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+                <span class="circle pink z-depth-1-half"><i class="fa fa-code" aria-hidden="true"></i></span>
               </a>
 
               <!-- Section Description -->
@@ -251,7 +247,7 @@
             <li>
               <!--Section Title -->
               <a href="#!">
-                <span class="circle mdb-color z-depth-1-half"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                <span class="circle mdb-color z-depth-1-half"><i class="fa fa-code" aria-hidden="true"></i></span>
               </a>
 
               <!-- Section Description -->
@@ -398,10 +394,10 @@
   </div>
 
 </div>
-	
+	</div>
 	
 	<footer class="footer animated fadeIn">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
                     <p class=" small mb-4 mb-lg-0">&copy; SVCE-ACM 2018. All Rights Reserved.</p>
@@ -480,6 +476,7 @@
     next.children(':first-child').clone().appendTo($(this));
   }
 });</script>
+	
 </body>
 
 </html>
