@@ -86,6 +86,9 @@ if(isset($_POST['submit']))
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger active">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="career.html">Career Center</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -125,7 +128,7 @@ if(isset($_POST['submit']))
             <div class="row">
               <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
                 
-                <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+                <p class=" small mb-4 mb-lg-0">&copy; SVCE-ACM 2018. All Rights Reserved.</p>
               </div>
               <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
