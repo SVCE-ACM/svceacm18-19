@@ -75,22 +75,15 @@
             </div>
             <!-- #events-notif -->
             <div id="events-desc">
-                <h1 class="text-center">Ideathon Winners</h1>
-                <!-- <img class="event-img" src="images/events/poster/poster.png" alt=""> -->
+                <h1 class="text-center">Latest Event</h1>
+                <!-- <img class="event-img" src="images/events19-20/designjam.jpeg"> -->
                 <div>
-                  <h3 class="text-center">Winners - Esquires</h3>
-                  <!-- <p> -->
-                  <ul>
-                    <li>Sivakumar M</li>
-                    <li>Kiruba Shankar Victor</li>
-                    <li>Shiv Prashad S</li>
-                  </ul>
-                  <h3 class="text-center">Runners - MR</h3>
-                  <ul>
-                    <li>Mageshwaran R</li>
-                    <li>Rishi K</li>
-                  </ul>
-                  <p>The above mentioned winners please contact us at <span class="event-link"><a href="tel:+919087622535">90876 22535</a></span> to get your certificates.</p>
+                    <h3 class="text-center">Design Jam</h3>
+                    <p>
+                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing  prizes ranging from your own domain name for your portfolio site and exciting coupons to internships!
+                    </p>
+                    <p>So what are you waiting for? Registration closes on 5th April 2020, 11:59pm IST, Sunday</p>
+                    <p>For more details and registration, click <span class="event-link"><a href="https://svce.acm.org/DJ20/">here</a></span></p>
                 </div>
             </div>
             <img id="herologo" src="images/logos/herologo.svg" alt="">
@@ -103,22 +96,15 @@
             <p class="mob-notif-text">Our Latest Event</p>
             <!-- #intro -->
             <div id="mob-events-desc">
-                <h1 class="text-center">Ideathon Winners</h1>
-                <!-- <img class="event-img" src="images/events/poster/poster.png" alt=""> -->
+                <h1 class="text-center">Latest Event</h1>
+                <!-- <img class="event-img" src="images/events19-20/designjam.jpeg"> -->
                 <div>
-                  <h3 class="text-center">Winners - Esquires</h3>
-                  <!-- <p> -->
-                  <ul>
-                    <li>Sivakumar M</li>
-                    <li>Kiruba Shankar Victor</li>
-                    <li>Shiv Prashad S</li>
-                  </ul>
-                  <h3 class="text-center">Runners - MR</h3>
-                  <ul>
-                    <li>Mageshwaran R</li>
-                    <li>Rishi K</li>
-                  </ul>
-                  <p>The above mentioned winners please contact us at <span class="event-link"><a href="tel:+919087622535">90876 22535</a></span> to get your certificates.</p>
+                    <h3 class="text-center">Design Jam</h3>
+                    <p>
+                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing  prizes ranging from your own domain name for your portfolio site and exciting coupons to internships!
+                    </p>
+                    <p>So what are you waiting for? Registration closes on 5th April 2020, 11:59pm IST, Sunday</p>
+                    <p>For more details and registration, click <span class="event-link"><a href="https://svce.acm.org/DJ20/">here</a></span></p>
                 </div>
             </div>
         </div><!-- .container -->
@@ -178,25 +164,49 @@
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>
-    function expand() { $('#intro').css('display', 'none');
+    function expand() {
+        $('#intro').css('display', 'none');
         $('#events-desc').css('display', 'block');
         $('#herologo').css({ position: 'absolute', right: '50%' });
-        anime({ targets: '#herologo', duration: 200, easing: 'linear', right: ['50%', '0%'], autoplay: !1, complete: function(anim) { $('#herologo').css({ position: '', right: '' });
+        anime({
+            targets: '#herologo',
+            duration: 200,
+            easing: 'linear',
+            right: ['50%', '0%'],
+            autoplay: !1,
+            complete: function(anim) {
+                $('#herologo').css({ position: '', right: '' });
                 $('#intro').css('opacity', 0);
                 $('#events-desc').css('opacity', 1);
                 $('#expand-btn').css('display', 'none');
-                $('#close-btn').css('display', 'flex') } }).play() }
+                $('#close-btn').css('display', 'flex')
+            }
+        }).play()
+    }
 
-    function close() { $('#intro').css('display', 'block');
+    function close() {
+        $('#intro').css('display', 'block');
         $('#events-desc').css('display', 'none');
         $('#herologo').css({ position: 'absolute', right: '0%' });
-        anime({ targets: '#herologo', duration: 200, easing: 'linear', right: ['0%', '50%'], autoplay: !1, complete: function(anim) { $('#herologo').css({ position: '', right: '' });
+        anime({
+            targets: '#herologo',
+            duration: 200,
+            easing: 'linear',
+            right: ['0%', '50%'],
+            autoplay: !1,
+            complete: function(anim) {
+                $('#herologo').css({ position: '', right: '' });
                 $('#intro').css('opacity', 1);
                 $('#events-desc').css('opacity', 0);
                 $('#expand-btn').css('display', 'flex');
-                $('#close-btn').css('display', 'none') } }).play() }
-    $('#expand-btn').click(function() { $('.fas').removeClass('animated heartBeat');
-        expand() });
+                $('#close-btn').css('display', 'none')
+            }
+        }).play()
+    }
+    $('#expand-btn').click(function() {
+        $('.fas').removeClass('animated heartBeat');
+        expand()
+    });
     $('#close-btn').click(function() { close() });
     if ($(window).width() > 992) expand();
     outroAnimation('.navbar', '.content, .footer')
