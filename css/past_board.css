@@ -1,0 +1,16 @@
+#year-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+#year-link a {
+  color: #000;
+  background-color: #83cee2;
+  border-radius: 15px;
+  margin-left: 30px;
+  padding: 10px;
+}
+
