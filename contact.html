@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -22,13 +21,84 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
-  </head>
-    
+</head>
+
 <style>
-.page-subtitle{color:rgb(131,206,226)}#contact-page .wrapper{flex-direction:column;flex-wrap:wrap}.page-content{padding:50px}.page-content .v-center{flex-direction:column}.form-control{border:none;border-bottom:2px solid #f0f0f0;border-radius:0;box-shadow:none;font-size:18px;margin-top:10px;margin-bottom:10px;-webkit-transition:all ease-in-out 0.4s;transition:all ease-in-out 0.4s;width:60%;max-width:500px}.form-control:focus{border-bottom-color:#999}input{height:55px}button#submit{background:rgb(9,53,122);cursor:pointer;border:none;border-radius:50px;color:white;height:50px;width:190px;margin-top:24px}button#submit:hover{font-weight:700}.fas{color:black}a.contact-link{color:black;text-decoration:underline}a.contact-link:hover{color:white}@media (max-width:1024px){.form-control{width:95%}}
-</style>
+    .page-subtitle {
+        color: rgb(131, 206, 226)
+    }
     
-  
+    #contact-page .wrapper {
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+    
+    .page-content {
+        padding: 50px
+    }
+    
+    .page-content .v-center {
+        flex-direction: column
+    }
+    
+    .form-control {
+        border: none;
+        border-bottom: 2px solid #f0f0f0;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        -webkit-transition: all ease-in-out 0.4s;
+        transition: all ease-in-out 0.4s;
+        width: 60%;
+        max-width: 500px
+    }
+    
+    .form-control:focus {
+        border-bottom-color: #999
+    }
+    
+    input {
+        height: 55px
+    }
+    
+    button#submit {
+        background: rgb(9, 53, 122);
+        cursor: pointer;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        height: 50px;
+        width: 190px;
+        margin-top: 24px
+    }
+    
+    button#submit:hover {
+        font-weight: 700
+    }
+    
+    .fas {
+        color: black
+    }
+    
+    a.contact-link {
+        color: black;
+        text-decoration: underline
+    }
+    
+    a.contact-link:hover {
+        color: white
+    }
+    
+    @media (max-width:1024px) {
+        .form-control {
+            width: 95%
+        }
+    }
+</style>
+
+
 <body id="contact-page">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
         <div class="container">
@@ -64,7 +134,8 @@
                 <h1 class="text-center page-title">Contact Us</h1>
                 <h2 class="text-center page-subtitle">Let's Get In Touch!</h2><br>
             </div>
-        </section><!-- .page-head -->
+        </section>
+        <!-- .page-head -->
         <section id="contact-sec" class="page-content">
             <div class="container">
                 <div class="row">
@@ -77,63 +148,73 @@
                 </div>
             </div>
             <div class="container-fluid">
-                <form action="/svceacm18-19/test/contact.php" id="contact-form" class="v-center" method="post" >
+                <form action="/svceacm18-19/test/contact.php" id="contact-form" class="v-center" method="post">
                     <input type="text" class="form-control" name="name" placeholder="Name" required="">
                     <input type="email" class="form-control" name="email" placeholder="Email" required="">
                     <textarea class="form-control" rows="5" name="message" placeholder="Message" required="" data-gramm_editor="false"></textarea>
                     <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
                     <?php echo $ma;?>
-                </form><!-- #contact-form -->
-            </div><!-- .row -->
+                </form>
+                <!-- #contact-form -->
+            </div>
+            <!-- .row -->
         </section>
         <!-- Footer -->
         <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                
-                <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
-              </div>
-              <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-                <ul class="list-inline mb-0">
-                  <li class="list-inline-item mr-3">
-                    <a href="https://www.facebook.com/SVCEACM/">
-                      <i class="fab fa-facebook fa-2x fa-fw"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item mr-3">
-                    <a href="https://twitter.com/acm_svce">
-                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="https://www.instagram.com/svceacm/">
-                      <i class="fab fa-instagram fa-2x fa-fw"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item mr-3">
-                    <a href="https://www.youtube.com/channel/UC4TPMqj-kR7DdpNB1ndREMg">
-                      <i class="fab fa-youtube fa-2x fa-fw"></i>
-                    </a>
-                  </li>
-                    <li class="list-inline-item mr-3">
-                    <a href="https://github.com/SVCE-ACM">
-                      <i class="fab fa-github fa-2x fa-fw"></i>
-                    </a>
-                  </li>
-                    
-                </ul>
-              </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+
+                        <p class=" small mb-4 mb-lg-0">&copy; ACM 2018. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.facebook.com/SVCEACM/">
+                                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.linkedin.com/company/svceacm">
+                                    <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/svceacm/">
+                                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://www.youtube.com/channel/UC4TPMqj-kR7DdpNB1ndREMg">
+                                    <i class="fab fa-youtube fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-3">
+                                <a href="https://github.com/SVCE-ACM">
+                                    <i class="fab fa-github fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </footer>
-    </div><!-- .wrapper -->
+    </div>
+    <!-- .wrapper -->
     <!-- ============= contact section ends ================== -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-    $(document).ready(function(){makeParallax($(window).width(),100);$(window).on('resize',function(){var windowWidth=$(this).width();makeParallax(windowWidth,100)});outroAnimation('.navbar','.wrapper')})
+        $(document).ready(function() {
+            makeParallax($(window).width(), 100);
+            $(window).on('resize', function() {
+                var windowWidth = $(this).width();
+                makeParallax(windowWidth, 100)
+            });
+            outroAnimation('.navbar', '.wrapper')
+        })
     </script>
 </body>
 

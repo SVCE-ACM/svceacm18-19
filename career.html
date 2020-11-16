@@ -31,70 +31,276 @@
     <link rel="stylesheet" href="css/social.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <style>
-        html,body{height:100%}body{display:flex;flex-direction:column}.content{flex:1 0 auto;display:flex;align-items:center}#hero{background-image:linear-gradient(to right bottom,#182e69,#08437d,#00588f,#006d9e,#0182ac);border-radius:50px;margin:auto;margin-top:100px;margin-bottom:50px;display:flex;flex-direction:column;padding:40px 30px;position:relative;color:white}.fas{animation-iteration-count:5}#expand-btn,#close-btn{cursor:pointer;margin:0}#expand-btn{display:flex}#close-btn{display:none}.notif-text{font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;-webkit-writing-mode:vertical-lr;-ms-writing-mode:tb-lr;writing-mode:vertical-lr;text-orientation:upright;margin-left:0}#events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}#mob-events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}.mob-notif-text{display:none;font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;letter-spacing:.1em}.event-img{margin:20px auto;width:100%;max-width:350px}.event-link{color:#00BCD4;text-decoration:underline}#hero #herologo{margin-left:5px;height:calc(50vh - 60px);align-self:center;min-width:calc(50vh - 60px);padding:5px}#hero #intro{border-radius:15px;margin:auto 15px;padding-left:15px;padding-right:15px;align-self:center}.intro-heading{margin-bottom:20px;text-align:center;color:rgb(131,206,226);font-size:calc(2.25vw + 24px);font-weight:700;line-height:1.1;align-self:center}.event-heading{display:flex;flex-direction:row-reverse;justify-content:space-around;margin-bottom:20px}#templates{display:flex;flex-direction:row;justify-content:space-around}@media screen and (max-width:992px){.content{background-image:-webkit-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:-o-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:linear-gradient(to bottom right,#182e69,#08437d,#00588f,#006d9e,#0182ac);padding:10px}#hero{background-image:none;margin-top:70px;margin-bottom:20px;flex-direction:column;height:100%;padding: 40px 20px}.event-heading{flex-direction:column}#herologo{min-height:260px;min-width:260px;margin-bottom:10px}.expand-switch{display:none!important}#intro{padding:0!important;margin:30px 15px 50px!important}.intro-heading{line-height:1.2;font-size:calc(3vw + 32px)}#mob-events-desc{opacity:1;display:flex;margin:auto}.mob-notif-text{display:block}#templates{flex-direction:column;align-items:center}}
+        html,
+        body {
+            height: 100%
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column
+        }
+        
+        .content {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center
+        }
+        
+        #hero {
+            background-image: linear-gradient(to right bottom, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 30px;
+            position: relative;
+            color: white
+        }
+        
+        .fas {
+            animation-iteration-count: 5
+        }
+        
+        #expand-btn,
+        #close-btn {
+            cursor: pointer;
+            margin: 0
+        }
+        
+        #expand-btn {
+            display: flex
+        }
+        
+        #close-btn {
+            display: none
+        }
+        
+        .notif-text {
+            font-size: 24px;
+            background: #21252996;
+            border-radius: 15px;
+            font-family: 'Staatliches', cursive;
+            text-align: center;
+            -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            margin-left: 0
+        }
+        
+        #events-desc {
+            border: 1px solid white;
+            border-radius: 15px;
+            -webkit-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            -moz-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            padding: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0
+        }
+        
+        #mob-events-desc {
+            border: 1px solid white;
+            border-radius: 15px;
+            -webkit-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            -moz-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            padding: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0
+        }
+        
+        .mob-notif-text {
+            display: none;
+            font-size: 24px;
+            background: #21252996;
+            border-radius: 15px;
+            font-family: 'Staatliches', cursive;
+            text-align: center;
+            letter-spacing: .1em
+        }
+        
+        .event-img {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 350px
+        }
+        
+        .event-link {
+            color: #00BCD4;
+            text-decoration: underline
+        }
+        
+        #hero #herologo {
+            margin-left: 5px;
+            height: calc(50vh - 60px);
+            align-self: center;
+            min-width: calc(50vh - 60px);
+            padding: 5px
+        }
+        
+        #hero #intro {
+            border-radius: 15px;
+            margin: auto 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            align-self: center
+        }
+        
+        .intro-heading {
+            margin-bottom: 20px;
+            text-align: center;
+            color: rgb(131, 206, 226);
+            font-size: calc(2.25vw + 24px);
+            font-weight: 700;
+            line-height: 1.1;
+            align-self: center
+        }
+        
+        .event-heading {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            margin-bottom: 20px
+        }
+        
+        #templates {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around
+        }
+        
+        @media screen and (max-width:992px) {
+            .content {
+                background-image: -webkit-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: -o-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: linear-gradient(to bottom right, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                padding: 10px
+            }
+            #hero {
+                background-image: none;
+                margin-top: 70px;
+                margin-bottom: 20px;
+                flex-direction: column;
+                height: 100%;
+                padding: 40px 20px
+            }
+            .event-heading {
+                flex-direction: column
+            }
+            #herologo {
+                min-height: 260px;
+                min-width: 260px;
+                margin-bottom: 10px
+            }
+            .expand-switch {
+                display: none!important
+            }
+            #intro {
+                padding: 0!important;
+                margin: 30px 15px 50px!important
+            }
+            .intro-heading {
+                line-height: 1.2;
+                font-size: calc(3vw + 32px)
+            }
+            #mob-events-desc {
+                opacity: 1;
+                display: flex;
+                margin: auto
+            }
+            .mob-notif-text {
+                display: block
+            }
+            #templates {
+                flex-direction: column;
+                align-items: center
+            }
+        }
+        
         .faqHeader {
-                            font-size: 27px;
-                            margin: 14px;
-                        }
-
-                        .panel-heading [data-toggle="collapse"]:after {
-                            font-family: 'Glyphicons Halflings';
-                            content: "\e072";
-                            float: right;
-                            color: #F58723;
-                            font-size: 18px;
-                            line-height: 22px;
-                            / -webkit-transform: rotate(-90deg);
-                            -moz-transform: rotate(-90deg);
-                            -ms-transform: rotate(-90deg);
-                            -o-transform: rotate(-90deg);
-                            transform: rotate(-90deg);
-                        }
-
-                        .panel-heading [data-toggle="collapse"].collapsed:after {
-
-                            -webkit-transform: rotate(90deg);
-                            -moz-transform: rotate(90deg);
-                            -ms-transform: rotate(90deg);
-                            -o-transform: rotate(90deg);
-                            transform: rotate(90deg);
-                            color: #454444;
-                        }
-                        a {
-                          color: white;
-                        }
-                        .card {
-                          background: none;
-                          margin-bottom: 10px;
-                        }
-                        .card-header {
-                          background: #0182ac;
-                          border: solid white 1px;
-                        }
-                        .card-body {
-                          border: solid white 1px;
-                          border-top: none;
-                          border-radius: 0 0 10px 10px;
-                        }
-                        .btn-accordion {
-                          cursor: pointer;
-                          color: white;
-                          border-style: none;
-                          background: none;
-                          width: 100%;
-                          text-align: left;
-                        }
-                        .btn-accordion:focus {
-                          outline: none;
-                        }
-                        .section-heading {
-                            color: rgb(131,206,226);
-                            font-size: calc(2.25vw + 16px)
-                        }
-                        #resume-corner {
-                            margin-bottom: 50px;
-                            overflow-wrap: break-word;
-                        }
+            font-size: 27px;
+            margin: 14px;
+        }
+        
+        .panel-heading [data-toggle="collapse"]:after {
+            font-family: 'Glyphicons Halflings';
+            content: "\e072";
+            float: right;
+            color: #F58723;
+            font-size: 18px;
+            line-height: 22px;
+            / -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        
+        .panel-heading [data-toggle="collapse"].collapsed:after {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+            color: #454444;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        .card {
+            background: none;
+            margin-bottom: 10px;
+        }
+        
+        .card-header {
+            background: #0182ac;
+            border: solid white 1px;
+        }
+        
+        .card-body {
+            border: solid white 1px;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .btn-accordion {
+            cursor: pointer;
+            color: white;
+            border-style: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .btn-accordion:focus {
+            outline: none;
+        }
+        
+        .section-heading {
+            color: rgb(131, 206, 226);
+            font-size: calc(2.25vw + 16px)
+        }
+        
+        #resume-corner {
+            margin-bottom: 50px;
+            overflow-wrap: break-word;
+        }
     </style>
 </head>
 
@@ -136,12 +342,18 @@
         <div id="hero" class="container">
             <h1 class="intro-heading">
                 Career center
-            </h1><!-- .intro-heading -->
+            </h1>
+            <!-- .intro-heading -->
             <h2 class="section-heading">
                 Resume Corner
-            </h2><!-- .section-heading -->
+            </h2>
+            <!-- .section-heading -->
             <div id="resume-corner">
-                <p>So you've probably read a lot of conflicting information on what your resume should or should not have. Well, generally it is said that people give a resume about 6 seconds to read. So you need to be crisp and to the point. No fluff. No stories. Keep it simple, keep it to one page. Put in your education (college. School isn't really needed once you have some projects or other achievements). Put in your work experience (All your internships go here). Add your best projects, any research experience you have and any achievements (Awards, prizes, winning a hackathon or other technical competition). And lastly add in any extra-curricular activities you're involved in (Student clubs. Any associations etc.)</p>
+                <p>So you've probably read a lot of conflicting information on what your resume should or should not have. Well, generally it is said that people give a resume about 6 seconds to read. So you need to be crisp and to the point. No fluff. No
+                    stories. Keep it simple, keep it to one page. Put in your education (college. School isn't really needed once you have some projects or other achievements). Put in your work experience (All your internships go here). Add your best
+                    projects, any research experience you have and any achievements (Awards, prizes, winning a hackathon or other technical competition). And lastly add in any extra-curricular activities you're involved in (Student clubs. Any associations
+                    etc.)
+                </p>
                 <p><b>Here are a few sources for you to get started with building your resume:</b></p>
                 <ul>
                     <li><a href="https://www.careercup.com/resume" class="event-link">CareerCup Article</a></li>
@@ -179,7 +391,8 @@
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            No, they are not. Your CGPA is a defining factor of your 4 years of college. While some universities do place a priority on the GRE, the vast majority focus on your CGPA. Note that this does not mean you should disregard the GRE entirely, it is still a priority, just not the primary one.
+                            No, they are not. Your CGPA is a defining factor of your 4 years of college. While some universities do place a priority on the GRE, the vast majority focus on your CGPA. Note that this does not mean you should disregard the GRE entirely, it is still
+                            a priority, just not the primary one.
                         </div>
                     </div>
                 </div>
@@ -193,7 +406,10 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            The first thing you need to do is make a resume. Check out the Career Center above for help on that. Now, before getting an internship, you need some skills. There should be some domain or language that you are good at, be it C, Java, Python, Web, Android or anything else. Now you have two options. 1. Networking: Talk to people. Talk to your parents. Talk to your uncles and aunts. Talk to your friends and faculty. Someone somewhere will know of a company that does something that you are into. Try going through them and getting an interview/internship. 2. Apply on your own. Contact companies directly via mail. Apply on online portals such as Internshala or Angel.co. If you're good enough, you will get an interview. Ace it and your internship is on the way. One last piece of advice though. Avoid unpaid internships and "inplant trainings" (You basically pay them and get a certificate). Neither will really be helpful.
+                            The first thing you need to do is make a resume. Check out the Career Center above for help on that. Now, before getting an internship, you need some skills. There should be some domain or language that you are good at, be it C, Java, Python, Web, Android
+                            or anything else. Now you have two options. 1. Networking: Talk to people. Talk to your parents. Talk to your uncles and aunts. Talk to your friends and faculty. Someone somewhere will know of a company that does something
+                            that you are into. Try going through them and getting an interview/internship. 2. Apply on your own. Contact companies directly via mail. Apply on online portals such as Internshala or Angel.co. If you're good enough, you will
+                            get an interview. Ace it and your internship is on the way. One last piece of advice though. Avoid unpaid internships and "inplant trainings" (You basically pay them and get a certificate). Neither will really be helpful.
                         </div>
                     </div>
                 </div>
@@ -221,7 +437,8 @@
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
-                            <b>General Courses (CS and Otherwise):</b>                            <ul>
+                            <b>General Courses (CS and Otherwise):</b>
+                            <ul>
                                 <li><a class="event-link" href="https://in.udacity.com/">Udacity</a></li>
                                 <li><a class="event-link" href="https://www.coursera.org/">Coursera</a></li>
                                 <li><a class="event-link" href="https://www.edx.org/">EDX</a></li>
@@ -258,7 +475,10 @@
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
-                            So first off, coding does not involve only C and C++. If you aren't a fan of those, get into web or mobile development. There's less of traditional coding there. But that aside, there are many other avenues apart from coding as well. These include design and marketing. Both have good scope and companies recruit for those roles in college as well. Design involves..well, designing. You'll be making posters and artwork, maybe website layouts or UI/UX work. You'll be expected to know how to use Adobe Photoshop and/or Adobe Illustrator. For marketing, it's all about your communication skills and your confidence. If you're comfortable talking with strangers and think you can convince them on something, marketing is for you.
+                            So first off, coding does not involve only C and C++. If you aren't a fan of those, get into web or mobile development. There's less of traditional coding there. But that aside, there are many other avenues apart from coding as well. These include design
+                            and marketing. Both have good scope and companies recruit for those roles in college as well. Design involves..well, designing. You'll be making posters and artwork, maybe website layouts or UI/UX work. You'll be expected to
+                            know how to use Adobe Photoshop and/or Adobe Illustrator. For marketing, it's all about your communication skills and your confidence. If you're comfortable talking with strangers and think you can convince them on something,
+                            marketing is for you.
                         </div>
                     </div>
                 </div>
@@ -286,7 +506,8 @@
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                         <div class="card-body">
-                            Yes. Non-technical skills, especially communication is of the utmost importance. But as an engineer, you need to have a firm understanding of the fundamentals of tech. Otherwise, people may very well ask you what the point of 4 years of study were if not to gain that understanding?
+                            Yes. Non-technical skills, especially communication is of the utmost importance. But as an engineer, you need to have a firm understanding of the fundamentals of tech. Otherwise, people may very well ask you what the point of 4 years of study were if
+                            not to gain that understanding?
                         </div>
                     </div>
                 </div>
@@ -300,7 +521,8 @@
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
                         <div class="card-body">
-                            Making a schedule is easy. Sticking to it is hard. Start small. Decide you want to spend at least 30 minutes a day on technical development. This can be reading about tech, writing code or even just ideating. But do it every day. Do it for at least a month and it will become a habit to you.
+                            Making a schedule is easy. Sticking to it is hard. Start small. Decide you want to spend at least 30 minutes a day on technical development. This can be reading about tech, writing code or even just ideating. But do it every day. Do it for at least a
+                            month and it will become a habit to you.
                         </div>
                     </div>
                 </div>
@@ -314,7 +536,8 @@
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
                         <div class="card-body">
-                            Placements would be the better option since you&rsquo;ll get some knowledge of how an organisation works after you start working. It is better to have at least 3 years of experience for an MBA. Again, MBAs for IIM and other Indian based institutes do not care about your experience, but it wouldn&rsquo;t give you an edge if you have zero experience. Plus, it matters where you do your MBA degrees since networking is key in business programs.
+                            Placements would be the better option since you&rsquo;ll get some knowledge of how an organisation works after you start working. It is better to have at least 3 years of experience for an MBA. Again, MBAs for IIM and other Indian based institutes do
+                            not care about your experience, but it wouldn&rsquo;t give you an edge if you have zero experience. Plus, it matters where you do your MBA degrees since networking is key in business programs.
                         </div>
                     </div>
                 </div>
@@ -328,7 +551,8 @@
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
                         <div class="card-body">
-                            Rather than trying to learn multiple programming languages, one must know how to conceptualise and solve problems and not depend on the quirks of a particular language. We would say that the best programming language is the one that you are already familiar with. The most needed language will often change due to the advancements in technology and use cases. According to StackOverflow, in 2018, the most commonly used language is JavaScript.
+                            Rather than trying to learn multiple programming languages, one must know how to conceptualise and solve problems and not depend on the quirks of a particular language. We would say that the best programming language is the one that you are already familiar
+                            with. The most needed language will often change due to the advancements in technology and use cases. According to StackOverflow, in 2018, the most commonly used language is JavaScript.
                         </div>
                     </div>
                 </div>
@@ -356,7 +580,8 @@
                     </div>
                     <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
                         <div class="card-body">
-                            MS or any higher level of education depends only on what you want to do. If you want to move away from coding, you can find jobs within technology as a software designer, business analyst or a product manager. Research on what type of courses you&rsquo;d find to be a better fit, if you don&rsquo;t want to take up MS in CS.
+                            MS or any higher level of education depends only on what you want to do. If you want to move away from coding, you can find jobs within technology as a software designer, business analyst or a product manager. Research on what type of courses you&rsquo;d
+                            find to be a better fit, if you don&rsquo;t want to take up MS in CS.
                         </div>
                     </div>
                 </div>
@@ -378,8 +603,8 @@
                             </a>
                         </li>
                         <li class="list-inline-item mr-3">
-                            <a href="https://twitter.com/acm_svce">
-                                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                            <a href="https://www.linkedin.com/company/svceacm">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
@@ -403,50 +628,64 @@
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>
-    function expand() {
-        $('#intro').css('display', 'none');
-        $('#events-desc').css('display', 'flex');
-        $('#herologo').css({ position: 'absolute', right: '50%' });
-        anime({
-            targets: '#herologo',
-            duration: 200,
-            easing: 'linear',
-            right: ['50%', '0%'],
-            autoplay: !1,
-            complete: function(anim) {
-                $('#herologo').css({ position: '', right: '' });
-                $('#intro').css('opacity', 0);
-                $('#events-desc').css('opacity', 1);
-                $('#expand-btn').css('display', 'none');
-                $('#close-btn').css('display', 'flex')
-            }
-        }).play()
-    }
+        function expand() {
+            $('#intro').css('display', 'none');
+            $('#events-desc').css('display', 'flex');
+            $('#herologo').css({
+                position: 'absolute',
+                right: '50%'
+            });
+            anime({
+                targets: '#herologo',
+                duration: 200,
+                easing: 'linear',
+                right: ['50%', '0%'],
+                autoplay: !1,
+                complete: function(anim) {
+                    $('#herologo').css({
+                        position: '',
+                        right: ''
+                    });
+                    $('#intro').css('opacity', 0);
+                    $('#events-desc').css('opacity', 1);
+                    $('#expand-btn').css('display', 'none');
+                    $('#close-btn').css('display', 'flex')
+                }
+            }).play()
+        }
 
-    function close() {
-        $('#intro').css('display', 'block');
-        $('#events-desc').css('display', 'none');
-        $('#herologo').css({ position: 'absolute', right: '0%' });
-        anime({
-            targets: '#herologo',
-            duration: 200,
-            easing: 'linear',
-            right: ['0%', '50%'],
-            autoplay: !1,
-            complete: function(anim) {
-                $('#herologo').css({ position: '', right: '' });
-                $('#intro').css('opacity', 1);
-                $('#events-desc').css('opacity', 0);
-                $('#expand-btn').css('display', 'flex');
-                $('#close-btn').css('display', 'none')
-            }
-        }).play()
-    }
-    $('#expand-btn').click(function() {
-        $('.fas').removeClass('animated heartBeat');
-        expand()
-    });
-    $('#close-btn').click(function() { close() });
-    outroAnimation('.navbar', '.content, .footer')
+        function close() {
+            $('#intro').css('display', 'block');
+            $('#events-desc').css('display', 'none');
+            $('#herologo').css({
+                position: 'absolute',
+                right: '0%'
+            });
+            anime({
+                targets: '#herologo',
+                duration: 200,
+                easing: 'linear',
+                right: ['0%', '50%'],
+                autoplay: !1,
+                complete: function(anim) {
+                    $('#herologo').css({
+                        position: '',
+                        right: ''
+                    });
+                    $('#intro').css('opacity', 1);
+                    $('#events-desc').css('opacity', 0);
+                    $('#expand-btn').css('display', 'flex');
+                    $('#close-btn').css('display', 'none')
+                }
+            }).play()
+        }
+        $('#expand-btn').click(function() {
+            $('.fas').removeClass('animated heartBeat');
+            expand()
+        });
+        $('#close-btn').click(function() {
+            close()
+        });
+        outroAnimation('.navbar', '.content, .footer')
     </script>
 </body>

@@ -22,7 +22,182 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        html,body{height:100%}body{display:flex;flex-direction:column}.content{flex:1 0 auto;display:flex;align-items:center}#hero{border-radius:50px;background-image:linear-gradient(to right bottom,#182e69,#08437d,#00588f,#006d9e,#0182ac);margin:auto;display:flex;flex-direction:row;padding:30px 10px;height:500px;position:relative;color:white}.fas{animation-iteration-count:5}#expand-btn,#close-btn{cursor:pointer;margin:0}#expand-btn{display:flex}#close-btn{display:none}.notif-text{font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;-webkit-writing-mode:vertical-lr;-ms-writing-mode:tb-lr;writing-mode:vertical-lr;text-orientation:upright;margin-left:0}#events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}#mob-events-desc{border:1px solid white;border-radius:15px;-webkit-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);-moz-box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);box-shadow:3px 3px 5px 0 rgba(255,255,255,1),-3px -3px 5px 0 rgba(255,255,255,1),-3px 3px 5px 0 rgba(255,255,255,1),3px -3px 5px 0 rgba(255,255,255,1);padding:15px;margin-left:15px;margin-right:15px;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0}.mob-notif-text{display:none;font-size:24px;background:#21252996;border-radius:15px;font-family:'Staatliches',cursive;text-align:center;letter-spacing:.1em}.event-img{margin:20px auto;width:100%;max-width:350px}.event-link a{color:#00BCD4;text-decoration:underline}#hero #herologo{margin-left:5px;height:calc(50vh - 60px);align-self:center;min-width:calc(50vh - 60px);padding:5px}#hero #intro{border-radius:15px;margin:auto 15px;padding-left:15px;padding-right:15px;align-self:center}#hero #intro #intro-heading{margin-bottom:20px;text-align:center;color:rgb(131,206,226);font-size:calc(2.25vw + 24px);font-weight:700;line-height:1.1}@media screen and (max-width:992px){.content{background-image:-webkit-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:-o-linear-gradient(top left,#182e69,#08437d,#00588f,#006d9e,#0182ac);background-image:linear-gradient(to bottom right,#182e69,#08437d,#00588f,#006d9e,#0182ac);padding:10px}#hero{background-image:none;margin-top:70px;margin-bottom:20px;flex-direction:column;height:100%}#herologo{min-height:260px;min-width:260px;margin-bottom:10px}.expand-switch{display:none!important}#intro{padding:0!important;margin:30px 15px 50px!important}#intro-heading{line-height:1.2;font-size:calc(3vw + 24px)}#mob-events-desc{opacity:1;display:flex;margin:auto}.mob-notif-text{display:block}}
+        html,
+        body {
+            height: 100%
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column
+        }
+        
+        .content {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center
+        }
+        
+        #hero {
+            border-radius: 50px;
+            background-image: linear-gradient(to right bottom, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            padding: 30px 10px;
+            height: 500px;
+            position: relative;
+            color: white
+        }
+        
+        .fas {
+            animation-iteration-count: 5
+        }
+        
+        #expand-btn,
+        #close-btn {
+            cursor: pointer;
+            margin: 0
+        }
+        
+        #expand-btn {
+            display: flex
+        }
+        
+        #close-btn {
+            display: none
+        }
+        
+        .notif-text {
+            font-size: 24px;
+            background: #21252996;
+            border-radius: 15px;
+            font-family: 'Staatliches', cursive;
+            text-align: center;
+            -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            margin-left: 0
+        }
+        
+        #events-desc {
+            border: 1px solid white;
+            border-radius: 15px;
+            -webkit-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            -moz-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            padding: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0
+        }
+        
+        #mob-events-desc {
+            border: 1px solid white;
+            border-radius: 15px;
+            -webkit-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            -moz-box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 1), -3px -3px 5px 0 rgba(255, 255, 255, 1), -3px 3px 5px 0 rgba(255, 255, 255, 1), 3px -3px 5px 0 rgba(255, 255, 255, 1);
+            padding: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0
+        }
+        
+        .mob-notif-text {
+            display: none;
+            font-size: 24px;
+            background: #21252996;
+            border-radius: 15px;
+            font-family: 'Staatliches', cursive;
+            text-align: center;
+            letter-spacing: .1em
+        }
+        
+        .event-img {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 350px
+        }
+        
+        .event-link a {
+            color: #00BCD4;
+            text-decoration: underline
+        }
+        
+        #hero #herologo {
+            margin-left: 5px;
+            height: calc(50vh - 60px);
+            align-self: center;
+            min-width: calc(50vh - 60px);
+            padding: 5px
+        }
+        
+        #hero #intro {
+            border-radius: 15px;
+            margin: auto 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            align-self: center
+        }
+        
+        #hero #intro #intro-heading {
+            margin-bottom: 20px;
+            text-align: center;
+            color: rgb(131, 206, 226);
+            font-size: calc(2.25vw + 24px);
+            font-weight: 700;
+            line-height: 1.1
+        }
+        
+        @media screen and (max-width:992px) {
+            .content {
+                background-image: -webkit-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: -o-linear-gradient(top left, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                background-image: linear-gradient(to bottom right, #182e69, #08437d, #00588f, #006d9e, #0182ac);
+                padding: 10px
+            }
+            #hero {
+                background-image: none;
+                margin-top: 70px;
+                margin-bottom: 20px;
+                flex-direction: column;
+                height: 100%
+            }
+            #herologo {
+                min-height: 260px;
+                min-width: 260px;
+                margin-bottom: 10px
+            }
+            .expand-switch {
+                display: none!important
+            }
+            #intro {
+                padding: 0!important;
+                margin: 30px 15px 50px!important
+            }
+            #intro-heading {
+                line-height: 1.2;
+                font-size: calc(3vw + 24px)
+            }
+            #mob-events-desc {
+                opacity: 1;
+                display: flex;
+                margin: auto
+            }
+            .mob-notif-text {
+                display: block
+            }
+        }
     </style>
 </head>
 
@@ -70,7 +245,8 @@
                 <!-- .notif-text -->
             </div>
             <div id="close-btn" class="expand-switch closed">
-                <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-left animated heartBeat"></i></i></p>
+                <p class="notif-text">Latest Event <i class="fas fa-arrow-circle-left animated heartBeat"></i></i>
+                </p>
                 <!-- .notif-text -->
             </div>
             <!-- #events-notif -->
@@ -80,7 +256,8 @@
                 <div>
                     <h3 class="text-center">Design Jam</h3>
                     <p>
-                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing  prizes ranging from your own domain name for your portfolio site and exciting coupons to internships!
+                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing prizes ranging from your own domain name for your portfolio site and exciting coupons
+                        to internships!
                     </p>
                     <p>So what are you waiting for? Registration closes on 5th April 2020, 11:59pm IST, Sunday</p>
                     <p>For more details and registration, click <span class="event-link"><a href="https://svce.acm.org/DJ20/">here</a></span></p>
@@ -101,13 +278,15 @@
                 <div>
                     <h3 class="text-center">Design Jam</h3>
                     <p>
-                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing  prizes ranging from your own domain name for your portfolio site and exciting coupons to internships!
+                        How's quarantine treating you? We present to you Design Jam 1.0, an online web design contest. Come test out your front end skills and stand a chance to win amazing prizes ranging from your own domain name for your portfolio site and exciting coupons
+                        to internships!
                     </p>
                     <p>So what are you waiting for? Registration closes on 5th April 2020, 11:59pm IST, Sunday</p>
                     <p>For more details and registration, click <span class="event-link"><a href="https://svce.acm.org/DJ20/">here</a></span></p>
                 </div>
             </div>
-        </div><!-- .container -->
+        </div>
+        <!-- .container -->
     </div>
     <!-- .content -->
     <!-- Footer -->
@@ -125,8 +304,8 @@
                             </a>
                         </li>
                         <li class="list-inline-item mr-3">
-                            <a href="https://twitter.com/acm_svce">
-                                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                            <a href="https://www.linkedin.com/company/svceacm">
+                                <i class="fab fa-linkedin fa-2x fa-fw"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
@@ -164,51 +343,65 @@
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script>
-    function expand() {
-        $('#intro').css('display', 'none');
-        $('#events-desc').css('display', 'block');
-        $('#herologo').css({ position: 'absolute', right: '50%' });
-        anime({
-            targets: '#herologo',
-            duration: 200,
-            easing: 'linear',
-            right: ['50%', '0%'],
-            autoplay: !1,
-            complete: function(anim) {
-                $('#herologo').css({ position: '', right: '' });
-                $('#intro').css('opacity', 0);
-                $('#events-desc').css('opacity', 1);
-                $('#expand-btn').css('display', 'none');
-                $('#close-btn').css('display', 'flex')
-            }
-        }).play()
-    }
+        function expand() {
+            $('#intro').css('display', 'none');
+            $('#events-desc').css('display', 'block');
+            $('#herologo').css({
+                position: 'absolute',
+                right: '50%'
+            });
+            anime({
+                targets: '#herologo',
+                duration: 200,
+                easing: 'linear',
+                right: ['50%', '0%'],
+                autoplay: !1,
+                complete: function(anim) {
+                    $('#herologo').css({
+                        position: '',
+                        right: ''
+                    });
+                    $('#intro').css('opacity', 0);
+                    $('#events-desc').css('opacity', 1);
+                    $('#expand-btn').css('display', 'none');
+                    $('#close-btn').css('display', 'flex')
+                }
+            }).play()
+        }
 
-    function close() {
-        $('#intro').css('display', 'block');
-        $('#events-desc').css('display', 'none');
-        $('#herologo').css({ position: 'absolute', right: '0%' });
-        anime({
-            targets: '#herologo',
-            duration: 200,
-            easing: 'linear',
-            right: ['0%', '50%'],
-            autoplay: !1,
-            complete: function(anim) {
-                $('#herologo').css({ position: '', right: '' });
-                $('#intro').css('opacity', 1);
-                $('#events-desc').css('opacity', 0);
-                $('#expand-btn').css('display', 'flex');
-                $('#close-btn').css('display', 'none')
-            }
-        }).play()
-    }
-    $('#expand-btn').click(function() {
-        $('.fas').removeClass('animated heartBeat');
-        expand()
-    });
-    $('#close-btn').click(function() { close() });
-    if ($(window).width() > 992) expand();
-    outroAnimation('.navbar', '.content, .footer')
+        function close() {
+            $('#intro').css('display', 'block');
+            $('#events-desc').css('display', 'none');
+            $('#herologo').css({
+                position: 'absolute',
+                right: '0%'
+            });
+            anime({
+                targets: '#herologo',
+                duration: 200,
+                easing: 'linear',
+                right: ['0%', '50%'],
+                autoplay: !1,
+                complete: function(anim) {
+                    $('#herologo').css({
+                        position: '',
+                        right: ''
+                    });
+                    $('#intro').css('opacity', 1);
+                    $('#events-desc').css('opacity', 0);
+                    $('#expand-btn').css('display', 'flex');
+                    $('#close-btn').css('display', 'none')
+                }
+            }).play()
+        }
+        $('#expand-btn').click(function() {
+            $('.fas').removeClass('animated heartBeat');
+            expand()
+        });
+        $('#close-btn').click(function() {
+            close()
+        });
+        if ($(window).width() > 992) expand();
+        outroAnimation('.navbar', '.content, .footer')
     </script>
 </body>

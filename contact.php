@@ -138,8 +138,8 @@ if(isset($_POST['submit']))
                     </a>
                   </li>
                   <li class="list-inline-item mr-3">
-                    <a href="https://twitter.com/acm_svce">
-                      <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                    <a href="https://www.linkedin.com/company/svceacm">
+                      <i class="fab fa-linkedin fa-2x fa-fw"></i>
                     </a>
                   </li>
                     <li class="list-inline-item mr-3">
